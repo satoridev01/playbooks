@@ -1,5 +1,0 @@
-tests:
-  install:
-    - ["apt", "install", "-y", "siege"]
-  execute:
-    - ["siege", "-c", "100", "-t", "30s", "https://www.satori-ci.com/login"]

@@ -1,0 +1,9 @@
+tests:
+  stress:
+    assertStdoutContains: "Availability:		      100.00"
+    input:
+      - ""
+software:
+  execute: ["siege", "-c", "200", "-t", "30s", "https://www.satori-ci.com/login[[tests]]"]
+  install:
+    - apt install -y siege
