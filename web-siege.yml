@@ -5,9 +5,8 @@ tests:
       - ""
 software:
   siege:
-    execute: ["siege", "-c", "200", "-t", "30s", "https://www.satori-ci.com/login[[tests]]"]
+    execute: ["siege", "-c", "200", "-t", "30s", "http://www.yuroapps.com/[[tests]]"]
     install:
       - echo "A ver si podemos ver cuanto tarda desde aca un curl contra el login"
-      - curl -s https://www.satori-ci.com/login -w %{time_total}
+      - curl http://www.yuroapps.com/
       - apt install -y siege
-      - curl https://www.satori-ci.com/login
