@@ -7,5 +7,7 @@ software:
   siege:
     execute: ["siege", "-c", "200", "-t", "30s", "https://www.satori-ci.com/login[[tests]]"]
     install:
+      - echo "A ver si podemos ver cuanto tarda desde aca un curl contra el login"
+      - curl -s https://www.satori-ci.com/login -w %{time_total}
       - apt install -y siege
       - curl https://www.satori-ci.com/login
