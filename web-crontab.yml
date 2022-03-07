@@ -5,3 +5,4 @@ software:
     execute:
       - "curl -s https://www.satori-ci.com/login -w %{time_total} -o/dev/null"
     crontab: */5 * * * *
+    onfail: slack o telegram
