@@ -1,0 +1,9 @@
+tests:
+    hosts:
+        assertStdoutContains: "0.0% packet loss"
+        input:
+            - www.satori-ci.com
+            - 3.16.7.14
+software:
+    ping:
+        execute: ["ping", "-c", "[[hosts]]"]

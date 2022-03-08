@@ -1,0 +1,7 @@
+tests:
+    assertStdoutEqual: "c71dc615975dac51076b289a7d9c748e"
+    host:
+        - "www.satori-ci.com"
+software:
+    curl:
+        execute: ["bash", "curl", "-s", "https://[[host]]", "|", "md5"]

@@ -1,0 +1,8 @@
+tests:
+    host:
+        assertStdoutEqual: "www.satori-ci.com has address 3.16.7.14"
+        input:
+            - ""
+software:
+    host:
+        execute: ["host", "www.satori-ci.com[[tests]]"]
