@@ -1,0 +1,12 @@
+tests:
+  install:
+    assertStdoutNotContains: " match for "
+    input:
+      - "./"
+software:
+  check:
+    install:
+      - git clone https://github.com/eth0izzle/shhgit.git
+      - go build -v -i
+    execute:
+      - ["./shhgit", "-local", "[[tests]]"]
