@@ -6,4 +6,4 @@ tests:
 software:
     nmap:
         execute: 
-            ["bash", "nmap [[tests]] -p 80,443 -oS oUTpuT >>/dev/null ; cat oUTpuT | grep '[oO0][pP][eE3][nN]' | wc -l | tr -d " "]  
+            ["bash", "nmap [[tests]] -p 80,443 | grep 'open' | wc -l | tr -d " "]  
