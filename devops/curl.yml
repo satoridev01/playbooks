@@ -4,4 +4,4 @@ tests:
         - "www.satori-ci.com"
 software:
     curl:
-        execute: ["bash", "curl", "-s", "https://[[host]]", "|", "md5"]
+        execute: ["bash", "curl -s https://[[host]] | md5"]
