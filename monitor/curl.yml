@@ -1,7 +1,7 @@
 tests:
-    assertStdoutEqual: "c71dc615975dac51076b289a7d9c748e"
-    host:
-        - "www.satori-ci.com"
+    assertStdoutContains: "Reports &#8211; Satori CI"
+    url:
+        - "https://www.satori-ci.com/reports/"
 software:
     curl:
-        execute: ["bash", "curl -s https://[[host]] | md5"]
+        execute: ["curl", "-s", "[[url]]"]
