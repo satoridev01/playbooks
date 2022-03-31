@@ -1,0 +1,12 @@
+tests:
+	assertStdoutEqual: ""
+	host:
+		- www.uflow.biz
+software:
+	install:
+		- apt -y install testssl.sh
+		- echo "./testssl.sh -oA output $1" > test.sh
+		- echo "grep \"LOW\|MEDIUM\|HIGH\|CRITICAL\" output.csv" >> test.sh
+		- chmod 700 test.sh
+	execute:
+		['./test.sh', '[[host]]']
