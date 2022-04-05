@@ -1,0 +1,10 @@
+tests:
+	input:
+		- ""
+
+software:
+	install:
+		- git clone https://github.com/trufflesecurity/trufflehog.git
+		- cd trufflehog; go install
+	trufflehog:
+		execute: ["trufflehog[[tests]]"]
