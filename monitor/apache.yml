@@ -1,0 +1,8 @@
+tests:
+    assertStdoutContains: "Server: Apache"
+    assertReturnCode: "0"
+    hosts:
+    - 54.145.150.152:80
+    - 54.145.150.152:443
+    execute:
+    - [curl -I $(host)]
