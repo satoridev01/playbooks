@@ -1,8 +1,8 @@
-# python3 ./satori-cli --run-playbook="../playbooks/devops/pylint.yml" --set-token="TBC"
+# $ python3 ./satori-cli run -p "../playbooks/devops/trufflehog_v1.yml" TBC
 install:
   - [apt install -y pylint]
   
 pylint:
   assertStdout: False
   execute:
-  - [pylint ./]
+  - [pylint *]
