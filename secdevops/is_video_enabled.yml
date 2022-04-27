@@ -1,0 +1,2 @@
+check_video:
+  - [ lsmod | grep uvcvideo ]
