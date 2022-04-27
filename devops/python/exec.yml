@@ -1,0 +1,4 @@
+exec:
+  assertStdout: ""
+  execute:
+  - [ grep "pexpect.run\|eval(\|exec(\|os\.system\|os\.popen\|execfile\|subprocess\.Popen\|subprocess\.call" * -r --include="*.py" ]
