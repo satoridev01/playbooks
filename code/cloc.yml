@@ -1,0 +1,10 @@
+settings:
+  - severity: 1
+  - output: [0]
+  # - output: report
+
+install:
+  - [ apt install -y cloc ]
+
+cloc:
+  - [ cloc ./ ]
