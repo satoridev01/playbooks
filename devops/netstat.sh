@@ -1,9 +1,12 @@
 install:
-  - [netstat -tulpen > netstat.orig]
+  - [netstat -tulpen > netstat-tulpen.orig]
+  - [netstat -atupen > netstat-atupen.orig]
   - [ls]
-  - [netstat -tulpen > netstat.new]
+  - [netstat -tulpen > netstat-tulpen.new]
+  - [netstat -atupen > netstat-atupen.new]
 
 netstat:
   assertStdout: False
   execute:
-    - [diff netstat.orig netstat.new]
+    - [diff netstat-tulpen.orig netstat-tulpen.new]
+    - [diff netstat-atupen.orig netstat-atupen.new]
