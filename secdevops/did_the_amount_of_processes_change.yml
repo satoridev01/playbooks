@@ -1,0 +1,13 @@
+# ./satori-cli -u https://github.com/satoriplaybooks/detect/open_ports.yml --data {"execute":"nc -l 8000"}
+# multilinea de install es un comando de bash
+install:
+  - [
+      ps -aux > ps.orig
+      $(execute) &
+      ps -aux > ps.new
+    ]
+
+netstat:
+  assertStdout: False
+  execute:
+    - [diff ps.orig ps.new]
