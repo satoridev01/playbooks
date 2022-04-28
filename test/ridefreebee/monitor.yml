@@ -1,0 +1,7 @@
+settings:
+  - rate: '5 minutes'
+
+test:
+  assertStdoutContains: Freebee is changing the way people experience South Florida
+  curl:
+    - [ curl -s "https://ridefreebee.com" ]
