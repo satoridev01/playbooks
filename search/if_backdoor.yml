@@ -1,0 +1,2 @@
+assertStdoutEqual: ""
+- [ grep -e "if.*\(.*(?<!=)=(?!=)" * -rI ] 
