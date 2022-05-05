@@ -1,0 +1,2 @@
+assertStdoutEqual: ""
+- [ grep "BEGIN.*PRIVATE KEY" * -r ]
