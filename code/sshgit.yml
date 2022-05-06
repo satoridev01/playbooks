@@ -1,0 +1,10 @@
+install:
+    - [ 
+        git clone https://github.com/eth0izzle/shhgit.git
+        go build -v -i
+    ]
+
+sshgit:
+    assertStdoutNotContains: " match for "
+    execute:
+      - ["./shhgit", "-local", "./"]
