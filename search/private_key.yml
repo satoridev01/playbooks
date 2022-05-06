@@ -1,2 +1,3 @@
-assertStdoutEqual: ""
-- [ grep "BEGIN.*PRIVATE KEY" * -r ]
+find_private_key:
+    assertStdoutEqual: ""
+    - [ grep "BEGIN.*PRIVATE KEY" * -r ]

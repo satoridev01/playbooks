@@ -1,6 +1,0 @@
-# https://github.com/gvb84/dawgmon.git
-install:
-  - [git clone https://github.com/gvb84/dawgmon.git]
-
-dawgmon:
-  - [sudo python3 dawgmon.py -gfA]

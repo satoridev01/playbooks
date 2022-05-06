@@ -1,7 +1,13 @@
-assertStdoutNotContains: "include|config|maintenance"
+settings:
+    - labels: "web"
+    - priority: 1
+    - description: "Brute force web content in a URL"
+
 install:
     - git clone https://salsa.debian.org/pkg-security-team/dirb.git
     - cd dirb/
     - bash configure
     - make
-    - ./dirb http://tower.ridefreebee.com/ wordlists/common.txt 
+
+dirb:
+    - ./dirb $(url) wordlists/common.txt 

@@ -1,5 +1,0 @@
-# https://github.com/pyupio/safety
-install:
-  - [pip install safety]
-safety:
-  - [check -r requirements.txt]

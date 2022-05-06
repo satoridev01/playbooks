@@ -1,9 +1,11 @@
 install:
-  - [lsof > lsof.orig]
-  - [ls]
-  - [lsof > lsof.new]
+    - [
+        lsof > lsof.orig
+        $(execute)]
+        lsof > lsof.new
+    ]
 
 lsof:
-  assertStdout: False
-  execute:
-  - [diff lsof.orig lsof.new]
+    assertStdout: False
+    execute:
+    - [ diff lsof.orig lsof.new ]

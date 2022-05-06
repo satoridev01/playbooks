@@ -1,2 +1,3 @@
-assertStdoutEqual: ""
-- [ grep -e "(bc1|[13])[a-zA-HJ-NP-Z0-9]{25,39}$" * -rI ]
+find_bitcoin_address:
+    assertStdoutEqual: ""
+    - [ grep -e "(bc1|[13])[a-zA-HJ-NP-Z0-9]{25,39}$" * -rI ]

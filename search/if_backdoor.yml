@@ -1,2 +1,3 @@
-assertStdoutEqual: ""
-- [ grep -e "if.*\(.*(?<!=)=(?!=)" * -r ] 
+find_if_backdoor:
+    assertStdoutEqual: ""
+    - [ grep -e "if.*\(.*(?<!=)=(?!=)" * -r ] 

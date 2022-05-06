@@ -1,9 +1,0 @@
-tests:
-    how-many-do-you-see:
-        assertStdoutEqual: "2"
-        input:
-            - www.satori-ci.com
-software:
-    nmap:
-        execute: 
-            ["bash", "nmap [[tests]] -p 80,443 | grep 'open' | wc -l | tr -d " "]  
