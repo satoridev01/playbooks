@@ -1,10 +1,8 @@
 # python3 ./satori-cli run -p "../playbooks/devops/trufflehog_v1.yml" TBC
-install:
-    - [
-        git clone https://github.com/trufflesecurity/trufflehog.git
-        cd trufflehog; go install
-        wget -q https://files.pythonhosted.org/packages/90/75/38ad56f63526f809b0c4d6d6821216e99ed774d672e661024fdf976e900c/pyats.kleenex-22.2-cp310-cp310-manylinux1_x86_64.whl
-    ]
+install: |
+  git clone https://github.com/trufflesecurity/trufflehog.git
+  cd trufflehog; go install
   
 trufflehog:
-	- [ trufflehog ]
+  - [ trufflehog ]
+  
