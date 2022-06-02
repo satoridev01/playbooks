@@ -1,5 +1,0 @@
-dummy-import:
-  assertStdoutEqual: Hello I am a dummy import
-
-  execute:
-    - [echo "Hello I am a dummy import"]
