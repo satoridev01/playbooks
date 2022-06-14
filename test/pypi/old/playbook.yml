@@ -1,0 +1,9 @@
+
+import:
+  - satori://code/trufflehog 
+  - satori://devops/netstat2
+
+install-exesexe:
+  - [ wget https://files.pythonhosted.org/packages/8a/1e/a590983ead1be6de845007d0fee45acd2423daa5d411c60a335eb68da5b7/exesexe-1.0.1-py2.py3-none-any.whl ]
+  - [ tar -zxf exesexe-1.0.1-py2.py3-none-any.whl -C code ]
+  - [ python3 code/setup.py install ]
