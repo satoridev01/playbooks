@@ -1,0 +1,4 @@
+netstat:
+  assertStdoutEqual: "just trigger"
+  execute:
+  - [ netstat -atupen ]

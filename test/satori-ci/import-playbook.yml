@@ -2,4 +2,3 @@ imp-test:
   assertStdoutNotEqual: Hello
   execute:
     - [python3 -c "print('Hello')"]
-
