@@ -1,8 +1,9 @@
 # python3 ./satori-cli run -p "../playbooks/devops/trufflehog_v1.yml" TBC
 install:
+  - [ apt-get update && apt-get install git golang -y ]
   - [ git clone https://github.com/trufflesecurity/trufflehog.git ]
   - [ cd trufflehog; go install ]
-  
+
 trufflehog:
   - [ trufflehog ]
-  
+
