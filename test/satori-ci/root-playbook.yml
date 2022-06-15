@@ -1,8 +1,8 @@
 import:
   - import-playbook
-  - satori://test/satori-ci/hola_mundo
+  - satori://test/satori-ci/import-playbook
 
 root-test:
-  assertStdoutEqual: Python
+  assertStdoutEqual: This is the root
   execute:
-    - [python3 --version]
+    - [echo "This is the base"]
