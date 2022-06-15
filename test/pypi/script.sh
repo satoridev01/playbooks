@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # General settings
 PYPI_PAGES=2
 
@@ -26,9 +27,7 @@ import:
 install-$PROJECT:
   assertReturnCode: 0
   execute:
-  - [ wget $REPO ]
-  - [ tar -zxf $(basename "$REPO") -C ./ ]
-  - [ python3 setup.py install ]"> playbook.yml
+  - [ apt update; apt install wget; wget $REPO; tar -zxf $(basename "$REPO") -C ./ ; python3 setup.py install ]"> playbook.yml
     echo satori-cli run playbook.yml
     break
 	fi
