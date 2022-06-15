@@ -24,9 +24,11 @@ import:
   - satori://devops/netstat2
 
 install-$PROJECT:
+  assertReturnCode: 0
+  execute:
   - [ wget $REPO ]
-  - [ tar -zxf $(basename "$REPO") -C code ]
-  - [ python3 code/setup.py install ]"> playbook.yml
+  - [ tar -zxf $(basename "$REPO") -C ./ ]
+  - [ python3 setup.py install ]"> playbook.yml
     echo satori-cli run playbook.yml
     break
 	fi
