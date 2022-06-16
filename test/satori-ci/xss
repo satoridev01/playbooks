@@ -1,0 +1,7 @@
+settings:
+  name: "<img src='' onerror='alert(1)' />"
+  rate: "10 minutes"
+test:
+  assertStdoutContains: "<img src='' onerror='alert(2)' />"
+  curl:
+    - [curl -s "https://google.com"]
