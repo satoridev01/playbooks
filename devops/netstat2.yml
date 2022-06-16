@@ -1,4 +1,4 @@
 netstat:
-  assertStdoutEqual: "just trigger"
+  assertStdoutNotContains: "LISTEN"
   execute:
   - [ apt-get install net-tools ; netstat -atupen ]
