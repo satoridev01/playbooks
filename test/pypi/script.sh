@@ -21,13 +21,13 @@ while read PROJECT; do
 		#echo "$PROJECT, $OUTPUT"
     echo "
 import:
-  - satori://code/trufflehog 
+#  - satori://code/trufflehog 
   - satori://devops/netstat2
 
 install-$PROJECT:
   assertReturnCode: 0
   execute:
-  - [ apt update; apt install wget; wget $REPO; tar -zxf $(basename "$REPO") -C ./ ; python3 setup.py install ]"> playbook.yml
+  - [ wget $REPO; pip install $(basename "$REPO") ]"> playbook.yml
     echo satori-cli run playbook.yml
     break
 	fi
