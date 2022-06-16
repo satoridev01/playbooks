@@ -1,4 +1,4 @@
 netstat:
   assertStdoutEqual: "just trigger"
   execute:
-  - [ apt install net-tools ; netstat -atupen ]
+  - [ apt-get install net-tools ; netstat -atupen ]
