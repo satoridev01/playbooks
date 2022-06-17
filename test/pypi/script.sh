@@ -19,16 +19,32 @@ while read PROJECT; do
 	REPO=`curl -s "https://pypi.org/project/$PROJECT/"|grep "file__card" -A2 -m1|grep "a href"|awk -F'"' '{print $2}'`
 	if [ "$REPO" != "" ]; then
 		#echo "$PROJECT, $OUTPUT"
-    echo "
-import:
-#  - satori://code/trufflehog 
-  - satori://devops/netstat2
+    echo "settings:
+  name: pypi
 
 install-$PROJECT:
   assertReturnCode: 0
   execute:
-  - [ wget $REPO; pip install $(basename "$REPO") ]"> playbook.yml
-    echo satori-cli run playbook.yml
-    break
+#  - [ apt-get install git; pip install truffleHog ]
+  - [ wget $REPO; pip install $(basename "$REPO") ]
+
+#detect-secrets:
+#  assertStdoutContains: 'fruta'
+#  execute:
+#  - [ apt-get install git; pip install detect-secrets; detect-secrets scan ] 
+
+#import:
+#  - satori://devops/netstat2
+#trufflehog:
+#  assertStdoutContains: 'fruta'
+#  execute:
+#  - [ trufflehog ./ ]
+
+#netstat:
+#  assertStdoutNotContains: 'LISTEN'
+#  execute:
+#  - [ apt-get install net-tools ; netstat -atupen ]"> playbook.yml
+    ../../../satori-cli/satori-cli run playbook.yml &
+    # break
 	fi
 done <<< "$PROJECTS"
