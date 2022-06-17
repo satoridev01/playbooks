@@ -1,50 +1,44 @@
 #!/bin/bash
 
 # General settings
-PYPI_PAGES=2
+MAX_CONT=1
 
 # Global variables
 PROJECTS=""
 CONT=1
 
 # Get the project names
-while [ $CONT -le $PYPI_PAGES ]; do 
+while [ $CONT -le $MAX_CONT ]; do 
   PROJECTS="$PROJECTS
 `curl -s "https://pypi.org/search/?c=Development+Status+%3A%3A+5+-+Production%2FStable&page=$CONT"|grep "package-snippet__name"|awk -F'>' '{print $2}'|awk -F'<' '{print $1}'`"
   CONT=$((CONT+1))
 done
 
 # Get the project repos
+CONT=0
 while read PROJECT; do
-	REPO=`curl -s "https://pypi.org/project/$PROJECT/"|grep "file__card" -A2 -m1|grep "a href"|awk -F'"' '{print $2}'`
+	REPO=`curl -s "https://pypi.org/project/$PROJECT/"|grep "file__card" -A2 -m1|grep "a href"|awk -F'"' '{print $2}'|grep "tar.gz"`
+    echo "repo: curl -s https://pypi.org/project/$PROJECT/"
 	if [ "$REPO" != "" ]; then
-		#echo "$PROJECT, $OUTPUT"
+        echo "$CONT) project: $PROJECT - repo: $REPO"
     echo "settings:
-  name: pypi
+  name: $REPO
 
-install-$PROJECT:
-  assertReturnCode: 0
-  execute:
-#  - [ apt-get install git; pip install truffleHog ]
-  - [ wget $REPO; pip install $(basename "$REPO") ]
-
-#detect-secrets:
-#  assertStdoutContains: 'fruta'
+#uri:
+#  assertStdoutEqual: ''
 #  execute:
-#  - [ apt-get install git; pip install detect-secrets; detect-secrets scan ] 
+#  - [ wget $REPO ; tar -zxf $(basename "$REPO"); grep "://" * -r ]
 
-#import:
-#  - satori://devops/netstat2
 #trufflehog:
-#  assertStdoutContains: 'fruta'
+#  assertStdoutNotContains: '~'
 #  execute:
-#  - [ trufflehog ./ ]
+#  - [ wget $REPO ; tar -zxf $(basename "$REPO"); pip install trufflehog3; trufflehog3 filesystem . ]
 
-#netstat:
-#  assertStdoutNotContains: 'LISTEN'
-#  execute:
-#  - [ apt-get install net-tools ; netstat -atupen ]"> playbook.yml
-    ../../../satori-cli/satori-cli run playbook.yml &
-    # break
+netstat:
+  assertStdoutNotContains: 'LISTEN'
+  execute:
+  - [ apt-get install net-tools -y >>/dev/null; wget $REPO; pip install $(basename "$REPO"); netstat -atupen ]"> plbks/playbook-$(basename "$REPO").yml
+    ../../../satori-cli/satori-cli run plbks/playbook-$(basename "$REPO").yml >>/dev/null &
 	fi
-done <<< "$PROJECTS"
+    CONT=$((CONT+1))
+done<<<"$PROJECTS"
