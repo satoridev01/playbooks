@@ -28,7 +28,8 @@ install:
   - [ wget -q $REPO ; tar -zxf $(basename "$REPO") >>/dev/null ]
 
 sensitive-keywords:
-  assertStdoutNotContains:
+  assertStdoutEqual: ''
+  keyword:
   - http://
   - https://
   - eval(
@@ -39,6 +40,8 @@ sensitive-keywords:
   - username
   - credit
   - token
+  execute:
+  - [ grep $(keyword) * -rI ]
 
 import:
   - satori://code/trufflehog
