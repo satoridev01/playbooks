@@ -1,6 +1,7 @@
 trufflehog:
-  assertReturnCode: 0
+  assertStdoutNotContains: 'HIGH'
   assertStdoutNotContains: '~'
+  assertStdoutNotContains: 'LOW'
   # build:
   # - [ apt-get install git golang -y; git clone https://github.com/trufflesecurity/trufflehog.git ] #; cd trufflehog; go build ; ls -la; ./trufflehog ./ ]
   pip-trufflehog3:

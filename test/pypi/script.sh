@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # General settings
-MAX_CONT=1
+MAX_CONT=10
 
 # Global variables
 PROJECTS=""
@@ -24,20 +24,29 @@ while read PROJECT; do
     echo "settings:
   name: $REPO
 
-#uri:
-#  assertStdoutEqual: ''
-#  execute:
-#  - [ wget $REPO ; tar -zxf $(basename "$REPO"); grep "://" * -r ]
+install:
+  - [ wget -q $REPO ; tar -zxf $(basename "$REPO") >>/dev/null ]
 
-#trufflehog:
-#  assertStdoutNotContains: '~'
-#  execute:
-#  - [ wget $REPO ; tar -zxf $(basename "$REPO"); pip install trufflehog3; trufflehog3 filesystem . ]
+sensitive-keywords:
+  assertStdoutNotContains:
+  - http://
+  - https://
+  - eval(
+  - exec(
+  - system(
+  - password
+  - passwd
+  - username
+  - credit
+  - token
 
-netstat:
-  assertStdoutNotContains: 'LISTEN'
-  execute:
-  - [ apt-get install net-tools -y >>/dev/null; wget $REPO; pip install $(basename "$REPO"); netstat -atupen ]"> plbks/playbook-$(basename "$REPO").yml
+import:
+  - satori://code/trufflehog
+
+#netstat:
+#  assertStdoutNotContains: 'LISTEN'
+#  execute:
+#  - [ apt-get install net-tools -y >>/dev/null; wget $REPO; pip install $(basename "$REPO"); netstat -atupen ]"> plbks/playbook-$(basename "$REPO").yml
     ../../../satori-cli/satori-cli run plbks/playbook-$(basename "$REPO").yml >>/dev/null &
 	fi
     CONT=$((CONT+1))
