@@ -1,0 +1,4 @@
+netstat-listen:
+  assertStdoutNotContains: 'LISTEN'
+  execute:
+  - [ apt-get install net-tools -y >>/dev/null; netstat -atupen ]

@@ -1,0 +1,23 @@
+test:
+  assertFileExists: "fruta"
+  assertStdoutContains: "fruta"
+  assertStdoutNotContains: "fruta"
+  assertStdoutEqual: "fruta"
+  assertStdoutNotEqual: "fruta"
+  assertStderr: "fruta"
+  assertStderrContains: "fruta"
+  assertStderrNotContains: "fruta"
+  assertStderrEqual: "fruta"
+  assertStderrNotEqual: "fruta"
+  assertKilled: "fruta"
+  assertReturnCode: "fruta"
+  assertNetwork: "fruta"
+  assertErrorDisclosure: "fruta"
+  assertCanary: "fruta"
+  assertFilenameDisclosure: "fruta"
+  assertDirectoryDisclosure: "fruta"
+  assertUsernameDisclosure: "fruta"
+  assertCommandExists: "fruta"
+  assertFileExists: "fruta"
+  curl:
+    - [curl -s "https://www.satori-ci.com"]

@@ -1,0 +1,4 @@
+test:
+  assertFruta: "fruta"
+  curl:
+    - [curl -s "https://www.satori-ci.com"]

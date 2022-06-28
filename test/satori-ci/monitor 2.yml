@@ -1,0 +1,7 @@
+settings:
+  #- rate: '5 minutes'
+    cron:  '*/5 * * * ? *'
+test:
+    assertStdoutContains: "Reports &#8211; Satori CI"
+    url:
+      - [ "curl -s https://www.satori-ci.com/reports/"]

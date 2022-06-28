@@ -1,0 +1,9 @@
+# esto debe ser advertido al usuario en los comentarios
+trufflehog:
+  assertReturnCode: 0
+  assertStdoutContains: 'fruta'
+  execute:
+  - [ apt-get install git golang -y ; git clone https://github.com/trufflesecurity/trufflehog.git ; cd trufflehog; go install ]
+
+trufflehog:
+  - [ trufflehog ]
