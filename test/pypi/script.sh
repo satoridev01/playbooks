@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # General settings
-MAX_CONT=10
+MAX_CONT=5
+NAME="pypi-$RANDOM"
 
 # Global variables
 PROJECTS=""
@@ -18,11 +19,12 @@ done
 CONT=0
 while read PROJECT; do
 	REPO=`curl -s "https://pypi.org/project/$PROJECT/"|grep "file__card" -A2 -m1|grep "a href"|awk -F'"' '{print $2}'|grep "tar.gz"`
-    echo "repo: curl -s https://pypi.org/project/$PROJECT/"
+    #echo "repo: curl -s https://pypi.org/project/$PROJECT/"
 	if [ "$REPO" != "" ]; then
-        echo "$CONT) project: $PROJECT - repo: $REPO"
+        BASENAME=$(basename "$REPO")
+        echo "$CONT) name: $NAME - project: $PROJECT - repo: $REPO"
     echo "settings:
-  name: $REPO
+  name: $NAME
 
 install:
   - [ wget -q $REPO ; tar -zxf $(basename "$REPO") >>/dev/null ]
@@ -41,7 +43,7 @@ sensitive-keywords:
   - credit
   - token
   execute:
-  - [ grep $(keyword) * -rI ]
+  - [ grep \$(keyword) * -rI ]
 
 import:
   - satori://code/trufflehog
@@ -49,7 +51,7 @@ import:
 #netstat:
 #  assertStdoutNotContains: 'LISTEN'
 #  execute:
-#  - [ apt-get install net-tools -y >>/dev/null; wget $REPO; pip install $(basename "$REPO"); netstat -atupen ]"> plbks/playbook-$(basename "$REPO").yml
+#  - [ apt-get install net-tools -y >>/dev/null; wget $REPO; pip install $BASENAME; netstat -atupen ]"> plbks/playbook-$BASENAME.yml
     ../../../satori-cli/satori-cli run plbks/playbook-$(basename "$REPO").yml >>/dev/null &
 	fi
     CONT=$((CONT+1))
