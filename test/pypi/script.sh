@@ -44,7 +44,7 @@ sensitive-keywords:
 
 import:
   - satori://code/trufflehog
-  - satori://search/ip_addresses
+#  - satori://search/ip_addresses
   - satori://secdevops/open_ports"> plbks/playbook-$BASENAME.yml
     satori-cli run plbks/playbook-$(basename "$REPO").yml
     exit
