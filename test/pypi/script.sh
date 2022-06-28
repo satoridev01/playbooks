@@ -19,7 +19,7 @@ while read PROJECT; do
 	REPO=`curl -s "https://pypi.org/project/$PROJECT/" | grep "file__card" -A2 -m1 | grep "a href" | awk -F'"' '{print $2}' | grep "tar.gz"`
 	if [ "$REPO" != "" ]; then
     BASENAME=$(basename "$REPO")
-    echo "$CONT) name: $NAME - project: $PROJECT - repo: $REPO"
+    echo "$CONT) name: $PLAYBOOKS_NAME - project: $PROJECT - repo: $REPO"
     echo "settings:
   name: $PLAYBOOKS_NAME
 
@@ -46,8 +46,8 @@ import:
   - satori://code/trufflehog
   - satori://search/ip_addresses
   - satori://secdevops/open_ports"> plbks/playbook-$BASENAME.yml
-    satori-cli run plbks/playbook-$(basename "$REPO").yml >>/dev/null &
+    satori-cli run plbks/playbook-$(basename "$REPO").yml
     exit
 	fi
     CONT=$((CONT+1))
-done<<<"$PROJECTS"
+done<<<"$PYPI_PROJECT_NAMES"
