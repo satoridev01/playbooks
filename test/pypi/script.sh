@@ -1,30 +1,27 @@
 #!/bin/bash
 
 # General settings
-MAX_CONT=5
-NAME="pypi-$RANDOM"
-
-# Global variables
-PROJECTS=""
+MAX_PYPI_PAGES=1
+PLAYBOOKS_NAME="pypi-$RANDOM"
 CONT=1
 
 # Get the project names
-while [ $CONT -le $MAX_CONT ]; do 
-  PROJECTS="$PROJECTS
-`curl -s "https://pypi.org/search/?c=Development+Status+%3A%3A+5+-+Production%2FStable&page=$CONT"|grep "package-snippet__name"|awk -F'>' '{print $2}'|awk -F'<' '{print $1}'`"
+PYPI_PROJECT_NAMES=""
+CONT=1
+while [ $CONT -le $MAX_PYPI_PAGES ]; do 
+  PYPI_PROJECT_NAMES="$PYPI_PROJECT_NAMES\n`curl -s "https://pypi.org/search/?c=Development+Status+%3A%3A+5+-+Production%2FStable&page=$CONT" | grep "package-snippet__name" | awk -F'>' '{print $2}' | awk -F'<' '{print $1}'`"
   CONT=$((CONT+1))
 done
 
-# Get the project repos
+# Run a Satori Playbook against each repo
 CONT=0
 while read PROJECT; do
-	REPO=`curl -s "https://pypi.org/project/$PROJECT/"|grep "file__card" -A2 -m1|grep "a href"|awk -F'"' '{print $2}'|grep "tar.gz"`
-    #echo "repo: curl -s https://pypi.org/project/$PROJECT/"
+	REPO=`curl -s "https://pypi.org/project/$PROJECT/" | grep "file__card" -A2 -m1 | grep "a href" | awk -F'"' '{print $2}' | grep "tar.gz"`
 	if [ "$REPO" != "" ]; then
-        BASENAME=$(basename "$REPO")
-        echo "$CONT) name: $NAME - project: $PROJECT - repo: $REPO"
+    BASENAME=$(basename "$REPO")
+    echo "$CONT) name: $NAME - project: $PROJECT - repo: $REPO"
     echo "settings:
-  name: $NAME
+  name: $PLAYBOOKS_NAME
 
 install:
   - [ wget -q $REPO ; tar -zxf $(basename "$REPO") >>/dev/null ]
@@ -43,16 +40,14 @@ sensitive-keywords:
   - credit
   - token
   execute:
-  - [ grep \$(keyword) * -rI ]
+  - [ grep '\$(keyword)' * -r ]
 
 import:
   - satori://code/trufflehog
-
-#netstat:
-#  assertStdoutNotContains: 'LISTEN'
-#  execute:
-#  - [ apt-get install net-tools -y >>/dev/null; wget $REPO; pip install $BASENAME; netstat -atupen ]"> plbks/playbook-$BASENAME.yml
-    ../../../satori-cli/satori-cli run plbks/playbook-$(basename "$REPO").yml >>/dev/null &
+  - satori://search/ip_addresses
+  - satori://secdevops/open_ports"> plbks/playbook-$BASENAME.yml
+    satori-cli run plbks/playbook-$(basename "$REPO").yml >>/dev/null &
+    exit
 	fi
     CONT=$((CONT+1))
 done<<<"$PROJECTS"
