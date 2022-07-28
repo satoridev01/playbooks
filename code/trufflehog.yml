@@ -3,6 +3,7 @@ settings:
   - description: "Multiple files contain hardcoded secrets"
   - recommendation: "Remove the secrets from the code whenever possible"
   - labels: Security Trufflehog
+  - priority: 2
 
 trufflehog:
   assertStdoutNotContains: 
