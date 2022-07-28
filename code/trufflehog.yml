@@ -1,3 +1,6 @@
+settings:
+  - name: "Trufflehog"
+
 trufflehog:
   assertStdoutNotContains: 
   - 'HIGH'
