@@ -1,5 +1,5 @@
 settings:
-  - name: "Trufflehog"
+  - name: "Hardcoded Secrets with Trufflehog"
 
 trufflehog:
   assertStdoutNotContains: 
