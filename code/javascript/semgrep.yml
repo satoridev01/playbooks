@@ -1,5 +1,6 @@
 settings:
   - name: "Static Source Code Analysis with Semgrep"
+  - labels: Security Semgrep
   
 install:
   - [ python3 -m pip install semgrep ]
