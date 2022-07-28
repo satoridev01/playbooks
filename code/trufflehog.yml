@@ -1,5 +1,7 @@
 settings:
   - name: "Hardcoded Secrets with Trufflehog"
+  - description: "Multiple files contain hardcoded secrets"
+  - recommendation: "Remove the secrets from the code whenever possible"
 
 trufflehog:
   assertStdoutNotContains: 
