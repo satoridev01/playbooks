@@ -6,4 +6,4 @@ trufflehog:
   # build:
   # - [ apt-get install git golang -y; git clone https://github.com/trufflesecurity/trufflehog.git ] #; cd trufflehog; go build ; ls -la; ./trufflehog ./ ]
   pip-trufflehog3:
-  - [ pip install trufflehog3; trufflehog3 filesystem . ]
+  - [ pip install trufflehog3; trufflehog3 filesystem . --no-entropy ]
