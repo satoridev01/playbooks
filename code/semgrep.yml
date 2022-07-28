@@ -1,7 +1,5 @@
 settings:
   - name: "Static Source Code Analysis with Semgrep"
-  - description: "Multiple files contain hardcoded secrets"
-  - recommendation: "Remove the secrets from the code whenever possible"
   - labels: Security Semgrep
 
 install:
