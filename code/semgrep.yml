@@ -7,4 +7,9 @@ install:
   - [ python3 -m pip install semgrep ]
   
 semgrep:
+  assertStdoutContains:
+  - HIGH
+  - MEDIUM
+  - LOW
+  execute:
   - [ semgrep --config auto ]
