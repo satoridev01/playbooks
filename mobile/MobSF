@@ -1,0 +1,6 @@
+install:
+  - [ git clone https://github.com/MobSF/Mobile-Security-Framework-MobSF.git ; cd Mobile-Security-Framework-MobSF; ./setup.sh ]
+  - [ ./run.sh 127.0.0.1:8000 & ] 
+  
+MobSF:
+  - [ TBC: http://127.0.0.1:8000/api_docs#upload-file-api ]
