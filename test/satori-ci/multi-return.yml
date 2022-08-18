@@ -1,0 +1,32 @@
+test1:
+  assertReturnCode: 1
+  execute:
+  - [ false ] 
+
+test2:
+  assertReturnCode: 0
+  execute:
+  - [ true ]
+
+test3:
+  assertReturnCode: 0
+  execute:
+  - [ false; true ]
+
+test4:
+  assertReturnCode: quehacemos?
+  execute:
+  - [ true; true ]
+
+test5:
+  assertReturnCode: quehacemos?
+  execute:
+  - [ true; fail ]
+
+test6:
+  assertReturnCode: 1
+  execute:
+  - [ fail; fail ]
+
+
+
