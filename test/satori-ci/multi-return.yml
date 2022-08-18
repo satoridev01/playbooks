@@ -16,17 +16,14 @@ test3:
 test4:
   assertReturnCode: quehacemos?
   execute:
-  - [ true; true ]
+  - [ true; false ]
 
 test5:
   assertReturnCode: quehacemos?
   execute:
-  - [ true; fail ]
+  - [ true; false ]
 
 test6:
   assertReturnCode: 1
   execute:
-  - [ fail; fail ]
-
-
-
+  - [ false; false ]
