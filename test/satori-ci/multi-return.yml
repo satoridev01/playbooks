@@ -9,12 +9,12 @@ test2:
   - [ true ]
 
 test3:
-  assertReturnCode: quehacemos?
+  assertReturnCode: 0
   execute:
   - [ false; true ]
 
 test4:
-  assertReturnCode: quehacemos?
+  assertReturnCode: 1
   execute:
   - [ true; false ]
 
