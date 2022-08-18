@@ -19,7 +19,7 @@ test4:
   - [ true; false ]
 
 test5:
-  assertReturnCode: 1
+  assertReturnCode: 0
   execute:
   - [ true; true ]
 
