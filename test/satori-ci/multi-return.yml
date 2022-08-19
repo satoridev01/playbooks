@@ -1,29 +1,29 @@
 test1:
   assertReturnCode: 1
   execute:
-  - [ false ] 
+  - [ /usr/bin/false ] 
 
 test2:
   assertReturnCode: 0
   execute:
-  - [ true ]
+  - [ /usr/bin/true ]
 
 test3:
   assertReturnCode: 0
   execute:
-  - [ false; true ]
+  - [ /usr/bin/false; /usr/bin/true ]
 
 test4:
   assertReturnCode: 1
   execute:
-  - [ true; false ]
+  - [ /usr/bin/true; /usr/bin/false ]
 
 test5:
   assertReturnCode: 0
   execute:
-  - [ true; true ]
+  - [ /usr/bin/true; /usr/bin/true ]
 
 test6:
   assertReturnCode: 1
   execute:
-  - [ false; false ]
+  - [ /usr/bin/false; /usr/bin/false ]
