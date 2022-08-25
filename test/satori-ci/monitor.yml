@@ -1,5 +1,5 @@
 settings:
-  - rate: '5 minutes'
+  rate: '5 minutes'
 
 test:
   assertStdoutContains: "Reports &#8211; Satori CI"

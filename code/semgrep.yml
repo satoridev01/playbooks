@@ -1,11 +1,11 @@
 settings:
-  - name: "Static Source Code Analysis with Semgrep"
-  - labels: Security Semgrep
-  - priority: 2
+  name: "Static Source Code Analysis with Semgrep"
+  labels: Security Semgrep
+  priority: 2
 
 install:
   - [ python3 -m pip install semgrep ]
-  
+
 semgrep:
   assertStdoutContains:
   - HIGH

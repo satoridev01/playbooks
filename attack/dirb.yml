@@ -1,7 +1,7 @@
 settings:
-    - labels: "web"
-    - priority: 1
-    - description: "Brute force web content in a URL"
+    labels: "web"
+    priority: 1
+    description: "Brute force web content in a URL"
 
 install:
     - git clone https://salsa.debian.org/pkg-security-team/dirb.git
@@ -10,4 +10,4 @@ install:
     - make
 
 dirb:
-    - ./dirb $(url) wordlists/common.txt 
+    - ./dirb $(url) wordlists/common.txt

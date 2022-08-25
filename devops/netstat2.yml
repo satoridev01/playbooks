@@ -1,6 +1,6 @@
 settings:
-  - description: "There are no open ports listening"
-  
+  description: "There are no open ports listening"
+
 netstat:
   assertStdoutNotContains: "LISTEN"
   execute:

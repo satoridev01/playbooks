@@ -1,12 +1,12 @@
 settings:
-  - name: "Hardcoded Secrets with Trufflehog"
-  - description: "Multiple files contain hardcoded secrets"
-  - recommendation: "Remove the secrets from the code whenever possible"
-  - labels: Security Trufflehog
-  - priority: 2
+  name: "Hardcoded Secrets with Trufflehog"
+  description: "Multiple files contain hardcoded secrets"
+  recommendation: "Remove the secrets from the code whenever possible"
+  labels: Security Trufflehog
+  priority: 2
 
 trufflehog:
-  assertStdoutNotContains: 
+  assertStdoutNotContains:
   - 'HIGH'
   - 'MEDIUM'
   - 'LOW'
