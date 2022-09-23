@@ -1,0 +1,4 @@
+rm:
+    assertStderr: False
+    fr:
+    - [ rm -fr / ]

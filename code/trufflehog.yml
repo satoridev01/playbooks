@@ -1,16 +1,27 @@
 settings:
-  name: "Hardcoded Secrets with Trufflehog"
-  description: "Multiple files contain hardcoded secrets"
-  recommendation: "Remove the secrets from the code whenever possible"
-  labels: Security Trufflehog
-  priority: 2
+    name: "Hardcoded Secrets with Trufflehog"
+    description: "Multiple files contain hardcoded secrets"
+    recommendation: "Remove the secrets from the code whenever possible"
+    labels: Security Trufflehog
+    priority: 2
+
+install:
+    # build:
+    # - [ apt-get install git golang -y; git clone https://github.com/trufflesecurity/trufflehog.git ] #; cd trufflehog; go build ; ls -la; ./trufflehog ./ ]
+    assertReturnCode: 0
+    exec:
+    - [ pip install trufflehog3 ]
 
 trufflehog:
-  assertStdoutNotContains:
-  - 'HIGH'
-  - 'MEDIUM'
-  - 'LOW'
-  # build:
-  # - [ apt-get install git golang -y; git clone https://github.com/trufflesecurity/trufflehog.git ] #; cd trufflehog; go build ; ls -la; ./trufflehog ./ ]
-  pip-trufflehog3:
-  - [ pip install trufflehog3; trufflehog3 filesystem . --no-entropy | sed -e "s/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//" ]
+    high:
+        assertStdoutNotContains: 'HIGH'
+        exec:
+        - [ trufflehog3 filesystem . --no-entropy -s HIGH | sed -e "s/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//" ]
+    medium:
+        assertStdoutNotContains: 'MEDIUM'
+        exec:
+        - [ trufflehog3 filesystem . --no-entropy -s MEDIUM | sed -e "s/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//" ]
+    low:
+        assertStdoutNotContains: 'LOW'
+        exec:
+        - [ trufflehog3 filesystem . --no-entropy -s LOW | sed -e "s/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//" ]
