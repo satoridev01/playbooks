@@ -3,7 +3,6 @@ settings:
     description: "Multiple files contain hardcoded secrets"
     recommendation: "Remove the secrets from the code whenever possible"
     labels: Security Trufflehog
-    priority: 2
 
 install:
     # build:
@@ -14,14 +13,20 @@ install:
 
 trufflehog:
     high:
-        assertStdoutNotContains: 'HIGH'
+        assertStdoutNotContains: 
+        - value: 'HIGH'
+        - severity: 1
         exec:
         - [ trufflehog3 filesystem . --no-entropy -s HIGH | sed -e "s/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//" ]
     medium:
-        assertStdoutNotContains: 'MEDIUM'
+        assertStdoutNotContains: 
+        - value: 'MEDIUM'
+        - severity: 3
         exec:
         - [ trufflehog3 filesystem . --no-entropy -s MEDIUM | sed -e "s/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//" ]
     low:
-        assertStdoutNotContains: 'LOW'
+        assertStdoutNotContains: 
+        - value: 'LOW'
+        - severity: 5
         exec:
         - [ trufflehog3 filesystem . --no-entropy -s LOW | sed -e "s/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//" ]
