@@ -1,7 +1,4 @@
-tests:
+satori:
     assertStdoutContains: "Reports &#8211; Satori CI"
-    url:
-        - "https://www.satori-ci.com/reports/"
-software:
-    curl:
-        execute: ["curl", "-s", "[[url]]"]
+    reports:
+    - [ "curl -s https://www.satori-ci.com/reports/" ]
