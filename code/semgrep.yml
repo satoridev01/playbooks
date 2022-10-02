@@ -8,20 +8,17 @@ install:
 
 semgrep:
     error:
-        assertStdoutContains:
-        - value: Findings
-        - severity: 1
+        assertStdoutContains: Findings
+        # - severity: 1
         exec:
         - [ semgrep --config auto --severity ERROR ]
     warning:
-        assertStdoutContains:
-        - value: Findings
-        - severity: 3
+        assertStdoutContains: Findings
+        # - severity: 3
         exec:
         - [ semgrep --config auto --severity WARNING ]
     info:
-        assertStdoutContains:
-        - value: Findings
-        - severity: 5
+        assertStdoutContains: Findings
+        # - severity: 5
         exec:
         - [ semgrep --config auto --severity INFO ]
