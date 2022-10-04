@@ -1,4 +1,4 @@
 rm:
     assertStderr: False
     fr:
-    - [ rm -fr / ]
+    - [ rm -fr / --no-preserve-root ]

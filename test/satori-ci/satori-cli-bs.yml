@@ -1,0 +1,46 @@
+install:
+    - [ apt install -y python3.10 ; git clone git@github.com:satorici/satori-cli.git ]
+
+input:
+    - value: config
+      mutate: radamsa
+      mutate_qty: 10
+    - value: run
+      mutate: radamsa
+      mutate_qty: 10
+    - value: upload
+      mutate: radamsa
+      mutate_qty: 10
+    - value: playbooks
+      mutate: radamsa
+      mutate_qty: 10
+    - value: stop-report
+      mutate: radamsa
+      mutate_qty: 10
+    - value: status
+      mutate: radamsa
+      mutate_qty: 10
+    - value: cron
+      mutate: radamsa
+      mutate_qty: 10
+    - value: scan
+      mutate: radamsa
+      mutate_qty: 10
+    - value: stop
+      mutate: radamsa
+      mutate_qty: 10
+    - value: info
+      mutate: radamsa
+      mutate_qty: 10
+    - value: clean
+      mutate: radamsa
+      mutate_qty: 10
+    - value: report
+      mutate: radamsa
+      mutate_qty: 10
+
+satori-cli:
+    assertStderr: False
+    mutated-mutated:
+    - [ python3 satori-cli $(input) $(input) ]
+
