@@ -1,0 +1,8 @@
+input:
+  - file: ./satori-cli-dict.yml
+    split: \n
+
+satori-cli:
+    assertStderr: False
+    execute:
+    - [ ./satori-cli $(input) $(input) ]
