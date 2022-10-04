@@ -4,6 +4,7 @@ test:
   input:
     - value: Hola Mundo
       mutate: radamsa
+      mutate_qty: 10
 
   execute:
     - [echo $(input)]
