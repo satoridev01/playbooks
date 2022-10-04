@@ -1,3 +1,6 @@
+install:
+    - [ apt install -y python3.10 ; git clone git@github.com:satorici/satori-cli.git ]
+
 input:
   - file: ./satori-cli-dict.yml
     split: \n
