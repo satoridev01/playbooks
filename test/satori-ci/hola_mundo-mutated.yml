@@ -1,0 +1,9 @@
+test:
+  assertStdoutContains: "Hola Mundo"
+
+  input:
+    - value: Hola Mundo
+      mutate: radamsa
+
+  execute:
+    - [echo $(input)]
