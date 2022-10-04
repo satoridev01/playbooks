@@ -13,20 +13,17 @@ install:
 
 trufflehog:
     high:
-        assertStdoutNotContains: 
-        - value: 'HIGH'
-        - severity: 1
+        assertStdoutNotContains: HIGH
+        # - severity: 1
         exec:
         - [ trufflehog3 filesystem . --no-entropy -s HIGH | sed -e "s/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//" ]
     medium:
-        assertStdoutNotContains: 
-        - value: 'MEDIUM'
-        - severity: 3
+        assertStdoutNotContains: MEDIUM
+        # - severity: 3
         exec:
         - [ trufflehog3 filesystem . --no-entropy -s MEDIUM | sed -e "s/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//" ]
     low:
-        assertStdoutNotContains: 
-        - value: 'LOW'
-        - severity: 5
+        assertStdoutNotContains: LOW
+        # - severity: 5
         exec:
         - [ trufflehog3 filesystem . --no-entropy -s LOW | sed -e "s/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//" ]
