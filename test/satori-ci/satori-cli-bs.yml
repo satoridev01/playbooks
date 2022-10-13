@@ -63,7 +63,9 @@ invalid:
 tracebacks:
     - "scan \xf5config"
     - "stop stop-re\xc2\xb7po\x0c\xf3\xe0\x80\xb2rt"
+    - "info ep\xe1\xf3\xa0\x81\xaf\xa0\x8eo\xef\xbf\xbfrt"
     - "clean \xcb\x90cle\xf3\xcb\x90clean"
+    - "report s\xcd\x8f\xf3\xa0\x80\xa1ca\xac\xacn"
 
 malformed:
     - ".satori/malformed/dev_random.yml"
