@@ -1,11 +1,11 @@
 install:
     assertReturnCode: 0
     dependencies:
-    - [ apt install -y python3.9 git ]
+    - [ apt install -y git ]
     clone:
     - [ git clone https://github.com/satorici/satori-cli.git ]
     requirements:
-    - [ pip install -r satori-cli/requirements.txt ]
+    - [ pip install -r satori-cli/requirements.txt -t satori-cli ]
 
 input:
     - value: config
@@ -50,4 +50,3 @@ satori-cli:
     assertStderr: False
     mutated-mutated:
     - [ python3 satori-cli/satori-cli $(input) $(input) ]
-
