@@ -8,6 +8,20 @@ install:
     - [ pip install -r requirements.txt ]
 
 input:
+  valid:
+    - config
+    - run
+    - upload
+    - playbooks
+    - stop-report
+    - status
+    - cron
+    - scan
+    - stop
+    - info
+    - clean
+    - report
+  invalid:
     - value: config
       mutate: radamsa
       mutate_qty: 10
