@@ -48,8 +48,6 @@ input:
 satori-cli:
     assertReturnCode: 0
     assertStderr: False
-    meta:
-    - [ $(input) ]
     mutated-mutated:
     - [ python3 satori-cli/satori-cli $(input) $(input) ]
 
