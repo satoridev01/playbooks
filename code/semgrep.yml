@@ -1,24 +1,21 @@
 settings:
     name: "Static Source Code Analysis with Semgrep"
-    labels: Security Semgrep
+#    labels: Security Semgrep
 
 install:
     assertReturnCode: 0
+    semgrep:
     - [ python3 -m pip install semgrep ]
 
-semgrep:
-    error:
-        assertStdoutContains: Findings
-        # - severity: 1
-        exec:
-        - [ semgrep --config auto --severity ERROR ]
-    warning:
-        assertStdoutContains: Findings
-        # - severity: 3
-        exec:
-        - [ semgrep --config auto --severity WARNING ]
-    info:
-        assertStdoutContains: Findings
-        # - severity: 5
-        exec:
-        - [ semgrep --config auto --severity INFO ]
+error:
+    assertStdoutContains: Findings
+    semgrep:
+    - [ semgrep --config auto --severity ERROR ]
+warning:
+    assertStdoutContains: Findings
+    semgrep:
+    - [ semgrep --config auto --severity WARNING ]
+info:
+    assertStdoutContains: Findings
+    semgrep:
+    - [ semgrep --config auto --severity INFO ]
