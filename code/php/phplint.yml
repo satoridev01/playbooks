@@ -1,0 +1,21 @@
+install:
+  assertReturnCode: 0
+  addRepository:
+  - [ echo "deb https://packages.sury.org/php/ bullseye main" >> /etc/apt/sources.list.d/sury-php.list ]
+  repositoryKey:
+  - [ wget -qO - https://packages.sury.org/php/apt.gpg | apt-key add - ]
+  aptUpdate:
+  - [ apt update ]
+  dependencies:
+  - [ apt install -y --no-install-recommends php8.1 ]
+  download-composer:
+  - [ curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php ]
+  install-composer:
+  - [ php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer ]
+  phplint:
+  - [ composer require overtrue/phplint --dev -vvv ] 
+
+phplint:
+  assertReturnCode: 0
+  exec:
+  - [ vendor/bin/phplint ./ --exclude=vendor ]
