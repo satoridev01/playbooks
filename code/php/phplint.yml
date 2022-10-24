@@ -19,6 +19,6 @@ phplint:
   assertReturnCode: 0
   assertStdout: False
   exec:
-  - [ find . -type f -iname "*.php" -exec php -l {} ]
+  - [ 'find . -type f -iname "*.php" -exec php -l {} \;' ]
   #- [ vendor/bin/phplint ./ --exclude=vendor ]
 
