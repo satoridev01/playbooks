@@ -21,3 +21,4 @@ phplint:
   exec:
   - [ 'find . -type f -iname "*.php" -exec php -l {} | grep -v "No syntax errors detected"' ]
   #- [ vendor/bin/phplint ./ --exclude=vendor ]
+
