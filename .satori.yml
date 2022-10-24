@@ -1,6 +1,2 @@
-#import:
-#  - "code/trufflehog.yml"
-#  - "satori://code/trufflehog.yml"
-
 import:
   - file://code/trufflehog.yml
