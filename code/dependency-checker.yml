@@ -1,9 +1,0 @@
-install:
-    - [
-    wget https://github.com/jeremylong/DependencyCheck/releases/download/v7.1.0/dependency-check-7.1.0-release.zip
-    unzip dependency-check-7.1.0-release.zip
-    ]
-
-dependency-check:
-    execute:
-    - [ ./dependency-check/bin/dependency-check.sh -s ./ ]
