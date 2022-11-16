@@ -1,0 +1,8 @@
+install:
+  npm:
+  - [ apt install -y nodejs npm ]
+
+npm:
+  assertStdout: False
+  audit:
+  - [ npm audit ]
