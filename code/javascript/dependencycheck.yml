@@ -1,0 +1,15 @@
+install:
+  assertReturnCode: 0
+  getDependencyCheck:
+  - [ wget https://github.com/jeremylong/DependencyCheck/releases/download/v7.3.0/dependency-check-7.3.0-release.zip ]
+  getDependencies:
+  - [ apt install -y unzip default-jre ]
+  unzipDependencyCheck:
+  - [ unzip dependency-check-7.3.0-release.zip ]
+  run:
+  - [ dependency-check/bin/dependency-check.sh --scan "./" -f CSV ]
+
+vulnerable:
+  assertStdout: False
+  dependencies:
+  - [ grep HIGHEST dependency-check-report.csv ]
