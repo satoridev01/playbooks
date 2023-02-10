@@ -7,15 +7,15 @@ install:
     - [ python3 -m pip install semgrep ]
 
 error:
-    assertStdoutContains: 0 findings
+    assertStderrContains: 0 findings
     semgrep:
     - [ semgrep --config auto --severity ERROR ]
 warning:
-    assertStdoutContains: 0 findings
+    assertStderrContains: 0 findings
     semgrep:
     - [ semgrep --config auto --severity WARNING ]
 info:
-    assertStdoutContains: 0 findings
+    assertStderrContains: 0 findings
     semgrep:
     - [ semgrep --config auto --severity INFO ]
 
