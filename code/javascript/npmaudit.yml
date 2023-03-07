@@ -2,6 +2,13 @@ install:
   npm:
   - [ apt install -y nodejs npm ]
 
+whereis:
+  assertReturnCode: 0
+  nodejs:
+  - [ whereis nodejs ]
+  npm:
+  - [ whereis npm ]
+  
 npm:
   assertReturnCode: 0
   assertStdout: False
