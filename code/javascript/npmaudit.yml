@@ -3,6 +3,7 @@ install:
   - [ apt install -y nodejs npm ]
 
 npm:
+  assertReturnCode: 0
   assertStdout: False
   audit:
   - [ npm audit ]
