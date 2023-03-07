@@ -13,4 +13,4 @@ npm:
   assertReturnCode: 0
   assertStdout: False
   audit:
-  - [ npm audit ]
+  - [ /usr/bin/npm audit ]
