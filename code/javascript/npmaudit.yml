@@ -3,10 +3,12 @@ install:
   #- [ apt install -y nodejs npm ]
   package-lock-only:
   - [ "if [ -e .package-lock.json ]; then npm i --package-lock-only; fi; ls -l .package-lock.json" ]
-  
+
 npm:
   assertReturnCode: 0
   assertStdout: False
+  install:
+  - [ npm i --package-lock-only ]
   audit:
   - [ /usr/bin/npm audit ]
   auditjson:
