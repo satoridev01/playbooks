@@ -3,13 +3,6 @@ install:
   #- [ apt install -y nodejs npm ]
   package-lock-only:
   - [ "if [ -e .package-lock.json ]; then npm i --package-lock-only; fi" ]
-
-whereis:
-  assertReturnCode: 0
-  nodejs:
-  - [ whereis nodejs ]
-  npm:
-  - [ whereis npm ]
   
 npm:
   assertReturnCode: 0
