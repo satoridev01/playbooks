@@ -1,6 +1,6 @@
-install:
-  npm:
-  - [ apt install -y nodejs npm ]
+#install:
+#  npm:
+#  - [ apt install -y nodejs npm ]
 
 whereis:
   assertReturnCode: 0
