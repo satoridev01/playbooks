@@ -7,5 +7,3 @@ npm:
   assertStdout: False
   audit:
   - [ /usr/bin/npm audit ]
-  auditjson:
-  - [ /usr/bin/npm audit -json ]
