@@ -10,4 +10,4 @@ install:
 testssl:
   assertStdoutEqual: ""
   execute:
-    - [ ./test.sh $(host) ]
+    - [ ./test.sh $(HOST) ]
