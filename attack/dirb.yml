@@ -1,13 +1,12 @@
 settings:
-    labels: "web"
-    priority: 1
-    description: "Brute force web content in a URL"
+  name: "Dirb - web directory brute forcer"
 
 install:
-    - git clone https://salsa.debian.org/pkg-security-team/dirb.git
-    - cd dirb/
-    - bash configure
-    - make
+  assertReturnCode: 0
+  dirb:
+  - [ "git clone https://salsa.debian.org/pkg-security-team/dirb.git; cd dirb/;bash configure; make" ]
 
 dirb:
-    - ./dirb $(url) wordlists/common.txt
+  assertStdout: False
+  common:
+  - [ ./dirb $(URL) wordlists/common.txt ]
