@@ -1,9 +1,0 @@
-settings:
-    # cron: '*/5 * * * ? *'
-    rate: '5 minutes'
-    onfail: '' # todo notify slack/telegram/email
-    assertTimeout: 10 # seconds
-
-tests:
-    execute:
-    - [ curl -s https://www.satori-ci.com/login -w %{time_total} -o/dev/null ]
