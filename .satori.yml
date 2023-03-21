@@ -1,3 +1,0 @@
-import:
-  - "file://code/trufflehog.yml"
-  - "satori://code/semgrep.yml"
