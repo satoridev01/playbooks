@@ -1,4 +1,0 @@
-satori:
-    assertStdoutContains: "Reports &#8211; Satori CI"
-    reports:
-    - [ "curl -s https://www.satori-ci.com/reports/" ]

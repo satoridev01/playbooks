@@ -1,8 +1,0 @@
-import:
-  - import-playbook
-  - satori://test/satori-ci/import-playbook
-
-root-test:
-  assertStdoutEqual: This is the root
-  execute:
-    - [echo "This is the base"]

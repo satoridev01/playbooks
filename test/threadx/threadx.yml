@@ -1,9 +1,0 @@
-install:
-  - [ 
-      git clone https://github.com/azure-rtos/threadx.git
-      cmake -Bbuild -DCMAKE_TOOLCHAIN_FILE=cmake/cortex_m4.cmake -GNinja .
-      cmake --build ./build
-    ]
-
-fuzz:
-  - [ ./threadx ]

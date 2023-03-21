@@ -1,4 +1,0 @@
-test:
-    assertStdoutContains: "Hola Mundo"
-    execute:
-    - [ echo "Hola Mundo" ]
