@@ -1,7 +1,10 @@
+settings:
+  name: "Ping the host and make sure there are no packet loss"
+  
 ping:
     assertStdoutContains: "0.0% packet loss"
-    hosts:
-    - www.satori-ci.com
-    - 3.16.7.14
+    #HOSTS:
+    #- www.satori-ci.com
+    #- 3.16.7.14
     execute: 
-    - [ ping -c $(hosts) ]
+    - [ ping -c $(HOSTS) ]
