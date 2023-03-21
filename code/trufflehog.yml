@@ -1,29 +1,26 @@
 settings:
-    name: "Hardcoded Secrets with Trufflehog"
-    severity": "INFORMATIONAL"
-	description": "Files were found containing hardcoded secrets"
-	mitigation": "Remove the secrets from the code whenever possible"
+  name: "Hardcoded Secrets with Trufflehog"
+  description": "Files were found containing hardcoded secrets"
+  mitigation": "Remove the secrets from the code whenever possible"
 
 install:
-    # build:
-    # - [ apt-get install git golang -y; git clone https://github.com/trufflesecurity/trufflehog.git ] #; cd trufflehog; go build ; ls -la; ./trufflehog ./ ]
-    assertReturnCode: 0
-    exec:
+  assertReturnCode: 0
+  truufflehog3:
     - [ pip install trufflehog3 ]
 
 trufflehog:
-    high:
-        assertStdoutNotContains: HIGH
-        # - severity: 1
-        exec:
-        - [ trufflehog3 filesystem . --no-entropy -s HIGH | sed -e "s/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//" ]
-    medium:
-        assertStdoutNotContains: MEDIUM
-        # - severity: 3
-        exec:
-        - [ trufflehog3 filesystem . --no-entropy -s MEDIUM | sed -e "s/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//" ]
-    low:
-        assertStdoutNotContains: LOW
-        # - severity: 5
-        exec:
-        - [ trufflehog3 filesystem . --no-entropy -s LOW | sed -e "s/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//" ]
+  high:
+    assertStdoutNotContains: HIGH
+    #setSeverity": HIGH
+    exec:
+    - [ trufflehog3 filesystem . --no-entropy -s HIGH | sed -e "s/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//" ]
+  medium:
+    assertStdoutNotContains: MEDIUM
+    #setSeverity: MEDIUM
+    exec:
+    - [ trufflehog3 filesystem . --no-entropy -s MEDIUM | sed -e "s/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//" ]
+  low:
+    assertStdoutNotContains: LOW
+    #setSeverity: LOW
+    exec:
+    - [ trufflehog3 filesystem . --no-entropy -s LOW | sed -e "s/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//" ]
