@@ -1,10 +1,13 @@
 settings:
-  severity: 1
-  output: [0]
-  # - output: report
+  name: "Count the lines of code"
+  severity: 5
 
 install:
+  assertReturnCode: 0
+  cloc:
   - [ apt install -y cloc ]
 
 cloc:
+  assertReturnCode: 0
+  run:
   - [ cloc ./ ]
