@@ -1,3 +1,4 @@
 find_private_key:
-    assertStdoutEqual: ""
-    - [ grep "BEGIN.*PRIVATE KEY" * -r ]
+  setSeverity: HIGH
+  assertStdoutEqual: ""
+  - [ grep "BEGIN.*PRIVATE KEY" * -r ]
