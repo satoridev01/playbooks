@@ -6,7 +6,10 @@ install:
   dirb:
   - [ "git clone https://salsa.debian.org/pkg-security-team/dirb.git; cd dirb/;bash configure; make" ]
 
+wordlist:
+- "wordlists/common.txt"
+
 dirb:
   assertStdout: False
   common:
-  - [ ./dirb $(URL) wordlists/common.txt ]
+  - [ ./dirb $(HOST) $(wordlist) ]
