@@ -11,7 +11,7 @@ install:
 trufflehog:
   high:
     assertStdoutNotContains: HIGH
-    #setSeverity": HIGH
+    #setSeverity: HIGH
     exec:
     - [ trufflehog3 filesystem . --no-entropy -s HIGH | sed -e "s/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//" ]
   medium:
