@@ -16,7 +16,8 @@ install:
 
 host:
   assertReturnCode: 0
-
+  #setSeverity: MEDIUM
+   
   before_siege:
   - [ curl -s https://$(HOST)/login -m 3 ]
 
