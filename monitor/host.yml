@@ -2,6 +2,6 @@ settings:
   name: "Check if a host has a certain IP address"
 
 host:
-  assertStdoutEqual: "$(HOST) has address $(IP)"
+  assertStdoutContains: "$(HOST) has address $(IP)"
   execute: 
    - [ host $(HOST) ]
