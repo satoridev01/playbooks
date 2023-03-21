@@ -1,5 +1,5 @@
 settings:
-  description: "There are no open ports listening"
+  name: "There are no open ports listening"
 
 netstat:
   assertStdoutNotContains: "LISTEN"
