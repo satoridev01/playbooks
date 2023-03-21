@@ -1,22 +1,25 @@
 settings:
-    name: "Static Source Code Analysis with Semgrep"
+    name: "Semgrep: static source code analysis"
 
 install:
-    assertReturnCode: 0
-    semgrep:
+  assertReturnCode: 0
+  semgrep:
     - [ python3 -m pip install semgrep ]
 
 error:
-    assertStdout: False
-    semgrep:
-    - [ semgrep --config auto --severity ERROR -q ]
+  #setSeverity: HIGH
+  assertStdout: False
+  semgrep:
+  - [ semgrep --config auto --severity ERROR -q ]
     
 warning:
-    assertStdout: False
-    semgrep:
-    - [ semgrep --config auto --severity WARNING -q ]
+  #setSeverity: MEDIUM
+  assertStdout: False
+  semgrep:
+  - [ semgrep --config auto --severity WARNING -q ]
     
 info:
-    assertStdout: False
-    semgrep:
-    - [ semgrep --config auto --severity INFO -q ]
+  #setSeverity: INFORMATIONAL
+  assertStdout: False
+  semgrep:
+  - [ semgrep --config auto --severity INFO -q ]
