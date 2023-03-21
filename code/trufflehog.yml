@@ -1,7 +1,8 @@
 settings:
     name: "Hardcoded Secrets with Trufflehog"
-    description: "Files were found containing hardcoded secrets"
-    recommendation: "Remove the secrets from the code whenever possible"
+    severity": "INFORMATIONAL"
+	description": "Files were found containing hardcoded secrets"
+	mitigation": "Remove the secrets from the code whenever possible"
 
 install:
     # build:
