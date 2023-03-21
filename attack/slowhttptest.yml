@@ -1,3 +1,11 @@
+settings:
+  name: "SlowHTTPTest - Common low-bandwidth application layer Denial of Service attacks"
+  description: "Tests:
+                - Slowloris
+                - Slow HTTP POST
+                - Slow Read attack (based on TCP persist timer exploit) by draining concurrent connections pool
+                - Apache Range Header attack by causing very significant memory and CPU usage on the server."
+
 install:
   assertReturnCode: 0
   slowhttptest:
@@ -5,7 +13,8 @@ install:
 
 host:
   assertReturnCode: 0
-
+  #setSeverity: MEDIUM
+  
   before_slowhttptest:
   - [ curl -s https://$(HOST) -w 3 ]
 
