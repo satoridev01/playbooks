@@ -5,7 +5,7 @@ settings:
 
 install:
   assertReturnCode: 0
-  truufflehog3:
+  trufflehog:
     - [ pip install trufflehog3 ]
 
 trufflehog:
