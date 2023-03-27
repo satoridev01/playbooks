@@ -19,10 +19,10 @@ host:
   #setSeverity: MEDIUM
    
   before_siege:
-  - [ curl -s https://$(HOST)/login -m 3 ]
+  - [ curl -s $(URL) -m 3 ]
 
   siege:
-  - [ siege -c 100 -t 30s https://$(HOST)/login ]
+  - [ siege -c 100 -t 30s $(URL) ]
 
   after_siege:
-  - [ curl -s https://$(HOST)/login -m 3 ]
+  - [ curl -s $(URL) -m 3 ]
