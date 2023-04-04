@@ -23,6 +23,9 @@ host:
 
   siege:
   - [ siege -c 100 -t 30s $(URL) ]
+  
+  output:
+  - [ "set +f; cat siege.*" ]
 
   after_siege:
   - [ curl -s $(URL) -m 3 ]
