@@ -12,4 +12,4 @@ wordlist:
 dirb:
   assertStdout: False
   common:
-  - [ ./dirb $(HOST) $(wordlist) ]
+  - [ ./dirb $(URL) $(wordlist) ]
