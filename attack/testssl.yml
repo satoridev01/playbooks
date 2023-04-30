@@ -1,13 +1,16 @@
+settings:
+  name: "Testssl checks a server's service on any port for the support of TLS/SSL ciphers, protocols as well as recent cryptographic flaws"
+  
 install:
-  - [
-    apt-get update
-    apt-get -y install testssl.sh
-    echo "testssl -oC output.csv \$1 > /dev/null" > test.sh
-    echo "grep 'LOW\|MEDIUM\|HIGH\|CRITICAL' output.csv" >> test.sh
-    chmod 700 test.sh
-    ]
+  assertReturnCode: 0
+  testssl:
+  - [ apt install -y testssl.sh ] 
 
 testssl:
-  assertStdoutEqual: ""
-  execute:
-    - [ ./test.sh $(HOST) ]
+  assertReturnCode: 0
+  run:
+  - [ testssl -p -s -f -U -S -P --csvfile=log $(URL) ]
+  log:
+    assertStdoutNotRegex: ("LOW"|"MEDIUM"|"HIGH"|"CRITICAL")
+    run:
+    - [ cat log ]
