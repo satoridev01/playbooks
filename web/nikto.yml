@@ -1,0 +1,13 @@
+settings:
+  name: "Nikto tests against web servers for multiple security threats, including over 6700 potentially dangerous files/programs"
+
+install:
+  assertReturnCode: 0
+  wget:
+  - [ wget -qO nikto.tar.gz https://github.com/sullo/nikto/archive/master.tar.gz ]
+  tar:
+  - [ tar xf nikto.tar.gz --strip-components=2 -C ./ nikto-master/program ]
+
+nikto:
+  run:
+  - [ ./nikto.pl -host $(URL) ]
