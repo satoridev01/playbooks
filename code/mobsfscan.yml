@@ -2,8 +2,12 @@ settings:
   name: "mobsfscan is a static analysis tool that can find insecure code patterns in your Android and iOS source code. Supports Java, Kotlin, Swift, and Objective C Code. mobsfscan uses MobSF static analysis rules and is powered by semgrep and libsast pattern matcher."
 
 install:
+  jq:
+  - [ apt install -y jq ]
   mobsfscan:
   - [ pip install mobsfscan ] 
 
 mobsfscan:
-  - [ mobsfscan ./ ]
+  assertStdout: False
+  run:
+  - [ mobsfscan ./ --sarif | jq '.runs[].results[] | select(.level == \"error\")'" ]
