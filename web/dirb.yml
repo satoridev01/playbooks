@@ -4,12 +4,9 @@ settings:
 install:
   assertReturnCode: 0
   dirb:
-  - [ "git clone https://salsa.debian.org/pkg-security-team/dirb.git; cd dirb/;bash configure; make" ]
-
-wordlist:
-- "wordlists/common.txt"
+  - [ apt -y install dirb ]
 
 dirb:
   assertStdout: False
   common:
-  - [ ./dirb $(URL) $(wordlist) ]
+  - [ dirb $(URL) /usr/share/dirb/wordlists/common.txt -S -r -i ]
