@@ -1,0 +1,9 @@
+settings:
+  name: "sslscan queries SSL/TLS services (such as HTTPS) and reports the protocol versions, cipher suites, key exchanges, signature algorithms, and certificates in use."
+
+install:
+  sslscan:
+  - [  apt install -y sslscan ]
+
+sslscan:
+  - [ sslscan --xml="$FILENAME-$HOST-sslscan.xml" $(HOST) ]
