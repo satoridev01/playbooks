@@ -3,7 +3,7 @@ settings:
 
 install:
   assertReturnCode: 0
-  pipflake:
+  flake8:
   - [ pip install -y flake8 ]
   
 flake8:
