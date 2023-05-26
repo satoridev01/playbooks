@@ -1,3 +1,6 @@
+settings:
+  name: "Assert that there is no Python command execution on the code"
+  
 exec:
   assertStdout: ""
   execute:
