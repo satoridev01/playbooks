@@ -1,5 +1,5 @@
 settings:
-  name: "Nikto tests against web servers for multiple security threats, including over 6700 potentially dangerous files/programs"
+  name: "Tests web servers for over 6700 security threats"
 
 install:
   assertReturnCode: 0
@@ -9,5 +9,7 @@ install:
   - [ tar xf nikto.tar.gz --strip-components=2 -C ./ nikto-master/program ]
 
 nikto:
+  assertReturnCode: 0
+  assertStdout: False
   run:
   - [ ./nikto.pl -host $(URL) ]
