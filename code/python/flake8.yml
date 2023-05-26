@@ -1,0 +1,12 @@
+settings:
+  name: "Flake8 is a wrapper around PyFlakes, pycodestyle and Ned Batchelder’s McCabe script"
+
+install:
+  assertReturnCode: 0
+  flake8:
+  - [ pip install flake8 ]
+  
+flake8:
+  assertStdout: False
+  run:
+  - [ flake8 * ]
