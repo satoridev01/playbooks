@@ -1,5 +1,6 @@
 settings:
-  name: "sslscan queries SSL/TLS services (such as HTTPS) and reports the protocol versions, cipher suites, key exchanges, signature algorithms, and certificates in use."
+  name: "Identify security issues related to SSL/TLS/HTTPS services"
+  description: "It reports the protocol versions, cipher suites, key exchanges, signature algorithms, and certificates in use."
 
 install:
   sslscan:
