@@ -1,5 +1,5 @@
 settings:
-  name: "Testssl checks a server's service on any port for the support of TLS/SSL ciphers, protocols as well as recent cryptographic flaws"
+  name: "Checks TLS/SSL ciphers and protocols for security flaws"
   
 install:
   assertReturnCode: 0
