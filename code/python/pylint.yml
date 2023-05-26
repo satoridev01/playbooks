@@ -8,5 +8,5 @@ install:
   
 pylint:
   assertStdout: False
-  execute:
+  run:
   - [ pylint * ]
