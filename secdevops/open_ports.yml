@@ -1,4 +1,12 @@
-netstat-listen:
-  assertStdoutNotContains: 'LISTEN'
-  execute:
-  - [ apt-get install net-tools -y >>/dev/null; netstat -atupen ]
+settings:
+  name: Are there any ports listening?
+
+install:
+  assertReturnCode: 0
+  net-tools:
+  - [ apt-get install net-tools -y ]
+
+netstat:
+  assertStdoutNotContains: "LISTEN"
+  listen:
+  - [ netstat -atupen ]
