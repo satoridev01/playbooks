@@ -1,4 +1,0 @@
-how-many-do-you-see:
-    assertStdoutEqual: "$(cant)"
-    execute:
-    - [ nmap $(host) -p 80,443 | grep 'open' | wc -l | tr -d " " ]
