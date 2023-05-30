@@ -7,25 +7,18 @@ settings:
                 throughput, concurrency and how many times the server returned responses. 
                 The tool has three modes, in which it can operate – regression, internet simulation and brute force.
                 Siege must only be ran against servers you own or on such you have explicit permission to test. "
-                
+  mitigation: "Use an anti DDoS service such as CloudFlare to prevent network attacks"
 install:
   assertReturnCode: 0
-
   siege:
   - [ apt install -y siege ]
-
 host:
   assertReturnCode: 0
-  #setSeverity: MEDIUM
-   
   before_siege:
   - [ curl -s $(URL) -m 3 ]
-
   siege:
   - [ siege -c 100 -t 30s $(URL) ]
-  
-  output:
+  results:
   - [ "set +f; cat siege.*" ]
-
   after_siege:
   - [ curl -s $(URL) -m 3 ]
