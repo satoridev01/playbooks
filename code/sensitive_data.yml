@@ -1,4 +1,4 @@
 sensitive_information:
-  assertStdout: ""
+  assertStdout: False
   execute:
   - [ grep -rHI "username\|password\|passwd\|privatekey\|secret\|PASSWD\|PASSWORD\|cvv\|CVV\|token" ./ ]
