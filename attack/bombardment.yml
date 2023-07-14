@@ -17,7 +17,7 @@ host:
   - [ curl -s $(URL) -m 10 ]
 
   bombardment:
-  - [ bombardment url 100 5 3 1 ]
+  - [ bombardment $(URL) 100 5 3 1 ]
 
   after_bombardment:
   - [ curl -s $(URL) -m 10 ]
