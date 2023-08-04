@@ -3,6 +3,8 @@ settings:
   
 install:
   assertReturnCode: 0
+  update:
+  - [ apt update ]
   testssl:
   - [ apt install -y testssl.sh ] 
 
