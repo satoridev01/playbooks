@@ -13,7 +13,6 @@ run:
 
 scout:
   assertReturnCode: 0
-  # satori-cli report UUID output --test="scout.output"
   output:
     assertStdout: True
     js:
