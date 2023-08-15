@@ -10,6 +10,8 @@ settings:
   mitigation: "Use an anti DDoS service such as CloudFlare to prevent network attacks"
 install:
   assertReturnCode: 0
+  curl:
+  - [ apt install -y curl ]
   siege:
   - [ apt install -y siege ]
 host:
