@@ -1,0 +1,7 @@
+settings:
+  name: Verify that the ServerCertificateValidationCallback is not set to True
+
+test:
+  assertStdout: False
+  ServerCertificateValidationCallback:
+  - [ grep ServerCertificateValidationCallback.*true * -R --include="*.vb" ]
