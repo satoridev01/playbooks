@@ -5,7 +5,7 @@ settings:
 install:
   assertReturnCode: 0
   cloc:
-  - [ apt install -y cloc ]
+  - [ apt install -qq -y cloc ]
 
 cloc:
   #setSeverity: INFORMATIONAL
