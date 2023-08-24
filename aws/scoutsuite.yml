@@ -6,7 +6,7 @@ install:
   scoutsuite:
   - [ pip install scoutsuite ]
   jq:
-  - [ apt install -y jq ]
+  - [ apt install -qq -y jq ]
 
 run:
 - [ scout aws --access-key-id $(KEY_ID) --secret-access-key $(KEY_SECRET) ]
