@@ -5,8 +5,10 @@ settings:
 
 install:
   assertReturnCode: 0
+  git:
+  - [ apt install -y git ]
   trufflehog:
-    - [ pip install trufflehog3 ]
+  - [ pip install trufflehog3 ]
 
 trufflehog:
   high:
