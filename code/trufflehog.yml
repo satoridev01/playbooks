@@ -15,14 +15,14 @@ trufflehog:
     assertStdoutNotContains: HIGH
     #setSeverity: HIGH
     exec:
-    - [ trufflehog3 filesystem . --no-entropy -s HIGH | sed -e "s/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//" ]
+    - [ trufflehog3 filesystem . --no-entropy -s HIGH | sed -e "s/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//" | cut -b -200 ]
   medium:
     assertStdoutNotContains: MEDIUM
     #setSeverity: MEDIUM
     exec:
-    - [ trufflehog3 filesystem . --no-entropy -s MEDIUM | sed -e "s/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//" ]
+    - [ trufflehog3 filesystem . --no-entropy -s MEDIUM | sed -e "s/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//" | cut -b -200 ]
   low:
     assertStdoutNotContains: LOW
     #setSeverity: LOW
     exec:
-    - [ trufflehog3 filesystem . --no-entropy -s LOW | sed -e "s/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//" ]
+    - [ trufflehog3 filesystem . --no-entropy -s LOW | sed -e "s/~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~//" | cut -b -200 ]
