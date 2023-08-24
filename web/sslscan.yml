@@ -4,7 +4,7 @@ settings:
 
 install:
   sslscan:
-  - [  apt install -y sslscan ]
+  - [  apt install -qq -y sslscan ]
 
 sslscan:
   - [ sslscan --xml="$FILENAME-$HOST-sslscan.xml" $(HOST) ]
