@@ -4,7 +4,7 @@ settings:
 
 install:
   jq:
-  - [ apt install -y jq ]
+  - [ apt install -qq -y jq ]
   mobsfscan:
   - [ pip install mobsfscan ] 
 
