@@ -6,7 +6,7 @@ install:
   update:
   - [ apt update ]
   dirb:
-  - [ apt -y install dirb ]
+  - [ apt install -qq -y dirb ]
 
 dirb:
   assertStdout: False
