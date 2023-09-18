@@ -8,7 +8,7 @@ install:
   wget:
   - [ apt install -qq -y wget ]
   cpan:
-  - [ apt install -qq -y cpanminus libssl-dev zlib1g-dev; cpanm Time::Local ; cpanm Net::hostent ; cpanm Time::HiRes ; cpanm Net::SSLeay ; cpanm IO::Socket::SSL ]
+  - [ apt install -qq -y build-essential cpanminus libssl-dev zlib1g-dev; cpanm Time::Local ; cpanm Net::hostent ; cpanm Time::HiRes ; cpanm Net::SSLeay ; cpanm IO::Socket::SSL ]
   find:
   - [ "find /root/.cpanm/work -type f -name 'build.log' -print0 | xargs -0 cat" ]
   nikto:
