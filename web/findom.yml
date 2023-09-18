@@ -4,6 +4,8 @@ settings:
 install:
   git:
   - [ apt install -qq -y git ]
+  trust:
+  - [ ssh-keyscan github.com >> ~/.ssh/known_hosts ]
   findom:
   - [ git clone https://github.com/dwisiswant0/findom-xss.git --recurse-submodules ]
 
