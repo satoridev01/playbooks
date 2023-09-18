@@ -1,6 +1,6 @@
 settings:
   name: "FinDOM-XSS is a tool that allows you to finding for possible and/ potential DOM based XSS vulnerability in a fast manner."
-  timeout: 500
+  #timeout: 500
 
 install:
   git:
