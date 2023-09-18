@@ -6,7 +6,7 @@ install:
   wget:
   - [ apt install -qq -y wget ]
   cpan:
-  - [ apt install -qq -y cpanminus; cpanm Time::Local ; cpanm Net::hostent ; cpanm Time::HiRes ; cpanm Net::SSLeay ; cpanm IO::Socket::SSL ]
+  - [ apt install -qq -y cpanminus libssl-dev; cpanm Time::Local ; cpanm Net::hostent ; cpanm Time::HiRes ; cpanm Net::SSLeay ; cpanm IO::Socket::SSL ]
   nikto:
   - [ wget -qO nikto.tar.gz https://github.com/sullo/nikto/archive/master.tar.gz ]
   tar:
