@@ -7,6 +7,10 @@ install:
   - [ apt install -qq -y wget ]
   cpan:
   - [ apt install -qq -y cpanminus libssl-dev zlib1g-dev; cpanm Time::Local ; cpanm Net::hostent ; cpanm Time::HiRes ; cpanm Net::SSLeay ; cpanm IO::Socket::SSL ]
+  verifySSLeay:
+  - [ perl -MNet::SSLeay -e 'print "$Net::SSLeay::VERSION";' ]
+  verifySSL:
+  - [ perl -MIO::Socket::SSL -e 'print "$IO::Socket::SSL::VERSION";' ]
   nikto:
   - [ wget -qO nikto.tar.gz https://github.com/sullo/nikto/archive/master.tar.gz ]
   tar:
