@@ -1,0 +1,11 @@
+settings:
+  name: "FinDOM-XSS is a tool that allows you to finding for possible and/ potential DOM based XSS vulnerability in a fast manner."
+
+install:
+  git:
+  - [ apt install -qq -y git ]
+  findom:
+  - [ git clone https://github.com/dwisiswant0/findom-xss.git --recurse-submodules ]
+
+findom:
+- [ cd findom-xss ; ./findom-xss.sh ${URL) ]
