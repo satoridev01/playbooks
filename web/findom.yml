@@ -8,4 +8,6 @@ install:
   - [ git clone https://github.com/dwisiswant0/findom-xss.git --recurse-submodules ]
 
 findom:
-- [ cd findom-xss ; ./findom-xss.sh $(URL) ]
+  assertStdoutContains: "Found nothing"
+  found:
+  - [ cd findom-xss ; ./findom-xss.sh $(URL) ]
