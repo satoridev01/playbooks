@@ -7,19 +7,16 @@ install:
     - [ python3 -m pip install semgrep ]
 
 error:
-  #setSeverity: HIGH
   assertStdout: False
   semgrep:
   - [ semgrep --config auto --severity ERROR -q ]
     
 warning:
-  #setSeverity: MEDIUM
   assertStdout: False
   semgrep:
   - [ semgrep --config auto --severity WARNING -q ]
     
 info:
-  #setSeverity: INFORMATIONAL
   assertStdout: False
   semgrep:
   - [ semgrep --config auto --severity INFO -q ]
