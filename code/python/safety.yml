@@ -1,4 +1,7 @@
-# https://github.com/pyupio/safety
+settings:
+  name: "Safety is a tool that checks Python dependencies for known security vulnerabilities using a provided requirements.txt file."
+  description: "URL: https://github.com/pyupio/safety"
+  
 install:
   - [ pip install safety ]
 
