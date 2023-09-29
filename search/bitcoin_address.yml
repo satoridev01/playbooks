@@ -1,3 +1,7 @@
-find_bitcoin_address:
+settings:
+  name: "Find Bitcoin addresses within files"
+
+find:
     assertStdoutEqual: ""
+    bitcoin_address:
     - [ grep -e "(bc1|[13])[a-zA-HJ-NP-Z0-9]{25,39}$" * -rI ]
