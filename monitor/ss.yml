@@ -1,7 +1,0 @@
-install:
-    assertStdoutEqual: ""
-    - [ 
-        ss -tpH
-        $(install)
-        ss -tpH
-      ]
