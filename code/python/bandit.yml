@@ -1,0 +1,10 @@
+settings:
+  name: "Find common security issues in Python code"
+
+install:
+- [ pip install bandit ]
+
+bandit:
+  assertStdoutContains: "No issues identified"
+  run:
+  - [ bandit -r ./ ] 
