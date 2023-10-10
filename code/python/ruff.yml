@@ -1,0 +1,9 @@
+settings:
+  name: "Python linter"
+
+install:
+- [ pip3 install ruff ]
+
+ruff:
+  run:
+  - [ ruff check /tmp ]
