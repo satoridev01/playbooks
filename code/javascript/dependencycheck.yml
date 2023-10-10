@@ -1,3 +1,6 @@
+settings:
+  name: "Detect publicly disclosed vulnerabilities contained within a project's dependencies"
+  
 install:
   assertReturnCode: 0
   getDependencyCheck:
