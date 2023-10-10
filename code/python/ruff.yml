@@ -5,6 +5,7 @@ install:
 - [ pip3 install ruff ]
 
 ruff:
+  assertStdout: False
   assertStderr: False
   run:
   - [ ruff check ./ ]
