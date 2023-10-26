@@ -1,10 +1,10 @@
 settings:
-  name: "Ping the host and make sure there are no packet loss"
-  
+  name: "Ping a host with no packet loss"
+
+install:
+- [ apt-get install iputils-ping -y -qq ]
+
 ping:
     assertStdoutContains: "0.0% packet loss"
-    #HOSTS:
-    #- www.satori-ci.com
-    #- 3.16.7.14
     execute: 
-    - [ ping -c $(HOSTS) ]
+    - [ ping -c $(HOST) ]
