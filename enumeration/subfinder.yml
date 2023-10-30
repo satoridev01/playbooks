@@ -1,0 +1,16 @@
+settings:
+  name: Subfinder is a subdomain discovery tool that returns valid subdomains for websites using passive online sources.
+
+install:
+  wget:
+  - [ apt install -qq -y wget ]
+  go:
+  - [ wget -q https://golang.org/dl/go1.20.linux-amd64.tar.gz ] 
+  - [ tar -C /usr/local -xzf go1.20.linux-amd64.tar.gz ]
+  - [ ln -s /usr/local/go/bin/go /usr/local/bin/go ]
+  - [ ln -s /usr/local/go/bin/gofmt /usr/local/bin/gofmt ]
+  subfinder:
+  - [ go install github.com/projectdiscovery/subfinder/v2/cmd/subfinder@latest ]
+
+subfinder:
+- [ /root/go/bin/subfinder -d $(DOMAIN) ]
