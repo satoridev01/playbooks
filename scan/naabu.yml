@@ -1,0 +1,16 @@
+settings:
+  name: Naabu is a Go port scanning tool that performs fast SYN/CONNECT/UDP enumeration of valid ports for hosts
+
+install:
+  dependencies:
+  - [ apt install -qq -y libpcap-dev build-essential wget ] 
+  go:
+  - [ wget -q https://golang.org/dl/go1.20.linux-amd64.tar.gz ] 
+  - [ tar -C /usr/local -xzf go1.20.linux-amd64.tar.gz ]
+  - [ ln -s /usr/local/go/bin/go /usr/local/bin/go ]
+  - [ ln -s /usr/local/go/bin/gofmt /usr/local/bin/gofmt ]
+  naabu:
+  - [ go install github.com/projectdiscovery/naabu/v2/cmd/naabu@latest ]
+
+naabu:
+- [ /root/go/bin/naabu -host $(DOMAIN) ]
