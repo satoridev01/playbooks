@@ -1,0 +1,21 @@
+settings:
+  name: Get all urls of a domain
+
+install:
+  wget:
+  - [ apt install -qq -y wget git ]
+  go:
+  - [ wget -q https://go.dev/dl/go1.21.3.linux-amd64.tar.gz ]
+  - [ tar -C /usr/local -xzf go1.21.3.linux-amd64.tar.gz ]
+  - [ ln -s /usr/local/go/bin/go /usr/local/bin/go ]
+  gauplus:
+  - [ go install github.com/bp0lr/gauplus@latest ]
+  nuclei:
+  - [ go install github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest ]
+  3p-templates:
+  - [ git clone https://github.com/panch0r3d/nuclei-templates.git ]
+
+gauplus:
+- [ /root/go/bin/gauplus -providers commoncrawl -o output $(DOMAIN) ]
+nuclei:
+- [ /root/go/bin/nuclei -l output -t ./nuclei-templates/email-extraction.yaml ]
