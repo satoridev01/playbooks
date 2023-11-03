@@ -1,5 +1,5 @@
 settings:
-  name: Get all urls of a domain
+  name: Get all urls of a domain and search for email addresses
 
 install:
   wget:
