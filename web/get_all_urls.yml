@@ -1,0 +1,18 @@
+settings:
+  name: Get all urls of a domain
+
+install:
+  wget:
+  - [ apt install -qq -y wget git ]
+  go:
+  - [ wget -q https://go.dev/dl/go1.21.3.linux-amd64.tar.gz ]
+  - [ tar -C /usr/local -xzf go1.21.3.linux-amd64.tar.gz ]
+  - [ ln -s /usr/local/go/bin/go /usr/local/bin/go ]
+  gauplus:
+  - [ go install github.com/bp0lr/gauplus@latest ]
+
+gauplus:
+  help:
+  - [ /root/go/bin/gauplus -h ]
+  run:
+  - [ /root/go/bin/gauplus -providers commoncrawl $(DOMAIN) ]
