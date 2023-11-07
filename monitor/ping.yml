@@ -7,4 +7,4 @@ install:
 ping:
     assertStdoutContains: "0.0% packet loss"
     execute: 
-    - [ ping -c $(HOST) ]
+    - [ ping -c 4 $(HOST) ]
