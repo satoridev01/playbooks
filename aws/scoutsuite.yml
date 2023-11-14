@@ -1,29 +1,19 @@
 settings:
-  name: Scout suite for AWS
+  name: "Multi-cloud security-auditing tool that gathers configuration data for manual inspection and highlights risk areas."
 
 install:
-  assertReturnCode: 0
   scoutsuite:
   - [ pip install scoutsuite ]
   jq:
   - [ apt install -qq -y jq ]
 
-run:
-- [ scout aws --access-key-id $(KEY_ID) --secret-access-key $(KEY_SECRET) ]
-
 scout:
-  assertReturnCode: 0
+  run:
+  - [ scout aws --access-key-id $(KEY_ID) --secret-access-key $(KEY_SECRET) ]
   output:
-    assertStdout: True
-    js:
-    - [ "set +f; cat scoutsuite-report/scoutsuite-results/scoutsuite_results_aws-*.js" ]
+  - [ "set +f; cat scoutsuite-report/scoutsuite-results/scoutsuite_results_aws-*.js" ]
   results:
     assertStdout: False
-    # assertStdout:
-    # - value: False
-    # - severity: 1/4
-    # - count:
-    # - [ tail -n +2 scoutsuite-report/scoutsuite-results/scoutsuite_results_aws-981612666546.js | jq '.services[].findings[] | select(.level == "warning")'|grep description|wc -l ]
     danger:
     - [ "tail -n +2 scoutsuite-report/scoutsuite-results/scoutsuite_results_aws-*.js | jq '.services[].findings[] | select(.level == \"danger\")'" ]
     # warning:
