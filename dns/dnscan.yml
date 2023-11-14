@@ -1,0 +1,16 @@
+settings:
+  name: "Wordlist-based DNS subdomain scanner."
+  description: "The script will first try to perform a zone transfer using each of the target domain's nameservers. If this fails, it will lookup TXT and MX records for the domain, and then perform a recursive subdomain scan using the supplied wordlist."
+
+install:
+  git:
+  - [ apt install -qq -y git ]
+  dnscan:
+  - [ git clone https://github.com/rbsec/dnscan.git ]
+  requirements:
+  - [ pip install -r dnscan/requirements.txt ]
+
+help:
+- [ python3 dnscan/dnscan.py -h ]
+dnscan:
+- [ python3 dnscan/dnscan.py -d $(DOMAIN) ]

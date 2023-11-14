@@ -1,0 +1,13 @@
+settings:
+  name: Enumerate subdomains on a target domain through passive reconnaissance and dictionary scan
+
+install:
+  git:
+  - [ apt install -qq -y git ]
+  knock:
+  - [ git clone https://github.com/guelfoweb/knock.git ]
+  requirements:
+  - [ pip3 install -r knock/requirements.txt ]
+
+knock:
+- [ "echo $(DOMAIN) | python3 knock/knockpy.py" ]
