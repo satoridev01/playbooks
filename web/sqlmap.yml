@@ -1,7 +1,7 @@
 settings:
   name: "sqlmap is an open source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws"
   # Example: 
-  # satori run sqlmap.yml --data='{"URL":"http://testphp.vulnweb.com/listproducts.php?cat=1"}' --output
+  # satori run satori://web/sqlmap.yml --data='{"URL":"http://testphp.vulnweb.com/listproducts.php?cat=1"}' --output
 
 install:
   git:
