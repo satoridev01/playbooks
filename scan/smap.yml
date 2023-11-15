@@ -1,6 +1,7 @@
 settings:
   name: "A port scanner built with shodan.io's free API"
-  description: 'Example: satori run satori://scan/smap.yml --data=''{"HOST":"satori.ci"}'' --output'
+  # Example: 
+  # satori run satori://scan/smap.yml --data='{"HOST":"satori.ci"}' --output
 
 install:
   wget:

@@ -1,6 +1,7 @@
 settings:
   name: "Crawl and spider a website"
-  description: "Example: satori run satori://web/katana.yml --data='{\"URL\":\"satori.ci\"}' --output"
+  # Example: 
+  # satori run satori://web/katana.yml --data='{"URL":"satori.ci"}' --output
 
 install:
   dependencies:
