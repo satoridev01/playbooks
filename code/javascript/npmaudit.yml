@@ -2,6 +2,8 @@ settings:
   name: "Scan your NPM project for vulnerabilities"
   
 install:
+  npm:
+  - [ apt install -qq -y npm ]
   package-lock-only:
   - [ "if [ ! -e package-lock.json ]; then npm i --package-lock-only; fi; ls -l package-lock.json" ]
 
