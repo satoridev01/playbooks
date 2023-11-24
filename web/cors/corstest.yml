@@ -1,0 +1,18 @@
+settings:
+  name: "CORS Test: misconfiguration scanner"
+  # source: https://github.com/RUB-NDS/CORStest
+  # example: satori run corstest.yml --data='{"URL":"https://satori.ci"}' --output --json | jq  -r 'select(.path=="CORStest:run").output.stdout' | base64 -d
+
+install:
+  git:
+  - [ apt install -qq -y git ]
+  corstest:
+  - [ git clone https://github.com/RUB-NDS/CORStest.git --depth 1 ]
+  infile:
+  - [ echo "$(URL)" > infile ]
+
+CORStest:
+  help:
+  - [ python3 CORStest/corstest.py --help ] 
+  run:
+  - [ python3 CORStest/corstest.py infile ]
