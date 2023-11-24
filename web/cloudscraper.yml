@@ -1,0 +1,17 @@
+settings:
+  name: "Cloud Scraper enumerates targets in search of cloud resources. S3 Buckets, Azure Blobs, Digital Ocean Storage Space"
+  # source: https://github.com/jordanpotti/cloudscraper
+  # example: satori run cloudscraper.yml --output --data='{"URL":"https://satori.ci"}'
+
+install:
+  dependencies:
+  - [ apt install -qq -y git ]
+  cloudscraper:
+  - [ "git clone https://github.com/jordanpotti/CloudScraper.git --depth 1;
+       pip3 install -r CloudScraper/requirements.txt "]
+
+help:
+- [ python3 CloudScraper/CloudScraper.py --help ]
+
+cloudscraper:
+- [ python3 CloudScraper/CloudScraper.py -u $(URL) ]
