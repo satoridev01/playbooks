@@ -5,7 +5,7 @@ install:
   dependencies:
   - [ apt install -qq -y unzip default-jre wget ]
   dependency-check:
-  - [ wget https://github.com/jeremylong/DependencyCheck/releases/download/v7.3.0/dependency-check-7.3.0-release.zip ; unzip dependency-check-7.3.0-release.zip ]
+  - [ wget -q https://github.com/jeremylong/DependencyCheck/releases/download/v7.3.0/dependency-check-7.3.0-release.zip ; unzip dependency-check-7.3.0-release.zip ]
 
 help:
 - [ dependency-check/bin/dependency-check.sh --help ]
