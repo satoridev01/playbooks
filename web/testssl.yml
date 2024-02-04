@@ -6,7 +6,7 @@ install:
   update:
   - apt update
   testssl:
-  - apt install -qq -y testssl.sh
+  - apt install -qy testssl.sh
 
 testssl:
   assertReturnCode: 0
