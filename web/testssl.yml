@@ -4,15 +4,15 @@ settings:
 install:
   assertReturnCode: 0
   update:
-  - [ apt update ]
+  - apt update
   testssl:
-  - [ apt install -qq -y testssl.sh ] 
+  - apt install -qq -y testssl.sh
 
 testssl:
   assertReturnCode: 0
   run:
-  - [ testssl -p -s -f -U -S -P --csvfile=log $(URL) ]
+  - testssl -p -s -f -U -S -P --csvfile=log ${{URL}}
   log:
     assertStdoutNotRegex: ("LOW"|"MEDIUM"|"HIGH"|"CRITICAL")
     run:
-    - [ cat log ]
+    - cat log
