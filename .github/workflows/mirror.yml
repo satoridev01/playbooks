@@ -18,8 +18,7 @@ jobs:
         with:
           role-to-assume: ${{ vars.ROLE }}
           aws-region: ${{ secrets.AWS_REGION }}
-      - uses: jakejarvis/s3-sync-action@master
-        with:
-          args: --delete --exclude '.git*' --exclude 'README.md'
+      - name: Sync playbooks to S3
+        run: aws s3 sync . s3://$BUCKET --delete --exclude '.git*' --exclude 'README.md'
         env:
-          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+          BUCKET: ${{ secrets.AWS_S3_BUCKET }}
