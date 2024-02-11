@@ -1,5 +1,5 @@
 settings:
-  name: Subfinder is a subdomain discovery tool that returns valid subdomains for websites using passive online sources.
+  name: "Discover valid subdomains using passive online sources"
   image: golang
 
 subfinder:
