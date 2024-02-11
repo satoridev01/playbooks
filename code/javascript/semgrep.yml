@@ -4,7 +4,7 @@ settings:
   priority: 2
 
 install:
-  - [ python3 -m pip install semgrep ]
+  - python3 -m pip install semgrep
 
 semgrep-javascript:
-  - [ semgrep --config "p/javascript" ]
+  - semgrep --config "p/javascript"
