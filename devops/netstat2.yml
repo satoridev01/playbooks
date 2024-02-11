@@ -1,7 +1,11 @@
 settings:
   name: "There are no open ports listening"
 
+
+install:
+- apt -qy install net-tools
+
 netstat:
   assertStdoutNotContains: "LISTEN"
-  execute:
-  - [ apt-get install net-tools ; netstat -atupen ]
+  run:
+  - netstat -atupen
