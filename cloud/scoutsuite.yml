@@ -3,18 +3,18 @@ settings:
 
 install:
   scoutsuite:
-  - [ pip install scoutsuite ]
+  - pip install scoutsuite
   jq:
-  - [ apt install -qq -y jq ]
+  - apt install -qy jq
 
 scout:
   run:
-  - [ scout aws --access-key-id $(KEY_ID) --secret-access-key $(KEY_SECRET) ]
+  - scout aws --access-key-id ${{KEY_ID}} --secret-access-key ${{KEY_SECRET}}
   output:
-  - [ "set +f; cat scoutsuite-report/scoutsuite-results/scoutsuite_results_aws-*.js" ]
+  - "set +f; cat scoutsuite-report/scoutsuite-results/scoutsuite_results_aws-*.js"
   results:
     assertStdout: False
     danger:
-    - [ "tail -n +2 scoutsuite-report/scoutsuite-results/scoutsuite_results_aws-*.js | jq '.services[].findings[] | select(.level == \"danger\")'" ]
+    - "tail -n +2 scoutsuite-report/scoutsuite-results/scoutsuite_results_aws-*.js | jq '.services[].findings[] | select(.level == \"danger\")'"
     # warning:
-    # - [ "tail -n +2 scoutsuite-report/scoutsuite-results/scoutsuite_results_aws-*.js | jq '.services[].findings[] | select(.level == \"warning\")'" ]
+    # - "tail -n +2 scoutsuite-report/scoutsuite-results/scoutsuite_results_aws-*.js | jq '.services[].findings[] | select(.level == \"warning\")'"
