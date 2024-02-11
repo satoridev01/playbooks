@@ -3,11 +3,11 @@ settings:
 
 install:
   git:
-  - [ apt install -qq -y git ]
+  - apt install -qy git
   knock:
-  - [ git clone https://github.com/guelfoweb/knock.git ]
+  - git clone https://github.com/guelfoweb/knock.git --depth 1
   requirements:
-  - [ pip3 install -r knock/requirements.txt ]
+  - pip3 install -r knock/requirements.txt
 
 knock:
-- [ "echo $(DOMAIN) | python3 knock/knockpy.py" ]
+- "echo ${{DOMAIN}} | python3 knock/knockpy.py"
