@@ -4,13 +4,14 @@ settings:
 
 install:
   git:
-  - [ apt install -qq -y git ]
+  - apt install -qy git
   dnscan:
-  - [ git clone https://github.com/rbsec/dnscan.git ]
+  - git clone https://github.com/rbsec/dnscan.git
   requirements:
-  - [ pip install -r dnscan/requirements.txt ]
+  - pip install -r dnscan/requirements.txt
 
-help:
-- [ python3 dnscan/dnscan.py -h ]
 dnscan:
-- [ python3 dnscan/dnscan.py -d $(DOMAIN) ]
+  help:
+  - python3 dnscan/dnscan.py -h
+  run:
+  - python3 dnscan/dnscan.py -d ${{DOMAIN}}
