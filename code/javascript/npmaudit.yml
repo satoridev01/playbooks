@@ -3,12 +3,12 @@ settings:
   
 install:
   npm:
-  - [ apt install -qq -y npm ]
+  - apt install -qy npm
   package-lock-only:
-  - [ "if [ ! -e package-lock.json ]; then npm i --package-lock-only; fi; ls -l package-lock.json" ]
+  - "if [ ! -e package-lock.json ]; then npm i --package-lock-only; fi; ls -l package-lock.json"
 
 npm:
   assertReturnCode: 0
   assertStdout: False
   audit:
-  - [ /usr/bin/npm audit ]
+  - /usr/bin/npm audit
