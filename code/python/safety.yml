@@ -3,10 +3,10 @@ settings:
   description: "URL: https://github.com/pyupio/safety"
   
 install:
-  - [ pip install safety ]
+  - pip install safety
 
 safety:
     assertIfFileExists: requirements.txt
     assertStdoutEqual: ""
     execute:
-    - [check -r requirements.txt ]
+    - check -r requirements.txt
