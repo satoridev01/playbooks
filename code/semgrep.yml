@@ -4,19 +4,19 @@ settings:
 install:
   assertReturnCode: 0
   semgrep:
-    - [ python3 -m pip install semgrep ]
+  - python3 -m pip install semgrep
 
 error:
   assertStdout: False
   semgrep:
-  - [ semgrep --config auto --severity ERROR -q ]
+  - semgrep --config auto --severity ERROR -q
     
 warning:
   assertStdout: False
   semgrep:
-  - [ semgrep --config auto --severity WARNING -q ]
+  - semgrep --config auto --severity WARNING -q
     
 info:
   assertStdout: False
   semgrep:
-  - [ semgrep --config auto --severity INFO -q ]
+  - semgrep --config auto --severity INFO -q
