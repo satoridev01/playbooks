@@ -4,11 +4,11 @@ settings:
 
 install:
   jq:
-  - [ apt install -qq -y jq ]
+  - apt install -qy jq
   mobsfscan:
-  - [ pip install mobsfscan ] 
+  - pip install mobsfscan
 
 mobsfscan:
   assertStdout: False
   run:
-  - [ "mobsfscan ./ --sarif | jq '.runs[].results[] | select(.level == \"error\")'" ]
+  - "mobsfscan ./ --sarif | jq '.runs[].results[] | select(.level == \"error\")'"
