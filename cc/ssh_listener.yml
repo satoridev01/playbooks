@@ -1,0 +1,6 @@
+INPUT:
+- - "este es
+un coso multilinea"
+
+echo:
+- echo "${{INPUT}}"
