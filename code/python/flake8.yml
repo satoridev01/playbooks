@@ -1,4 +1,5 @@
 settings:
+  image: python
   name: "Flake8 is a wrapper around PyFlakes, pycodestyle and Ned Batchelder’s McCabe script"
 
 install:
