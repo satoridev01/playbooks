@@ -1,4 +1,5 @@
 settings:
+  image: python
   name: "Find common security issues in Python code"
 
 install:
