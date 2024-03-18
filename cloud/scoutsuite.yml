@@ -1,5 +1,6 @@
 settings:
   name: "Multi-cloud security-auditing tool that gathers configuration data for manual inspection and highlights risk areas."
+  files: True
 
 install:
   scoutsuite:
