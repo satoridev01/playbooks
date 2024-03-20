@@ -1,6 +1,7 @@
 settings:
   image: python
   name: "Flake8 is a wrapper around PyFlakes, pycodestyle and Ned Batchelder’s McCabe script"
+  #example: satori run satori://code/python/flake8.yml
 
 install:
   assertReturnCode: 0
