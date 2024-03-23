@@ -1,10 +1,8 @@
 settings:
   name: "Discover valid subdomains using passive online sources"
   image: golang
-  # scheme: projectdiscovery
-  
-cmd:
-- bash -c ${{CMD}}
+  scheme: projectdiscovery
+  # example: tbc
 
 subfinder:
   install:
