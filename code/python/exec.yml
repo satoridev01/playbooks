@@ -1,5 +1,6 @@
 settings:
   name: "Assert that there is no Python command execution on the code"
+  # example: satori run ./ --playbook="satori://code/python/exec.yml" --report 
   
 exec:
   assertStdout: ""
