@@ -1,5 +1,6 @@
 settings:
   name: Zmap is a fast single packet network scanner designed for Internet-wide network surveys
+  #example: satori run satori://scan/zmap.yml
 
 install:
 - [ apt install -qq -y zmap net-tools ]
