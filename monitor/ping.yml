@@ -1,5 +1,6 @@
 settings:
   name: "Ping a host with no packet loss"
+  #example: satori run satori://monitor/ping.yml
 
 install:
 - [ apt-get install iputils-ping -y -qq ]
