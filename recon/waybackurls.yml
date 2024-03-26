@@ -1,6 +1,6 @@
 settings:
   name: "Fetch all the URLs that the Wayback Machine knows about for a domain"
-  # Example: 
+  # example: 
   # satori run satori://recon/waybackurl.yml --data='{"HOST":"satori.ci"}' --output
 
 install:
