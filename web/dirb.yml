@@ -1,5 +1,6 @@
 settings:
   name: "Dirb - web directory brute forcer"
+  #example: satori run satori://web/dirb.yml 
 
 install:
   assertReturnCode: 0
