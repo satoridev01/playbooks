@@ -3,6 +3,6 @@ settings:
   # example: satori run ./ --playbook="satori://code/python/exec.yml" --report 
   
 exec:
-  assertStdout: ""
+  assertStdout: False
   execute:
   - grep "pexpect.run\|eval(\|exec(\|os\.system\|os\.popen\|execfile\|subprocess\.Popen\|subprocess\.call" * -r --include="*.py"
