@@ -1,6 +1,7 @@
 settings:
   name: Mobile Security Framework (MobSF)
   labels: security MobSF
+  #example: satori run satori://mobile/MobSF.yml
 
 install:
   - [ git clone https://github.com/MobSF/Mobile-Security-Framework-MobSF.git ; cd Mobile-Security-Framework-MobSF; ./setup.sh ]
