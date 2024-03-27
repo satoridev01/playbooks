@@ -1,5 +1,6 @@
 settings:
   name: "Tests web servers for over 6700 security threats"
+   #example: satori run satori://web/nikto.yml
 
 install:
   assertReturnCode: 0
