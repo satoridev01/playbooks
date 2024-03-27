@@ -1,5 +1,6 @@
 settings:
   name: Get all urls of a domain
+  #example: satori run satori://web/get_all_urls.yml
 
 install:
   wget:
