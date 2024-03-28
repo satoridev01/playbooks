@@ -4,10 +4,11 @@ settings:
 
 install:
   assertReturnCode: 0
-  nmap:
-  - apt install -y nmap
   update:
   - apt update
+  nmap:
+  - apt install -y nmap
+
 
 scan:
   assertStdoutContains: "Nmap done"
