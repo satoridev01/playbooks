@@ -6,6 +6,8 @@ install:
   assertReturnCode: 0
   nmap:
   - apt install -y nmap
+  update:
+  - apt update
 
 scan:
   assertStdoutContains: "Nmap done"
