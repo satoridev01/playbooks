@@ -4,16 +4,16 @@ settings:
   
 install:
   dependencies:
-  - [ apt install -qq -y libpcap-dev build-essential wget ] 
+  - apt install -qq -y libpcap-dev build-essential wget 
   go:
-  - [ wget -q https://golang.org/dl/go1.20.linux-amd64.tar.gz ] 
-  - [ tar -C /usr/local -xzf go1.20.linux-amd64.tar.gz ]
-  - [ ln -s /usr/local/go/bin/go /usr/local/bin/go ]
+  - wget -q https://golang.org/dl/go1.20.linux-amd64.tar.gz 
+  - tar -C /usr/local -xzf go1.20.linux-amd64.tar.gz
+  - ln -s /usr/local/go/bin/go /usr/local/bin/go
   naabu:
-  - [ go install github.com/projectdiscovery/naabu/v2/cmd/naabu@latest ]
+  - go install github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
 
 help:
-- [ /root/go/bin/naabu --help ]
+- /root/go/bin/naabu --help
 
 naabu:
-- [ /root/go/bin/naabu -host $(HOST) ]
+- /root/go/bin/naabu -host ${{HOST}}
