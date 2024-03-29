@@ -1,11 +1,11 @@
 settings:
   name: Mobile Security Framework (MobSF)
   labels: security MobSF
-  #example: satori run satori://mobile/MobSF.yml
+  #example: satori run satori://mobile/MobSF.yml --report
 
 install:
-  - [ git clone https://github.com/MobSF/Mobile-Security-Framework-MobSF.git ; cd Mobile-Security-Framework-MobSF; ./setup.sh ]
-  - [ ./run.sh 127.0.0.1:8000 & ]
+  - git clone https://github.com/MobSF/Mobile-Security-Framework-MobSF.git ; cd Mobile-Security-Framework-MobSF; ./setup.sh
+  - ./run.sh 127.0.0.1:8000 &
 
 MobSF:
-  - [ TBC: http://127.0.0.1:8000/api_docs#upload-file-api ]
+  - TBC: http://127.0.0.1:8000/api_docs#upload-file-api
