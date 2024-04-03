@@ -1,22 +1,22 @@
 settings:
   name: "Tests web servers for over 6700 security threats"
-   #example: satori run satori://web/nikto.yml
+   #example: satori run satori://web/nikto.yml --data='{"URL":"https://satori.ci"}' --output
 
 install:
   assertReturnCode: 0
   update:
-  - [ apt update ]
+  - apt update
   wget:
-  - [ apt install -qq -y wget ]
+  - apt install -qq -y wget
   cpan:
-  - [ apt install -qq -y build-essential cpanminus libssl-dev zlib1g-dev; cpanm Time::Local ; cpanm Net::hostent ; cpanm Time::HiRes ; cpanm Net::SSLeay ; cpanm IO::Socket::SSL ]
+  - apt install -qq -y build-essential cpanminus libssl-dev zlib1g-dev; cpanm Time::Local ; cpanm Net::hostent ; cpanm Time::HiRes ; cpanm Net::SSLeay ; cpanm IO::Socket::SSL
   nikto:
-  - [ wget -qO nikto.tar.gz https://github.com/sullo/nikto/archive/master.tar.gz ]
+  - wget -qO nikto.tar.gz https://github.com/sullo/nikto/archive/master.tar.gz
   tar:
-  - [ tar xf nikto.tar.gz --strip-components=2 -C ./ nikto-master/program ]
+  - tar xf nikto.tar.gz --strip-components=2 -C ./ nikto-master/program
 
 nikto:
   assertReturnCode: 0
   assertStdout: False
   run:
-  - [ ./nikto.pl -host $(URL) ]
+  - ./nikto.pl -host ${{URL}}
