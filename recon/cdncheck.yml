@@ -1,21 +1,22 @@
 settings:
   name: "Identify the technology associated with a host: CDN, CLOUD or WAF"
-  # Example: 
-  # satori run satori://recon/cdncheck.yml --data='{"HOST":"satori.ci"}' --output
+  # Example: satori run satori://recon/cdncheck.yml --data='{"HOST":"satori.ci"}' --output
 
 install:
+  update:
+  - apt update
   wget:
-    - [apt install -qq -y wget]
+    - apt install -qq -y wget
   go:
-    - [wget -q https://go.dev/dl/go1.21.3.linux-amd64.tar.gz]
-    - [tar -C /usr/local -xzf go1.21.3.linux-amd64.tar.gz]
-    - [ln -s /usr/local/go/bin/go /usr/local/bin/go]
+    - wget -q https://go.dev/dl/go1.21.3.linux-amd64.tar.gz
+    - tar -C /usr/local -xzf go1.21.3.linux-amd64.tar.gz
+    - ln -s /usr/local/go/bin/go /usr/local/bin/go
   cdncheck:
-    - [go install github.com/projectdiscovery/cdncheck/cmd/cdncheck@latest]
+    - go install github.com/projectdiscovery/cdncheck/cmd/cdncheck@latest
 
 help:
-  - [/root/go/bin/cdncheck -duc -h]
+  - /root/go/bin/cdncheck -duc -h
 cdncheck:
   assertStdoutNotContains: "No results found"
   run:
-    - [/root/go/bin/cdncheck -duc -resp -i $(HOST)]
+    - /root/go/bin/cdncheck -duc -resp -i ${{HOST}}
