@@ -1,7 +1,7 @@
 settings:
   name: ZGrab scanner
   # source: https://github.com/zmap/zgrab2
-  # example: satori run satori://web/zgrab2.yml --data='{"HOST":"satori.ci"}'
+  # example: satori run satori://web/zgrab2.yml --data='{"HOST":"satori.ci"}' --output
 
 install:
   update:
