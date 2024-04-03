@@ -3,18 +3,18 @@ settings:
   #example: satori run satori://scan/zmap.yml
 
 install:
-- [ apt install -qq -y zmap net-tools ]
+- apt install -qq -y zmap net-tools
 
 route:
-- [ route ]
+- route
 
 ifconfig:
-- [ ifconfig ]
+- ifconfig
 
 zmap_help:
-- [ zmap -h ]
+- zmap -h
 
 zmap:
   assertStdout: True
   run:
-  - [ zmap -i eth1 -p $(PORT) $(HOST) ]
+  - zmap -i eth1 -p ${{PORT}} ${{HOST}}
