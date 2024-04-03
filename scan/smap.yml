@@ -4,16 +4,18 @@ settings:
   # satori run satori://scan/smap.yml --data='{"HOST":"satori.ci"}' --output
 
 install:
+  update:
+    - apt update
   wget:
-    - [apt install -qq -y wget]
+    - apt install -qq -y wget
   go:
-    - [wget -q https://go.dev/dl/go1.21.3.linux-amd64.tar.gz]
-    - [tar -C /usr/local -xzf go1.21.3.linux-amd64.tar.gz]
-    - [ln -s /usr/local/go/bin/go /usr/local/bin/go]
+    - wget -q https://go.dev/dl/go1.21.3.linux-amd64.tar.gz
+    - tar -C /usr/local -xzf go1.21.3.linux-amd64.tar.gz
+    - ln -s /usr/local/go/bin/go /usr/local/bin/go
   smap:
-    - [go install github.com/s0md3v/smap/cmd/smap@latest]
+    - go install github.com/s0md3v/smap/cmd/smap@latest
 
 help:
-  - [/root/go/bin/smap -h]
+  - /root/go/bin/smap -h
 smap:
-  - [/root/go/bin/smap $(HOST)]
+  - /root/go/bin/smap ${{HOST}}
