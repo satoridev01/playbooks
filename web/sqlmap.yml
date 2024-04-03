@@ -1,14 +1,15 @@
 settings:
   name: "sqlmap is an open source penetration testing tool that automates the process of detecting and exploiting SQL injection flaws"
-  # Example: 
-  # satori run satori://web/sqlmap.yml --data='{"URL":"http://testphp.vulnweb.com/listproducts.php?cat=1"}' --output
+  # Example: satori run satori://web/sqlmap.yml --data='{"URL":"http://testphp.vulnweb.com/listproducts.php?cat=1"}' --output
 
 install:
+  update:
+  - apt update
   git:
-  - [ apt install -qq -y git ]
+  - apt install -qq -y git
   sqlmap:
-  - [ git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git ]
+  - git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git
 help:
-- [ python sqlmap/sqlmap.py -hh ]
+- python sqlmap/sqlmap.py -hh
 sqlpmap:
-- [ python sqlmap/sqlmap.py -u $(URL) ]
+- python sqlmap/sqlmap.py -u ${{URL}}
