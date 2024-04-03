@@ -2,7 +2,7 @@ settings:
   name: "CMSeek: CMS Detection and Exploitation suite"
   description: "Scan WordPress, Joomla, Drupal and over 180 other CMSs"
   # source: "https://github.com/Tuhinshubhra/CMSeeK.git"
-  # example: satori run satori://web/cmseek.yml --data='{"URL":"https://satori.ci"}' --report
+  # example: satori run satori://web/cmseek.yml --data='{"URL":"https://satori.ci"}' --output
 
 install:
   update:
