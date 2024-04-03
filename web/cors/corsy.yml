@@ -1,7 +1,7 @@
 settings:
   name: Scans for all known misconfigurations in CORS implementations.
   # source: https://github.com/s0md3v/Corsy
-  # example: satori run satori://web/cors/corsy.yml --data='{"URL":"https://satori.ci"}' --output --json |  jq  -r 'select(.path=="corsy:run").output.stdout' | base64 -d
+  # example: satori run satori://web/cors/corsy.yml --data='{"URL":"https://satori.ci"}' --output
 
 install:
   update:
