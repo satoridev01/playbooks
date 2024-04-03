@@ -11,7 +11,7 @@ install:
   corstest:
   - git clone https://github.com/RUB-NDS/CORStest.git --depth 1
   infile:
-  - echo "$(URL)" > infile
+  - echo "${{URL}}" > infile
 
 CORStest:
   help:
