@@ -4,16 +4,18 @@ settings:
   # satori run satori://web/httpx.yml --data='{"URL":"https://www.hackerone.com"}' --output
 
 install:
+  update:
+  - apt update
   wget:
-  - [ apt install -qq -y wget ]
+  - apt install -qq -y wget
   go:
-  - [ wget -q https://go.dev/dl/go1.21.3.linux-amd64.tar.gz ]
-  - [ tar -C /usr/local -xzf go1.21.3.linux-amd64.tar.gz ]
-  - [ ln -s /usr/local/go/bin/go /usr/local/bin/go ]
+  - wget -q https://go.dev/dl/go1.21.3.linux-amd64.tar.gz
+  - tar -C /usr/local -xzf go1.21.3.linux-amd64.tar.gz
+  - ln -s /usr/local/go/bin/go /usr/local/bin/go
   httpx:
-  - [ go install github.com/projectdiscovery/httpx/cmd/httpx@latest ]
+  - go install github.com/projectdiscovery/httpx/cmd/httpx@latest
 
 help:
-- [ /root/go/bin/httpx -h ]
+- /root/go/bin/httpx -h
 httpx:
-- [ /root/go/bin/httpx -u $(URL) -silent -probe ]
+- /root/go/bin/httpx -u ${{URL}} -silent -probe
