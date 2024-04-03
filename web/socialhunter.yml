@@ -1,6 +1,6 @@
 settings:
   name: Socialhunter crawls the given URL and finds broken social media links that can be hijacked
-  #example: satori run satori://web/socialhunter.yml --data='{"URL":"https://www.satori.ci"}' --report
+  #example: satori run satori://web/socialhunter.yml --data='{"URL":"https://www.satori.ci"}' --output
 
 install:
   update:
