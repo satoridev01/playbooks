@@ -4,15 +4,17 @@ settings:
   # example: satori run satori://web/cors/corsy.yml --data='{"URL":"https://satori.ci"}' --output --json |  jq  -r 'select(.path=="corsy:run").output.stdout' | base64 -d
 
 install:
+  update:
+  - apt update
   dependencies:
-  - [ apt install -qq -y git ]
+  - apt install -qq -y git
   corsy:
-  - [ git clone https://github.com/s0md3v/Corsy.git ]
+  - git clone https://github.com/s0md3v/Corsy.git
   requirements:
-  - [ pip3 install -r Corsy/requirements.txt ]
+  - pip3 install -r Corsy/requirements.txt
 
 corsy:
   help:
-  - [ python3 Corsy/corsy.py -h ]
+  - python3 Corsy/corsy.py -h
   run:
-  - [ python3 Corsy/corsy.py -u $(URL) ]
+  - python3 Corsy/corsy.py -u ${{URL}}
