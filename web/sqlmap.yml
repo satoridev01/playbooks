@@ -11,5 +11,5 @@ install:
   - git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git
 help:
 - python3 sqlmap/sqlmap.py -hh
-run:
+sqlpmap:
 - python3 sqlmap/sqlmap.py -u ${{URL}}
