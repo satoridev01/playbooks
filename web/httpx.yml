@@ -1,7 +1,6 @@
 settings:
   name: "httpx is a fast and multi-purpose HTTP toolkit that allows running multiple probes using the retryablehttp library"
-  # Example: 
-  # satori run satori://web/httpx.yml --data='{"URL":"https://www.hackerone.com"}' --output
+  # Example: satori run satori://web/httpx.yml --data='{"URL":"https://www.hackerone.com"}' --output
 
 install:
   update:
