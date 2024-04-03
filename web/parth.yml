@@ -1,12 +1,11 @@
 settings:
   name: Identify potential vulnerabilities on the web pages of a website
-  # Example: 
-  # satori run satori://web/parth.yml --data='{"HOST":"geeksforgeeks.org"}' --output
+  # Example: satori run satori://web/parth.yml --data='{"HOST":"geeksforgeeks.org"}' --output
 
 install:
-- [ pip3 install requests parth ]
+- pip3 install requests parth
 
 help:
-- [ parth -h ]
+- parth -h
 parth:
-- [ parth -put $(HOST) ]
+- parth -put ${{HOST}}
