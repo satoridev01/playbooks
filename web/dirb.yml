@@ -1,15 +1,15 @@
 settings:
   name: "Dirb - web directory brute forcer"
-  #example: satori run satori://web/dirb.yml 
+  #example: satori run satori://web/dirb.yml --data='{"URL":"https://www.satori.ci"}'
 
 install:
   assertReturnCode: 0
   update:
-  - [ apt update ]
+  - apt update
   dirb:
-  - [ apt install -qq -y dirb ]
+  - apt install -qq -y dirb
 
 dirb:
   assertStdout: False
   common:
-  - [ dirb $(URL) /usr/share/dirb/wordlists/common.txt -S -r -i ]
+  - dirb ${{URL}} /usr/share/dirb/wordlists/common.txt -S -r -i
