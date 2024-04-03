@@ -1,19 +1,21 @@
 settings:
   name: Socialhunter crawls the given URL and finds broken social media links that can be hijacked
-  #example: satori run satori://web/socialhunter.yml
+  #example: satori run satori://web/socialhunter.yml --data='{"URL":"https://www.satori.ci"}' --report
 
 install:
+  update:
+  - apt updtae
   wget:
-  - [ apt install -qq -y wget ]
+  - apt install -qq -y wget
   go:
-  - [ wget -q https://go.dev/dl/go1.21.3.linux-amd64.tar.gz ]
-  - [ tar -C /usr/local -xzf go1.21.3.linux-amd64.tar.gz ]
-  - [ ln -s /usr/local/go/bin/go /usr/local/bin/go ]
+  - wget -q https://go.dev/dl/go1.21.3.linux-amd64.tar.gz
+  - tar -C /usr/local -xzf go1.21.3.linux-amd64.tar.gz
+  - ln -s /usr/local/go/bin/go /usr/local/bin/go
   #- [ ln -s /usr/local/go/bin/gofmt /usr/local/bin/gofmt ]
   socialhunter:
-  - [ go install github.com/utkusen/socialhunter@latest ]
+  - go install github.com/utkusen/socialhunter@latest
 
 url:
-- [ echo "$(URL)" > url.txt ]
+- echo "${{URL}}" > url.txt
 socialhunter:
-- [ /root/go/bin/socialhunter -f url.txt ]
+- /root/go/bin/socialhunter -f url.txt
