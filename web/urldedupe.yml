@@ -4,6 +4,7 @@ settings:
   # satori run urldedupe.yml --data='{"URL":"https://google.com/home?qs=value\nhttps://google.com/home?qs=secondValue"}' --output
 
 install:
+- apt update
 - apt install -qq -y git build-essential make cmake
 
 build:
