@@ -3,6 +3,8 @@ settings:
   # example: satori run satori://recon/waybackurl.yml --data='{"HOST":"satori.ci"}' --output
 
 install:
+  update:
+    - apt update 
   wget:
     - apt install -qq -y wget
   go:
