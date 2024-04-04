@@ -12,8 +12,8 @@ install:
   cmseek:
   - "git clone https://github.com/Tuhinshubhra/CMSeeK.git --depth 1; pip3 install -r CMSeeK/requirements.txt"
 
-help:
-- python3 CMSeeK/cmseek.py --help
-
 cmseek:
-- python3 CMSeeK/cmseek.py --batch -u ${{URL}}
+  help:
+  - python3 CMSeeK/cmseek.py --help
+  run:
+  - python3 CMSeeK/cmseek.py --batch -u ${{URL}}
