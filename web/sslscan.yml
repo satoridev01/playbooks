@@ -10,4 +10,4 @@ install:
   - apt install -qy sslscan
 
 sslscan:
-  - sslscan --xml="$FILENAME-$HOST-sslscan.xml" ${{HOST}}
+- sslscan --xml="$FILENAME-$HOST-sslscan.xml" ${{HOST}}
