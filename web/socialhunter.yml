@@ -17,5 +17,6 @@ install:
 
 url:
 - echo "${{URL}}" > url.txt
+
 socialhunter:
 - /root/go/bin/socialhunter -f url.txt
