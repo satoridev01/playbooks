@@ -14,7 +14,8 @@ install:
   httpx:
   - go install github.com/projectdiscovery/httpx/cmd/httpx@latest
 
-help:
-- /root/go/bin/httpx -h
 httpx:
-- /root/go/bin/httpx -u ${{URL}} -silent -probe
+  help:
+  - /root/go/bin/httpx -h
+  run:
+  - /root/go/bin/httpx -u ${{URL}} -silent -probe
