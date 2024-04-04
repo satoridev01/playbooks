@@ -11,8 +11,8 @@ install:
   cloudscraper:
   - "git clone https://github.com/jordanpotti/CloudScraper.git --depth 1; pip3 install -r CloudScraper/requirements.txt"
 
-help:
-- python3 CloudScraper/CloudScraper.py --help
-
 cloudscraper:
-- python3 CloudScraper/CloudScraper.py -u ${{URL}}
+  help:
+  - python3 CloudScraper/CloudScraper.py --help
+  run:
+  - python3 CloudScraper/CloudScraper.py -u ${{URL}}
