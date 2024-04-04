@@ -16,8 +16,8 @@ install:
   - git clone https://github.com/zmap/zgrab2.git --depth 1
   - cd zgrab2/cmd/zgrab2 ; go build .
 
-help:
-- /data/zgrab2/cmd/zgrab2/zgrab2 --help
-
 zgrab2:
-- echo ${{HOST}} | /data/zgrab2/cmd/zgrab2/zgrab2 http
+  help:
+  - /data/zgrab2/cmd/zgrab2/zgrab2 --help
+  run:
+  - echo ${{HOST}} | /data/zgrab2/cmd/zgrab2/zgrab2 http
