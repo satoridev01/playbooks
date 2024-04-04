@@ -5,7 +5,8 @@ settings:
 install:
 - pip3 install requests parth
 
-help:
-- parth -h
 parth:
-- parth -put ${{HOST}}
+  help:
+  - parth -h
+  run:
+  - parth -put ${{HOST}}
