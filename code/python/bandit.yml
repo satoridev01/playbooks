@@ -1,7 +1,7 @@
 settings:
   image: python
   name: "Find common security issues in Python code"
-  #example: satori run ./ playbook="satori://code/python/bandit.yml" --report
+  #example: satori run ./ --playbook="satori://code/python/bandit.yml" --report
 
 install:
 - pip install bandit
