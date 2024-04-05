@@ -1,6 +1,7 @@
 settings:
   image: python
   name: "Python linter"
+  #example: satori run ./ --playbook="satori://code/python/ruff.yml" --report
 
 install:
 - pip3 install ruff
