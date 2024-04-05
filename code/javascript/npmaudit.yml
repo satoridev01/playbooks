@@ -3,6 +3,8 @@ settings:
   #example: satori run ./ --playbook="satori://code/javascript/npmaudit.yml" --report
   
 install:
+  update:
+  - apt update
   npm:
   - apt install -qy npm
   package-lock-only:
