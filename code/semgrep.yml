@@ -1,5 +1,6 @@
 settings:
     name: "Semgrep: static source code analysis"
+    #eample: satori run ./ --playbook="satori://code/semgrep.yml" --report
 
 install:
   assertReturnCode: 0
