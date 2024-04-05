@@ -5,7 +5,7 @@ settings:
   # example: satori run ./ --playbook="satori://code/python/safety.yml" --report 
   
 install:
-  - pip install safety
+  - pip3 install safety
 
 safety:
     assertIfFileExists: requirements.txt
