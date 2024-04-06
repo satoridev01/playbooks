@@ -1,7 +1,7 @@
 settings:
   name: "Wordlist-based DNS subdomain scanner."
   description: "The script will first try to perform a zone transfer using each of the target domain's nameservers. If this fails, it will lookup TXT and MX records for the domain, and then perform a recursive subdomain scan using the supplied wordlist."
-  # example: satori run satori://dns/dnscan.yml --data='{"DOMAIN":"satori.ci"}' --report
+  # example: satori run satori://dns/dnscan.yml --data='{"DOMAIN":"satori.ci"}' --output
   
 install:
   update: 
