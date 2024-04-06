@@ -1,11 +1,12 @@
 settings:
     name: "Semgrep: static source code analysis"
+    image: python
     #eample: satori run ./ --playbook="satori://code/semgrep.yml" --report
 
 install:
   assertReturnCode: 0
   semgrep:
-  - python3 -m pip install semgrep
+  - pip install semgrep
 
 error:
   assertStdout: False
