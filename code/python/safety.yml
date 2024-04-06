@@ -8,7 +8,7 @@ install:
   - pip3 install safety
 
 safety:
-    assertIfFileExists: requirements.txt
-    assertStdoutEqual: False
-    execute:
+    assertFileExists: requirements.txt
+    assertStdout: False
+    run:
     - check -r requirements.txt
