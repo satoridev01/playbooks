@@ -9,6 +9,6 @@ install:
 
 safety:
     assertIfFileExists: requirements.txt
-    assertStdoutEqual: ""
+    assertStdoutEqual: False
     execute:
     - check -r requirements.txt
