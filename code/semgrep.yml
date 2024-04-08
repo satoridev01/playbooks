@@ -1,7 +1,7 @@
 settings:
     name: "Semgrep: static source code analysis"
     image: python
-    #eample: satori run ./ --playbook="satori://code/semgrep.yml" --report
+    #eample: satori run ./ --playbook="satori://code/semgrep.yml" --output
 
 install:
   assertReturnCode: 0
