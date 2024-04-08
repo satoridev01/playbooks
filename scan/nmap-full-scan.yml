@@ -4,8 +4,6 @@ settings:
 
 install:
   assertReturnCode: 0
-  update:
-  - apt update
   nmap:
   - apt install -y nmap
 
