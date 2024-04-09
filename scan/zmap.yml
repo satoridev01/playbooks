@@ -3,6 +3,7 @@ settings:
   #example: satori run satori://scan/zmap.yml --data='{"PORT":"1234","HOST":"host"}' --output
 
 install:
+- apt update
 - apt install -qq -y zmap net-tools
 
 route:
