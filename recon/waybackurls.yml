@@ -1,6 +1,6 @@
 settings:
   name: "Fetch all the URLs that the Wayback Machine knows about for a domain"
-  # example: satori run satori://recon/waybackurls.yml --data='{"HOST":"https://www.satori.ci"}' --output
+  # example: satori run satori://recon/waybackurls.yml --data='{"URL":"https://www.satori.ci"}' --output
 
 install:
   update:
@@ -14,7 +14,8 @@ install:
   waybackurls:
     - go install github.com/tomnomnom/waybackurls@latest
 
-help:
-  - /root/go/bin/waybackurls -h
 waybackurls:
+  help:
+  - /root/go/bin/waybackurls -h
+  run:
   - /root/go/bin/waybackurls ${{URL}}
