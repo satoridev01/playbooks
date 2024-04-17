@@ -1,7 +1,7 @@
 settings:
+  image: python
   name: "CMSeek: CMS Detection and Exploitation suite"
   description: "Scan WordPress, Joomla, Drupal and over 180 other CMSs"
-  image: python
   # source: "https://github.com/Tuhinshubhra/CMSeeK.git"
   # example: satori run satori://web/cmseek.yml --data='{"URL":"https://satori.ci"}' --output
 
