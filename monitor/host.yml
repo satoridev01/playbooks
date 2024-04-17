@@ -8,4 +8,4 @@ update:
 host:
   assertStdoutContains: "${{HOST}} has address ${{IP}}"
   run: 
-   - /usr/bin/host ${{HOST}}
+   - host ${{HOST}}
