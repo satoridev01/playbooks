@@ -7,5 +7,5 @@ update:
   
 host:
   #assertStdoutContains: "${{HOST}} has address ${{IP}}"
-  run: 
+  execute: 
    - host ${{HOST}}
