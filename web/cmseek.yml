@@ -1,6 +1,7 @@
 settings:
   name: "CMSeek: CMS Detection and Exploitation suite"
   description: "Scan WordPress, Joomla, Drupal and over 180 other CMSs"
+  image: python
   # source: "https://github.com/Tuhinshubhra/CMSeeK.git"
   # example: satori run satori://web/cmseek.yml --data='{"URL":"https://satori.ci"}' --output
 
@@ -10,7 +11,7 @@ install:
   git:
   - apt install -qq -y git
   cmseek:
-  - "git clone https://github.com/Tuhinshubhra/CMSeeK.git --depth 1; pip install -r CMSeeK/requirements.txt"
+  - git clone https://github.com/Tuhinshubhra/CMSeeK.git --depth 1; pip install -r CMSeeK/requirements.txt
 
 cmseek:
   help:
