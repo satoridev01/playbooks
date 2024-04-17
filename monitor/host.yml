@@ -4,5 +4,5 @@ settings:
 
 host:
   assertStdoutContains: "${{HOST}} has address ${{IP}}"
-  execute: 
+  run: 
    - host ${{HOST}}
