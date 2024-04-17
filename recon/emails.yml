@@ -4,7 +4,7 @@ settings:
 
 install:
   update:
-  -apt update
+  - apt update
   wget:
   - apt install -qq -y wget git
   go:
