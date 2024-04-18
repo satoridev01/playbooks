@@ -1,0 +1,11 @@
+settings:
+  name: Bearer is a Python SAST
+  image: bearer/bearer
+
+bearer:
+  help:
+  - bearer --help
+  scan:
+    assertStdoutNotContains: "no failures were detected"
+    run:
+    - bearer scan ./ --hide-progress-bar
