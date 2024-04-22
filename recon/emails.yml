@@ -1,6 +1,6 @@
 settings:
   name: Get all urls of a domain and search for email addresses
-  #example: satori run satori://recon/emails.yml --data='{"DOMAIN":"satori.ci"}'
+  #example: satori run satori://recon/emails.yml --data='{"DOMAIN":"satori.ci"}' --output
 
 install:
   update:
