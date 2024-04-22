@@ -6,6 +6,6 @@ update:
   - apt update
   
 host:
-  #assertStdoutContains: "${{HOST}} has address ${{IP}}"
+  assertStdoutContains: "${{HOST}} has address ${{IP}}"
   execute: 
    - host ${{HOST}}
