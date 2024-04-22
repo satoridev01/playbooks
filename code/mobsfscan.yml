@@ -5,6 +5,8 @@ settings:
   #example: satori run satori://code/mobsfscan.yml --report --output
   
 install:
+  update:
+  - apt update
   jq:
   - apt install -qy jq
   mobsfscan:
