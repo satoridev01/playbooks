@@ -1,6 +1,5 @@
 settings:
   name: Mobile Security Framework (MobSF)
-  labels: security MobSF
   #example: satori run satori://mobile/MobSF.yml --report --output
 
 install:
