@@ -1,7 +1,7 @@
 settings:
   name: "Static analysis tool for mobile code"
   description: "It can find insecure code patterns in your Android and iOS source code. Supports Java, Kotlin, Swift, and Objective C Code. mobsfscan uses MobSF static analysis rules and is powered by semgrep and libsast pattern matcher."
-  #example: satori run satori://code/mobsfscan.yml
+  #example: satori run satori://code/mobsfscan.yml --report --output
   
 install:
   jq:
