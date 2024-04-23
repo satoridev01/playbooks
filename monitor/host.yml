@@ -1,5 +1,5 @@
 settings:
-  image: ubuntu
+  image: debian
   name: "Check if a host has a certain IP address"
   #example: satori run satori://monitor/host.yml --data='{"HOST":"host_name","IP":"ip_adress"}' --output
 
