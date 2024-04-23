@@ -5,7 +5,7 @@ settings:
 
 install:
   - apt update
-  - apt install dnsutils
+  - apt install -qy dnsutils
 
 
 host:
