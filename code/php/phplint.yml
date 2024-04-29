@@ -1,5 +1,6 @@
 settings:
-  image: cytopia/phplint
+  #image: cytopia/phplint
+  image: alpine
   name: "PHPLint is a static analysis tool for PHP that checks code for syntax errors, conformance to coding standards, and potential runtime issues."
   #example: satori run ./ --playbook="satori://code/php/phplint.yml" --report --output
   
