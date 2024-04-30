@@ -1,7 +1,7 @@
 settings:
   name: "Tests web servers for over 6700 security threats"
   image: ubuntu:jammy
-  #example: satori run satori://web/nikto.yml --data='{"URL":"https://satori.ci"}' --output
+  # example: satori run satori://web/nikto.yml --data='{"URL":"http://example.com"}' --output
 
 install:
   assertReturnCode: 0
