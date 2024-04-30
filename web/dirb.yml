@@ -2,6 +2,7 @@ settings:
   name: "Dirb - web directory brute forcer"
   image: ubuntu:jammy
   #example: satori run satori://web/dirb.yml --data='{"URL":"https://www.satori.ci"}' --report --output
+  timeout: 600
 
 install:
   assertReturnCode: 0
