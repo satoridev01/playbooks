@@ -1,0 +1,13 @@
+settings:
+  image: node
+  name: Retire.js is to help you detect the use of JS-library versions with known vulnerabilities.
+  #example: 
+
+install:
+  npm:
+  - apt install -qy npm
+  retire:
+  - npm install -g retire
+
+retirejs:
+  - retire --outputformat cyclonedx
