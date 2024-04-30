@@ -7,7 +7,7 @@ install:
   update:
   - apt update
   upgrade:
-  - apt upgrade -qy
+  - apt dist-upgrade -qy
   dirb:
   - apt install -qy dirb
 
