@@ -6,6 +6,8 @@ install:
   assertReturnCode: 0
   update:
   - apt update
+  upgrade:
+  - apt upgrade
   dirb:
   - apt install -qy dirb
 
