@@ -1,19 +1,26 @@
 settings:
   name: "Crawl and spider a website"
-  # Example: satori run satori://web/katana.yml --data='{"URL":"satori.ci"}' --output
+  image: golang
+  # example: satori run satori://web/katana.yml --data='{"URL":"satori.ci"}' --output
 
-install:
-  update:
-  - apt update
-  dependencies:
-  - apt install -qq -y wget git gcc musl-dev
-  go:
-  - wget -q https://golang.org/dl/go1.20.linux-amd64.tar.gz
-  - tar -C /usr/local -xzf go1.20.linux-amd64.tar.gz
-  - ln -s /usr/local/go/bin/go /usr/local/bin/go
-  build:
-  - git clone https://github.com/projectdiscovery/katana.git
-  - cd katana/cmd/katana/ ; go build .
+#install:
+#  update:
+#  - apt update
+#  dependencies:
+#  - apt install -qq -y wget git gcc musl-dev
+#  go:
+#  - wget -q https://golang.org/dl/go1.20.linux-amd64.tar.gz
+#  - tar -C /usr/local -xzf go1.20.linux-amd64.tar.gz
+#  - ln -s /usr/local/go/bin/go /usr/local/bin/go
+#  build:
+#  - git clone https://github.com/projectdiscovery/katana.git
+#  - cd katana/cmd/katana/ ; go build .
 
 katana:
-- /data/katana/cmd/katana/katana -u ${{URL}}
+  dependencies:
+  - apt install -qq -y wget git gcc musl-dev
+  install:
+  - go install github.com/projectdiscovery/katana/cmd/katana@latest
+  run:
+  - katana -u ${{URL}}
+  #- /data/katana/cmd/katana/katana -u ${{URL}}
