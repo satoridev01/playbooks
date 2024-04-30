@@ -1,6 +1,6 @@
 settings:
   name: "Tests web servers for over 6700 security threats"
-  image: debian
+  image: ubuntu
   #example: satori run satori://web/nikto.yml --data='{"URL":"https://satori.ci"}' --output
 
 install:
