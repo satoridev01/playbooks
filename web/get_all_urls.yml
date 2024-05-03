@@ -1,24 +1,14 @@
 settings:
   name: Get all urls of a domain
   image: golang
-  #example: satori run satori://web/get_all_urls.yml --data='{"DOMAIN":"satori.ci"}' --output
-
-install:
-  #update:
-  #- apt update
-  #wget:
-  #- apt install -qq -y wget git
-  #go:
-  #- wget -q https://go.dev/dl/go1.21.3.linux-amd64.tar.gz
-  #- tar -C /usr/local -xzf go1.21.3.linux-amd64.tar.gz
-  #- ln -s /usr/local/go/bin/go /usr/local/bin/go
-  gauplus:
-  - go install github.com/bp0lr/gauplus@latest
+  # example: satori run satori://web/get_all_urls.yml --data='{"DOMAIN":"example.com"}' --output
 
 gauplus:
+  install:
+  - go install github.com/bp0lr/gauplus@latest
   help:
-  #- /root/go/bin/gauplus -h
   - gauplus -h
-  run:
-  #- /root/go/bin/gauplus -providers commoncrawl ${{DOMAIN}}
-  - gauplus -providers commoncrawl ${{DOMAIN}}
+  test:
+    assertStdout: False
+    run:
+    - gauplus -providers commoncrawl ${{DOMAIN}} | sort -u
