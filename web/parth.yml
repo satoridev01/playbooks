@@ -8,5 +8,7 @@ parth:
   - pip3 install requests parth
   help:
   - parth -h
-  run:
-  - parth -put ${{HOST}}
+  test:
+    assertStdoutContains: "issues"
+    run:
+    - parth -put ${{HOST}}
