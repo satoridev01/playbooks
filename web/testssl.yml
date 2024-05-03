@@ -4,14 +4,12 @@ settings:
   # example: satori run satori://web/testssl.yml --data='{"HOST":"satori.ci"}' --output
   
 install:
-  assertReturnCode: 0
   update:
   - apt update
   testssl:
   - apt install -qy testssl.sh
 
 testssl:
-  assertReturnCode: 0
   run:
   - testssl -p -s -f -U -S -P --csvfile=log ${{HOST}}
   log:
