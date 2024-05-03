@@ -14,5 +14,7 @@ install:
 sqlmap:
   help:
   - python3 sqlmap/sqlmap.py -hh
-  run:
-  - python3 sqlmap/sqlmap.py -u ${{URL}}
+  test:
+    assertStdoutNotContains: "sqlmap identified the following injection point"
+    run:
+    - python3 sqlmap/sqlmap.py -u ${{URL}}
