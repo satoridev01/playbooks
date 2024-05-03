@@ -17,5 +17,7 @@ install:
 corsy:
   help:
   - python3 Corsy/corsy.py -h
-  run:
-  - python3 Corsy/corsy.py -u ${{URL}}
+  test:
+    assertStdoutContains: "No misconfigurations found"
+    run:
+    - python3 Corsy/corsy.py -u ${{URL}}
