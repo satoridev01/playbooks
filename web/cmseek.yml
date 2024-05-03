@@ -16,5 +16,7 @@ install:
 cmseek:
   help:
   - python3 CMSeeK/cmseek.py --help
-  run:
-  - python3 CMSeeK/cmseek.py --batch -u ${{URL}}
+  test:
+    assertStdoutContains: "CMS Detection failed"
+    run:
+    - python3 CMSeeK/cmseek.py --batch -u ${{URL}}
