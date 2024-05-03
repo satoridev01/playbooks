@@ -17,5 +17,7 @@ install:
 CORStest:
   help:
   - python3 CORStest/corstest.py --help
-  run:
-  - python3 CORStest/corstest.py infile
+  test:
+    assertStdoutContains: "Not vulnerable"
+    run:
+    - python3 CORStest/corstest.py infile
