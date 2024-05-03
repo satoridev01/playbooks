@@ -1,0 +1,14 @@
+settings:
+  image: rustscan/rustscan:latest
+  name: The Modern Port Scanner. Find ports quickly (3 seconds at its fastest). Run scripts through our scripting engine (Python, Lua, Shell supported).
+  # example: satori run satori://scan/rustscan.yml --data='{"IP":"IP-address"}'
+
+install:
+  assertReturnCode: 0
+  update:
+  - apt update
+  nmap:
+  - apt install -qy nmap
+
+rustscan:
+  - rustscan ${{IP}} -t 500 -b 1500 -- -A
