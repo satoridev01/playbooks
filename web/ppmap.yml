@@ -5,7 +5,7 @@ settings:
   
 install:
   - apt update
-  - apt install -qy golang sudo
+  - apt install -qy git golang sudo
   - git clone https://github.com/kleiton0x00/ppmap.git
   - cd ppmap/ && bash setup.sh
 
