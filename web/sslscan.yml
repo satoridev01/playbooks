@@ -1,7 +1,8 @@
 settings:
   name: "Identify security issues related to SSL/TLS/HTTPS services"
   description: "It reports the protocol versions, cipher suites, key exchanges, signature algorithms, and certificates in use."
-  #example: satori run satori://web/sslscan.yml --data='{"HOST":"satori.ci"}' --output
+  image: ubuntu:jammy
+  # example: satori run satori://web/sslscan.yml --data='{"HOST":"satori.ci"}' --output
 
 install:
   update:
