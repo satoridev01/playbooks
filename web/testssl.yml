@@ -1,6 +1,7 @@
 settings:
   name: "Checks TLS/SSL ciphers and protocols for security flaws"
   image: ubuntu:jammy
+  # example: satori run satori://web/testssl.yml --data='{"HOST":"satori.ci"}' --output
   
 install:
   assertReturnCode: 0
@@ -12,7 +13,7 @@ install:
 testssl:
   assertReturnCode: 0
   run:
-  - testssl -p -s -f -U -S -P --csvfile=log ${{URL}}
+  - testssl -p -s -f -U -S -P --csvfile=log ${{HOST}}
   log:
     assertStdoutNotRegex: ("LOW"|"MEDIUM"|"HIGH"|"CRITICAL")
     run:
