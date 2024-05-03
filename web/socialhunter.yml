@@ -4,20 +4,12 @@ settings:
   # example: satori run satori://web/socialhunter.yml --data='{"URL":"https://www.satori.ci"}' --output
 
 install:
-  #update:
-  #- apt update
-  #wget:
-  #- apt install -qq -y wget
-  #go:
-  #- wget -q https://go.dev/dl/go1.21.3.linux-amd64.tar.gz
-  #- tar -C /usr/local -xzf go1.21.3.linux-amd64.tar.gz
-  #- ln -s /usr/local/go/bin/go /usr/local/bin/go
   socialhunter:
   - go install github.com/utkusen/socialhunter@latest
-
-url:
-- echo "${{URL}}" > url.txt
+  url:
+  - echo "${{URL}}" > url.txt
 
 socialhunter:
-#- /root/go/bin/socialhunter -f url.txt
-- socialhunter -f url.txt
+  assertStdoutContains: "Scan Completed"
+  run:
+  - socialhunter -f url.txt
