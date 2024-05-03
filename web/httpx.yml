@@ -8,5 +8,7 @@ httpx:
   - go install github.com/projectdiscovery/httpx/cmd/httpx@latest
   help:
   - httpx -h
-  run:
-  - httpx -u ${{URL}} -silent -probe
+  test:
+    assertStdoutContains: "SUCCESS"
+    run:
+    - httpx -u ${{URL}} -silent -probe
