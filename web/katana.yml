@@ -13,6 +13,6 @@ katana:
   help:
   - katana --help
   test:
-    assertStdout: False
+    assertStdout: True
     run:
     - katana -u ${{URL}}
