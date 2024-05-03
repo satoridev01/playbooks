@@ -10,11 +10,8 @@ install:
   - cd ppmap/ && bash setup.sh
 
 ppmap:
-  help:
-  - ppmap --help
-  test:
-    assertStdoutNotContains: 
-    - "VULN"
-    - "EXPL"
-    run:
-    - echo '${{URL}}' | ppmap
+  assertStdoutNotContains: 
+  - "VULN"
+  - "EXPL"
+  run:
+  - echo '${{URL}}' | ppmap
