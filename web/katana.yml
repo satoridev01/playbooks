@@ -12,5 +12,7 @@ install:
 katana:
   help:
   - katana --help
-  run:
-  - katana -u ${{URL}}
+  test:
+    assertStdout: False
+    run:
+    - katana -u ${{URL}}
