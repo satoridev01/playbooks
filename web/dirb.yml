@@ -11,6 +11,6 @@ install:
   - apt install -qy dirb
 
 dirb:
-  assertStdout: False
+  assertStdoutContains: "DOWNLOADED: 4456"
   common:
   - dirb ${{URL}} /usr/share/dirb/wordlists/common.txt -S -r -i
