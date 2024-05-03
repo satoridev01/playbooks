@@ -9,6 +9,6 @@ gauplus:
   help:
   - gauplus -h
   test:
-    assertStdout: False
+    assertStdout: True
     run:
     - gauplus -providers commoncrawl ${{DOMAIN}} | sort -u
