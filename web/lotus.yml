@@ -1,12 +1,9 @@
 settings:
-  #image: ubuntu
   name: Scant3r scans URLs with multiple HTTP methods and tries to look for bugs with basic exploits from Headers and URL parameters
   # example: satori run satori://web/lotus.yml --output
 
 install:
-assertReturnCode: 0
-  update: 
-    - apt update
+  assertReturnCode: 0
   lotus: 
     - apt install libssl-dev pkg-config gcc git lua53 liblua5.3-0 liblua5.3-dev -y
     - cargo install --git=https://github.com/BugBlocker/lotus/
