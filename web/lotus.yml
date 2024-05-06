@@ -4,6 +4,8 @@ settings:
 
 install:
   assertReturnCode: 0
+  git:
+    - apt install -qq -y git
   lotus: 
     - git clone --depth 1 https://github.com/rusty-sec/lotus
 
