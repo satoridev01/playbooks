@@ -4,8 +4,6 @@ settings:
   #example: satori run ./ --playbook="satori://code/javascript/retirejs.yml" --output
 
 install:
-  npm:
-  - apt install -qy npm
   retire:
   - npm install -g retire
 
