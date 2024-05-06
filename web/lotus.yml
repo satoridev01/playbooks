@@ -5,10 +5,10 @@ settings:
 install:
   assertReturnCode: 0
   curl:
-    - apt install curl
+    #- apt install curl
   lotus: 
-    - cargo install --git=https://github.com/rusty-sec/lotus
-    #- git clone --depth 1 https://github.com/rusty-sec/lotus ; cd rusty-sec/lotus ; ejecucion adentro del directorio
+    #- cargo install --git=https://github.com/rusty-sec/lotus
+    - git clone --depth 1 https://github.com/rusty-sec/lotus
 
 lotus:
   - echo http://testphp.vulnweb.com/listproducts.php?cat=1 | lotus scan lotus-scripts/active -o test_out.json -v  
