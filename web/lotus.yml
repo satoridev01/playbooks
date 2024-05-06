@@ -1,4 +1,5 @@
 settings:
+  image: python
   name: Scant3r scans URLs with multiple HTTP methods and tries to look for bugs with basic exploits from Headers and URL parameters
   # example: satori run satori://web/lotus.yml --output
 
