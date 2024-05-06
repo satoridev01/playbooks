@@ -9,7 +9,7 @@ install:
   update:
   - apt update
   git:
-  - apt install -qq -y git
+  - apt install -qy git
   cmseek:
   - git clone https://github.com/Tuhinshubhra/CMSeeK.git --depth 1; pip3 install -r CMSeeK/requirements.txt
 
