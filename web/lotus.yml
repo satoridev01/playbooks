@@ -8,7 +8,7 @@ install:
   update:
     - apt update
   git:
-    - apt install -qq -y git
+    - apt install -qy git
   lotus: 
     - git clone --depth 1 https://github.com/rusty-sec/lotus
 
