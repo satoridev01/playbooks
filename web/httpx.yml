@@ -1,7 +1,7 @@
 settings:
   name: "httpx is a fast and multi-purpose HTTP toolkit that allows running multiple probes using the retryablehttp library"
   image: golang
-  # example: satori run satori://web/httpx.yml --data='{"URL":"https://www.hackerone.com"}' --output
+  # example: satori run satori://web/httpx.yml --data='{"URL":"satori.ci"}' --output
 
 httpx:
   install:
@@ -11,4 +11,4 @@ httpx:
   test:
     assertStdoutContains: "SUCCESS"
     run:
-    - httpx -u ${{URL}} -silent -probe
+    - httpx -u ${{URL}} -no-color -ip -cdn -cname -stats -title -retries 3 -threads 450 -timeout 3 -location -tls-grab -csp-probe -web-server -tech-detect -content-type -response-time -content-length -follow-redirects -follow-host-redirects -silent -probe -json
