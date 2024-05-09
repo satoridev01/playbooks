@@ -13,5 +13,5 @@ install:
 sublist3r:
   assertStdout: False
   run:
-    - python3 Sublist3r/sublist3r.py -e google,yahoo,virustotal -d ${{DOMAIN}}
+    - python3 Sublist3r/sublist3r.py -e google,yahoo -d ${{DOMAIN}}
     
