@@ -13,7 +13,7 @@ install:
 sublist3r:
   assertStdout: False
   help:
-    - https://github.com/aboul3la/Sublist3r
+    - python Sublist3r/sublist3r.py -h
   run:
     - python3 Sublist3r/sublist3r.py -e google,yahoo -d ${{DOMAIN}}
     
