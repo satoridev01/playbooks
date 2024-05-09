@@ -8,7 +8,7 @@ install:
   git:
     - apt install -qy git
   clone:
-    - git clone --depth 1 git clone https://github.com/aboul3la/Sublist3r.git ; pip3 install -r Sublist3r/requirements.txt
+    - git clone git clone https://github.com/aboul3la/Sublist3r.git --depth 1 ; pip3 install -r Sublist3r/requirements.txt
 
 sublist3r:
   - python3 Sublist3r/sublist3r.py -e google,yahoo,virustotal -d ${{DOMAIN}}
