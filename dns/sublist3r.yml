@@ -15,5 +15,5 @@ sublist3r:
   help:
     - python Sublist3r/sublist3r.py -h
   run:
-    - python3 Sublist3r/sublist3r.py -e google,yahoo -d ${{DOMAIN}}
+    - python Sublist3r/sublist3r.py -v -d ${{DOMAIN}} -t 5 -e bing,google,yahoo
     
