@@ -1,7 +1,7 @@
 settings:
   image: ubuntu
   name: Scant3r scans URLs with multiple HTTP methods and tries to look for bugs with basic exploits from Headers and URL parameters
-  # example: satori run satori://web/lotus.yml --data='{"URL":"http://testphp.vulnweb.com/listproducts.php?cat=1"}' --output
+  #example: satori run satori://web/lotus.yml --data='{"URL":"http://testphp.vulnweb.com/listproducts.php?cat=1"}' --output
 
 install:
   assertReturnCode: 0
