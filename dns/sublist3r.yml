@@ -1,4 +1,5 @@
 settings:
+  image: python
   name: Sublist3r enumerates subdomains using many search engines such as Google, Yahoo, Bing, Baidu and Ask.
   #example: tbc
 
