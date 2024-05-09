@@ -4,12 +4,13 @@ settings:
   #example: satori run satori://dns/sublist3r.yml --data='{"DOMAIN":"satori.ci"}' --output
 
 install:
-  assertStdout: 0
+  assertReturnCode: 0
   git:
     - apt install -qy git
   clone:
     - git clone git clone https://github.com/aboul3la/Sublist3r.git --depth 1 ; pip3 install -r Sublist3r/requirements.txt
 
 sublist3r:
+  assertStdout: False
   - python3 Sublist3r/sublist3r.py -e google,yahoo,virustotal -d ${{DOMAIN}}
     
