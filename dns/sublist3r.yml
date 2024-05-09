@@ -8,7 +8,7 @@ install:
   git:
     - apt install -qy git
   clone:
-    - git clone  --depth 1 https://github.com/aboul3la/Sublist3r.git ; pip3 install -r Sublist3r/requirements.txt
+    - git clone --depth 1 https://github.com/aboul3la/Sublist3r.git ; pip3 install -r Sublist3r/requirements.txt
 
 sublist3r:
   assertStdout: False
