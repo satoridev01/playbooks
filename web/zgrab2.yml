@@ -1,23 +1,28 @@
 settings:
   name: ZGrab scanner
+  image: golang
   # source: https://github.com/zmap/zgrab2
   # example: satori run satori://web/zgrab2.yml --data='{"HOST":"satori.ci"}' --output
 
-install:
-  update:
-  - apt update
-  wget:
-  - apt install -qq -y wget git jq
-  go:
-  - wget -q https://go.dev/dl/go1.21.3.linux-amd64.tar.gz
-  - tar -C /usr/local -xzf go1.21.3.linux-amd64.tar.gz
-  - ln -s /usr/local/go/bin/go /usr/local/bin/go
-  build:
-  - git clone https://github.com/zmap/zgrab2.git --depth 1
-  - cd zgrab2/cmd/zgrab2 ; go build .
+#install:
+#  update:
+#  - apt update
+#  wget:
+#  - apt install -qy wget git jq
+#  go:
+#  - wget -q https://go.dev/dl/go1.21.3.linux-amd64.tar.gz
+#  - tar -C /usr/local -xzf go1.21.3.linux-amd64.tar.gz
+#  - ln -s /usr/local/go/bin/go /usr/local/bin/go
+#  build:
+#  - git clone https://github.com/zmap/zgrab2.git --depth 1
+#  - cd zgrab2/cmd/zgrab2 ; go build .
 
 zgrab2:
+  install:
+  - go install github.com/zmap/zgrab2/cmd/zgrab2@latest
   help:
-  - /data/zgrab2/cmd/zgrab2/zgrab2 --help
+  #- /data/zgrab2/cmd/zgrab2/zgrab2 --help
+  - zgrab2 --help
   run:
-  - echo ${{HOST}} | /data/zgrab2/cmd/zgrab2/zgrab2 http
+  #- echo ${{HOST}} | /data/zgrab2/cmd/zgrab2/zgrab2 http
+  - echo ${{HOST}} | zgrab2 http
