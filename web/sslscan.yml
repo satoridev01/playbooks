@@ -11,4 +11,7 @@ install:
   - apt install -qy sslscan
 
 sslscan:
-- sslscan  --no-cipher-details --xml="$FILENAME-$HOST-sslscan.xml" ${{HOST}}
+  help:
+  - sslscan --help
+  run:
+  - sslscan  --no-cipher-details --xml="$FILENAME-$HOST-sslscan.xml" ${{HOST}}
