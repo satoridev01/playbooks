@@ -1,10 +1,11 @@
 settings:
   name: Pass in a list of URLs, and get back a list of deduplicated (unique) URL and query string combination
+  image: ubuntu:jammy
   # Example: satori run satori://web/urldedupe.yml --data='{"URL":"https://google.com/home?qs=value\nhttps://google.com/home?qs=secondValue"}' --output
 
 install:
 - apt update
-- apt install -qq -y git build-essential make cmake
+- apt install -qy git build-essential make cmake
 
 build:
 - git clone https://github.com/ameenmaali/urldedupe.git
