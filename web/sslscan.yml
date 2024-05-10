@@ -17,8 +17,9 @@ sslscan:
     assertStdoutNotContains:
     - "TLSv1.0   enabled"
     - "TLSv1.1   enabled"
-    - "vulnerable=\"0\""
+    - "vulnerable=\"1\""
+    - "supported=\"1\" secure=\"0\""
     run:
-    - sslscan  --no-cipher-details --xml="${{HOST}}-sslscan.xml" ${{HOST}}
+    - sslscan --no-colour --no-cipher-details --xml="${{HOST}}-sslscan.xml" ${{HOST}}
     xml:
     - cat ${{HOST}}-sslscan.xml
