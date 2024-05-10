@@ -20,6 +20,7 @@ naabu:
   install:
   - go install github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
   help:                                                                                                            
-  - /root/go/bin/naabu --help                                                                                      
+  - /root/go/bin/naabu --help
+  - naabu --help
   run:                                                                                                           
   - /root/go/bin/naabu -host ${{HOST}}
