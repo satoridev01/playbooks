@@ -1,21 +1,24 @@
 settings:                                                                                                        
   name: Naabu is a Go port scanning tool that performs fast SYN/CONNECT/UDP enumeration of valid ports for hosts 
+  image: golang
   # example: satori run satori://scan/naabu.yml --data='{"HOST":"satori.ci"}' --output                           
                                                                                                                  
-install:
-  update:
-  - apt update
-  dependencies:
-  - apt install -qq -y libpcap-dev build-essential wget
-  go:
-  - wget -q https://go.dev/dl/go1.21.3.linux-amd64.tar.gz
-  - tar -C /usr/local -xzf go1.21.3.linux-amd64.tar.gz
-  - ln -s /usr/local/go/bin/go /usr/local/bin/go
-  - ln -s /usr/local/go/bin/gofmt /usr/local/bin/gofmt
-  naabu:
-  - go install github.com/projectdiscovery/naabu/v2/cmd/naabu@latest                                             
+#install:
+#  update:
+#  - apt update
+#  dependencies:
+#  - apt install -qq -y libpcap-dev build-essential wget
+#  go:
+#  - wget -q https://go.dev/dl/go1.21.3.linux-amd64.tar.gz
+#  - tar -C /usr/local -xzf go1.21.3.linux-amd64.tar.gz
+#  - ln -s /usr/local/go/bin/go /usr/local/bin/go
+#  - ln -s /usr/local/go/bin/gofmt /usr/local/bin/gofmt
+#  naabu:
+#  - go install github.com/projectdiscovery/naabu/v2/cmd/naabu@latest                                             
 
-naabu:                                                                                                              
+naabu:  
+  install:
+  - go install github.com/projectdiscovery/naabu/v2/cmd/naabu@latest
   help:                                                                                                            
   - /root/go/bin/naabu --help                                                                                      
   run:                                                                                                           
