@@ -13,7 +13,12 @@ install:
 sslscan:
   help:
   - sslscan --help
-  run:
-  - sslscan  --no-cipher-details --xml="${{HOST}}-sslscan.xml" ${{HOST}}
-  xml:
-  - cat ${{HOST}}-sslscan.xml
+  test:
+    assertStdoutNotContains:
+    - "TLSv1.0   enabled"
+    - "TLSv1.1   enabled"
+    - "vulnerable=\"0\""
+    run:
+    - sslscan  --no-cipher-details --xml="${{HOST}}-sslscan.xml" ${{HOST}}
+    xml:
+    - cat ${{HOST}}-sslscan.xml
