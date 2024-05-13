@@ -7,5 +7,6 @@ subzy:
   install:
     - go install -v github.com/LukaSikic/subzy@latest
   help:
-
+    - subzy --help
   run:
+    - subzy run
