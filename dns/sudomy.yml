@@ -1,4 +1,16 @@
 settings:
-  image:
+  image: screetsec/sudomy:v1.2.1-dev
   name: Sudomy is a subdomain enumeration tool to collect subdomains and analyzing domains
   #example: 
+
+ install:
+  git:
+    - apt install -qy git
+  clone:
+    - git clone --depth 1 https://github.com/screetsec/Sudomy.git ; pip install -r requirements.txt
+
+sudomy:
+  help:
+   - sudomy -d
+  run:
+   -  sudomy -d ${{DOMAIN}} --all 
