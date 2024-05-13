@@ -7,7 +7,7 @@ install:
   git:
     - apt install -qy git
   theharvest:
-    - git clone --depth 1 https://github.com/laramies/theHarvester ; pip install -r theHarvester/requirements/dev.txt
+    - git clone --depth 1 https://github.com/laramies/theHarvester ; pip install -r theHarvester/requirements/base.txt
 
 theHarvest:
   help:
