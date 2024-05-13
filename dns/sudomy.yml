@@ -13,4 +13,4 @@ sudomy:
   help:
    - sudomy -d
   run:
-   -  sudomy -d ${{DOMAIN}} --all 
+   - sudomy -d ${{DOMAIN}} --all 
