@@ -13,4 +13,5 @@ theHarvest:
   help:
     - python3 theHarvester/theHarvester.py -h
   run:
-    - python3 theHarvester/theHarvester.py -d ${{DOMAIN}}
+    - python3 theHarvester/theHarvester.py -d ${{DOMAIN}} ; ls -lR
+    
