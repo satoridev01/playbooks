@@ -11,6 +11,6 @@ settings:
 
 sudomy:
   help:
-   - sudomy -d
+   - sudomy -h
   run:
    - sudomy -d ${{DOMAIN}} --all 
