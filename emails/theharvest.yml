@@ -1,9 +1,0 @@
-settings:
-  image: kalilinux/kali-rolling
-  name: E-mails, subdomains and names enumeration tool.
-
-theHarvest:
-  help:
-    - theHarvester -h
-  run:
-    - tbc
