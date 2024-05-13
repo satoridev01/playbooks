@@ -1,0 +1,15 @@
+settings:
+  image: python
+  name: E-mails, subdomains and names enumeration tool.
+  #example: satori run satori://email/theharvester.yml --output
+
+install:
+  git:
+  theharvest:
+    - git clone --depth 1 https://github.com/laramies/theHarvester ; pip install -r requirements/dev.txt
+
+theHarvest:
+  help:
+    - python3 theHarvester.py -h
+  run:
+    - tbc
