@@ -7,4 +7,4 @@ sudomy:
   help:
     - sudomy -h
   run:
-    - sudomy -d ${{DOMAIN}} --all | ls -lR
+    - sudomy -d ${{DOMAIN}} --all ; ls -lR
