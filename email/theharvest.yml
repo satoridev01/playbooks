@@ -1,7 +1,7 @@
 settings:
   image: kalilinux/kali-rolling
   name: E-mails, subdomains and names enumeration tool.
-  #example: satori run satori://email/theharvest.yml 
+  #example: satori run satori://email/theharvest.yml --output
 
 theHarvest:
   help:
