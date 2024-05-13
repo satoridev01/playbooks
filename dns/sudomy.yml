@@ -3,7 +3,7 @@ settings:
   name: Sudomy is a subdomain enumeration tool to collect subdomains and analyzing domains
   #example: satori run satori://dns/sudomy.yml --data='{"DOMAIN":"satori.ci"}' --output
 
- install:
+install:
   git:
     - apt install -qy git
   clone:
