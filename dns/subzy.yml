@@ -1,7 +1,7 @@
 settings:
   image: golang
   name: Subzy is subdomain takeover tool which works based on matching response fingerprings from can-i-take-over-xyz.
-  #example: 
+  #example: satori run satori://dns/subzy.yml --output
 
 subzy:
   install:
