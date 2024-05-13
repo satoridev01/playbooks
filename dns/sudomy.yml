@@ -11,6 +11,6 @@ install:
 
 sudomy:
   help:
-   - sudomy -h
+    - sudomy -h
   run:
-   - sudomy -d ${{DOMAIN}} --all 
+    - sudomy -d ${{DOMAIN}} --all 
