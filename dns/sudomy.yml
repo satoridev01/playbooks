@@ -1,5 +1,5 @@
 settings:
-  image: screetsec/sudomy:v1.2.1-dev
+  image: python
   name: Sudomy is a subdomain enumeration tool to collect subdomains and analyzing domains
   #example: satori run satori://dns/sudomy.yml --data='{"DOMAIN":"satori.ci"}' --output
 
