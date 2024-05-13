@@ -1,0 +1,9 @@
+settings:
+  image: golang
+  name: Subzy is subdomain takeover tool which works based on matching response fingerprings from can-i-take-over-xyz.
+  #example: 
+
+install:
+  assertReturnCode: 0
+  subzy:
+    - go install -v github.com/LukaSikic/subzy@latest
