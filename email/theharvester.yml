@@ -13,5 +13,6 @@ theHarvest:
   help:
     - python3 theHarvester/theHarvester.py -h
   run:
-    - python3 theHarvester/theHarvester.py -d ${{DOMAIN}} ; ls -lR
-    
+    - python3 theHarvester/theHarvester.py -d ${{DOMAIN}} -l 150 -f satoriOutput
+  read:  
+    - cat theHarvester/satoriOutput.json
