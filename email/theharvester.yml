@@ -15,4 +15,4 @@ theHarvest:
   run:
     - python3 theHarvester/theHarvester.py -d ${{DOMAIN}} -l 150 -f ${{OUTPUT}}
   read:  
-    - cat theHarvester/${{OUTPUT}}.json
+    - cat theHarvester/${{OUTPUT}}
