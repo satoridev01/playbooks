@@ -9,5 +9,5 @@ tlsx:
   help:
     - tlsx -h
   run:
-    - $ tlsx -u ${{HOST}}
+    - tlsx -u ${{HOST}}
   
