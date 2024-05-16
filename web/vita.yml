@@ -1,5 +1,5 @@
 settings:
-  image: ubuntu:jammy
+  image: rust
   name: Vita is a tool to gather subdomains from passive sources.
   #example: satori run satori://web/vita.yml --data='{"DOMAIN":"satori.ci"}' --output
 
