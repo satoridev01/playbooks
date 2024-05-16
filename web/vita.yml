@@ -1,0 +1,13 @@
+settings:
+  image: ubuntu
+  name: Vita is a tool to gather subdomains from passive sources.
+  #example: satori run satori://web/vita.yml --data='{"DOMAIN":"satori.ci"}'
+
+install:
+  git:
+    - apt install -qy git
+  clone:
+    - git clone https://github.com/junnlikestea/vita ; ./vita cargo build --release
+
+run:
+  - vita -d ${{DOMAIN}}
