@@ -1,12 +1,10 @@
 settings:
-  image: alpinelinux/docker-cli
+  image: trailofbits/twa:latest
   name: A tiny web auditor with strong opinions.
   #example: satori run satori://web/twa.yml --data='{"HOST":"satori.ci"}' --output
 
-install:
-  twa:
-    - docker build -t trailofbis/twa
+twa:
   help:
-    - docker run --rm -t trailofbits/twa -h
+    - twa -h
   run:
-    - docker run --rm -t trailofbits/twa -vw ${{HOST}}
+    - twa -vw ${{HOST}}
