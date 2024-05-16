@@ -1,5 +1,5 @@
 settings:
-  image: trailofbits/twa:latest
+  image: trailofbits/twa:1.7.0
   name: A tiny web auditor with strong opinions.
   #example: satori run satori://web/twa.yml --data='{"HOST":"satori.ci"}' --output
 
