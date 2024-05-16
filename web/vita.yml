@@ -9,7 +9,7 @@ install:
   git:
     - apt install -qy git
   clone:
-    - git clone --depth 1 https://github.com/junnlikestea/vita ; ./vita cargo build --release
+    - git clone --depth 1 https://github.com/junnlikestea/vita ; cd vita ; cargo build --release
 
 run:
   - vita -d ${{DOMAIN}}
