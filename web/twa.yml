@@ -1,5 +1,5 @@
 settings:
-  image: alpine
+  image: alpinelinux/docker-cli
   name: A tiny web auditor with strong opinions.
   #example: satori run satori://web/twa.yml --data='{"HOST":"satori.ci"}' --output
 
