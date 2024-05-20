@@ -11,6 +11,8 @@ install:
     - apt install libssl-dev pkg-config gcc git lua53 liblua5.3-0 liblua5.3-dev -y
   cargo:  
     - cargo install --git=https://github.com/BugBlocker/lotus/
+  git:
+    - git clone --depth 1 https://github.com/rusty-sec/lotus-scripts
 
 lotus:
   run:
