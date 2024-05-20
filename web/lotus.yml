@@ -16,7 +16,7 @@ install:
 
 lotus:
   run:
-    - echo ${{URL}} | lotus urls lotus-scripts/active/ -o test.json
+    - echo ${{URL}} | ./lotus urls lotus-scripts/active/ -o test.json
   read:
     - cat test.json
 
