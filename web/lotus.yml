@@ -6,13 +6,13 @@ settings:
 install:
   assertReturnCode: 0
   packages:
-    - apt install libssl-dev pkg-config gcc git lua53 liblua5.3-0 liblua5.3-dev -qy
+    - apt install libssl-dev pkg-config gcc git lua53 liblua5.3-0 liblua5.3-dev -y
   cargo:  
     - cargo install --git=https://github.com/BugBlocker/lotus/
 
 lotus:
   run:
-    - echo ${{URL}} | ./lotus urls lotus-scripts/active/ -o test.json
+    - echo ${{URL}} | lotus urls lotus-scripts/active/ -o test.json
   read:
     - cat test.json
 
