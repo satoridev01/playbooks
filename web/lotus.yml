@@ -5,8 +5,10 @@ settings:
 
 install:
   assertReturnCode: 0
-  - apt install libssl-dev pkg-config gcc git lua53 liblua5.3-0 liblua5.3-dev -qy
-  - cargo install --git=https://github.com/BugBlocker/lotus/
+  packages:
+    - apt install libssl-dev pkg-config gcc git lua53 liblua5.3-0 liblua5.3-dev -qy
+  cargo:  
+    - cargo install --git=https://github.com/BugBlocker/lotus/
 
 lotus:
   run:
