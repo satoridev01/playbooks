@@ -12,4 +12,7 @@ install:
 
 lotus:
   run:
-    - echo ${{URL}} | lotus scan lotus-scripts/active -o test_out.json -v  
+    - echo ${{URL}} | ./lotus urls lotus-scripts/active/ -o test.json
+  read:
+    - cat test.json
+
