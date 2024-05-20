@@ -5,6 +5,8 @@ settings:
 
 install:
   assertReturnCode: 0
+  update:
+    - apt update
   packages:
     - apt install libssl-dev pkg-config gcc git lua53 liblua5.3-0 liblua5.3-dev -y
   cargo:  
