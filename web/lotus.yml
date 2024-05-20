@@ -1,16 +1,13 @@
 settings:
-  image: ubuntu:jammy
+  image: cimg/rust
   name: Scant3r scans URLs with multiple HTTP methods and tries to look for bugs with basic exploits from Headers and URL parameters
   #example: satori run satori://web/lotus.yml --data='{"URL":"http://testphp.vulnweb.com/listproducts.php?cat=1"}' --output
 
 install:
   assertReturnCode: 0
-  update:
-    - apt update
-  git:
-    - apt install -qy git
-  lotus: 
-    - git clone --depth 1 https://github.com/rusty-sec/lotus
+  - apt install libssl-dev pkg-config gcc git lua53 liblua5.3-0 liblua5.3-dev -qy
+  - cargo install --git=https://github.com/BugBlocker/lotus/
 
 lotus:
-  - echo ${{URL}} | lotus scan lotus-scripts/active -o test_out.json -v  
+  run:
+    - echo ${{URL}} | lotus scan lotus-scripts/active -o test_out.json -v  
