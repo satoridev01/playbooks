@@ -8,7 +8,7 @@ install:
   update:
     - apt update
   packages:
-    - apt install libssl-dev pkg-config gcc git lua53 liblua5.3-0 liblua5.3-dev -y
+    - apt install git -qy
   cargo:  
     - cargo install --git=https://github.com/BugBlocker/lotus/
   git:
