@@ -2,6 +2,7 @@ settings:
   image: python
   name: E-mails, subdomains and names enumeration tool.
   #example: satori run satori://email/theharvester.yml --data='{"DOMAIN":"kali.org"}' --output
+  #github: https://github.com/laramies/theHarvester
 
 install:
   git:
@@ -14,5 +15,3 @@ theHarvest:
     - python3 theHarvester/theHarvester.py -h
   run:
     - python3 theHarvester/theHarvester.py -d ${{DOMAIN}} -b baidu -f output
-  read:  
-    - cat output.json
