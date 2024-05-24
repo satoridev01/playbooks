@@ -14,4 +14,4 @@ theHarvest:
   help:
     - python3 theHarvester/theHarvester.py -h
   run:
-    - python3 theHarvester/theHarvester.py -d ${{DOMAIN}} -b baidu -f output
+    - python3 theHarvester/theHarvester.py -d ${{DOMAIN}} -b baidu
