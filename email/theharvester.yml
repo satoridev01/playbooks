@@ -13,6 +13,6 @@ theHarvest:
   help:
     - python3 theHarvester/theHarvester.py -h
   run:
-    - python3 theHarvester/theHarvester.py -d ${{DOMAIN}} -b pgp -f output
+    - python3 theHarvester/theHarvester.py -d ${{DOMAIN}} -b baidu -f output
   read:  
     - cat output.json
