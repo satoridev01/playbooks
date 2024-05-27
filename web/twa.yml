@@ -2,6 +2,4 @@ settings:
   image: trailofbis/twa
   name: A tiny web auditor with strong opinions.
   #example: satori run satori://web/twa.yml --data='{"HOST":"satori.ci"}' --output
-  
-twa:
-  - run trailofbits/twa -vw ${{HOST}}
+
