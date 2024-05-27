@@ -4,4 +4,4 @@ settings:
   #example: satori run satori://web/twa.yml --data='{"HOST":"satori.ci"}' --output
   
 twa:
-  - run trailofbits/twa -vw google.com
+  - run trailofbits/twa -vw ${{HOST}}
