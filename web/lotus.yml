@@ -20,7 +20,7 @@ install:
 
 lotus:
   run:
-    - echo ${{URL}} | cd lotus-scripts ; ls -l
+    - echo ${{URL}} | lotus-scripts/active -o out.json -v
   read:
-    - cat test.json
+    - cat out.json
 
