@@ -13,7 +13,6 @@ install:
   packages:
     - apt install git -qy
   lua:
-    #- apt search lua5
     - apt install -qy lua5.4 liblua5.4-dev
   cargo:  
     - cargo install --git=https://github.com/BugBlocker/lotus/
