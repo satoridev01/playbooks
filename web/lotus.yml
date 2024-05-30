@@ -9,7 +9,7 @@ install:
   update:
     - apt update
   jq:
-    - apt install jq
+    - apt install jq -qy
   packages:
     - apt install git -qy
   lua:
