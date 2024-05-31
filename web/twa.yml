@@ -10,10 +10,10 @@ install:
     - apt install jq -qy
   curl:
     - apt install curl -qy
-  dig:
-    - 
+  dnsutils:
+    - apt install dnsutils -qy
   nc:
-    - 
+    - apt install netcat
 
 run:
   - twa -v ${{HOST}}
