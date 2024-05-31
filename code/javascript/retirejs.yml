@@ -9,4 +9,7 @@ install:
   - npm install -g retire
 
 retirejs:
-  - retire --outputformat cyclonedx
+  help:
+    - retire --help
+  run:
+    - retire --outputformat cyclonedx
