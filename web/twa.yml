@@ -14,7 +14,12 @@ install:
   dnsutils:
     - apt install dnsutils -qy
   nc:
-    - apt install netcat
+    - apt install netcat -qy
+  git:
+    - apt install git -qy
+  twa:
+    - git clone --depth 1 https://github.com/trailofbits/twa.git
+  
 
 run:
-  - twa -v ${{HOST}}
+  - twa/twa -v ${{HOST}}
