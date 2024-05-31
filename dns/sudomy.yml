@@ -2,6 +2,7 @@ settings:
   image: screetsec/sudomy:v1.2.0-dev
   name: Sudomy is a subdomain enumeration tool to collect subdomains and analyzing domains
   #example: satori run satori://dns/sudomy.yml --data='{"DOMAIN":"satori.ci"}' --output
+  #github: https://github.com/screetsec/Sudomy
 
 sudomy:
   help:
