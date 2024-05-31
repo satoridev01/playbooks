@@ -3,6 +3,7 @@ settings:
   name: A tiny web auditor with strong opinions.
   #example: satori run satori://web/twa.yml --data='{"HOST":"satori.ci"}' --output
   #github: https://github.com/trailofbits/twa
+
 install:
   update:
     - apt update
