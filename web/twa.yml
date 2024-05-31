@@ -17,9 +17,12 @@ install:
     - apt install netcat -qy
   git:
     - apt install git -qy
-  twa:
+  clone:
     - git clone --depth 1 https://github.com/trailofbits/twa.git
   
 
-run:
-  - twa/twa -v ${{HOST}}
+twa:
+  help:
+    -twa/twa -h
+  run:
+    - twa/twa -v ${{HOST}}
