@@ -1,5 +1,5 @@
 settings:
-  image: 
+  image: ubuntu:jammy
   name: A tiny web auditor with strong opinions.
   #example: satori run satori://web/twa.yml --data='{"HOST":"satori.ci"}' --output
   #github: https://github.com/trailofbits/twa
@@ -11,9 +11,9 @@ install:
   curl:
     - apt install curl -qy
   dig:
-    -
+    - apt install dig
   nc:
-    -
+    - apt install nc
 
 run:
-  - 
+  - twa -v ${{HOST}}
