@@ -1,7 +1,8 @@
 settings:
   image: rustscan/rustscan:2.1.1
   name: The Modern Port Scanner. Find ports quickly (3 seconds at its fastest). Run scripts through our scripting engine (Python, Lua, Shell supported).
-  # example: satori run satori://scan/rustscan.yml --data='{"HOST":"satori.ci"}' --output
+  #example: satori run satori://scan/rustscan.yml --data='{"HOST":"satori.ci"}' --output
+  #github: https://github.com/RustScan/RustScan
 
 rustscan:
   - rustscan -a ${{HOST}}
