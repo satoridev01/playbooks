@@ -20,7 +20,6 @@ install:
   clone:
     - git clone --depth 1 https://github.com/trailofbits/twa.git
   
-twa:
   help:
     -twa/twa -h
   run:
