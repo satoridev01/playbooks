@@ -11,9 +11,9 @@ install:
   curl:
     - apt install curl -qy
   dig:
-    - apt install dig
+    - 
   nc:
-    - apt install nc
+    - 
 
 run:
   - twa -v ${{HOST}}
