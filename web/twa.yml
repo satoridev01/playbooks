@@ -20,6 +20,7 @@ install:
   clone:
     - git clone --depth 1 https://github.com/trailofbits/twa.git
   
-run:
+twa:
   asserStdout: Contains
-  - twa/twa -v ${{HOST}}
+  run:
+    - twa/twa -v ${{HOST}}
