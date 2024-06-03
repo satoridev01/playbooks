@@ -21,6 +21,6 @@ install:
     - git clone --depth 1 https://github.com/trailofbits/twa.git
 
 twa:
-  asserStdout: Contains
+  assertStdoutContains: FAIL
   run:
     - twa/twa -v ${{HOST}}
