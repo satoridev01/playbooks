@@ -19,7 +19,7 @@ install:
     - apt install git -qy
   clone:
     - git clone --depth 1 https://github.com/trailofbits/twa.git
-  
+
 twa:
   asserStdout: Contains
   run:
