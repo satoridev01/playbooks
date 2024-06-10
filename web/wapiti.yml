@@ -6,3 +6,5 @@ settings:
 run:
   help:
     - wapiti -h
+  run:
+    - wapiti -u ${{URL}}
