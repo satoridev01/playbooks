@@ -3,7 +3,7 @@ settings:
   name: Web vulnerability scanner written in Python3 
   #example: satori run satori://web/wapiti.yml --data='{"URL":"satori.ci"}' --output
 
-run:
+wapiti:
   help:
     - wapiti -h
   run:
