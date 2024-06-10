@@ -1,0 +1,16 @@
+settings:
+  image: python
+  name: WAFW00F allows one to identify and fingerprint Web Application Firewall (WAF) products protecting a website. 
+  #example: satori run satori://web/wafw00f.yml --data='{"URL":"satori.ci"}' --output
+
+install:
+  assertReturnCode: 0
+  update:
+    - apt update
+  git:
+    - apt install git -qy
+  clone:
+    - git clone --depth 1 https://github.com/EnableSecurity/wafw00f.git ; python wafw00f/setup.py install
+
+run:
+  - wafw00f ${{URL}}
