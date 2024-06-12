@@ -5,9 +5,9 @@ settings:
 
 install:
   webanalyze:
-    -go install -v github.com/rverton/webanalyze/cmd/webanalyze@latest
+    - go install -v github.com/rverton/webanalyze/cmd/webanalyze@latest
   update:
-    webanalyze -update
+    - webanalyze -update
 
 webanalyze:
   help:
