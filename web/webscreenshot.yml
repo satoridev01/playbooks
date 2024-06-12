@@ -10,4 +10,4 @@ webscreenshot:
   help:
     - webscreenshot -h
   run:
-    -  webscreenshot -v ${{URL}}
+    - webscreenshot -v ${{URL}}
