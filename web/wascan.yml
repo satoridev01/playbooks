@@ -5,12 +5,8 @@ settings:
 
 install:
   assertReturnCode: 0
-  update:
-    - apt update
-  git:
-    - apt install git -qy
   clone:
-    - git clone --depth 1 https://github.com/R3dFruitRollUp/WAScan.git ; pip install -r WAScan/requirements.txt
+    - git clone --depth 1 https://github.com/R3dFruitRollUp/WAScan.git ; cd WAScan ; pip install -r requirements.txt
 
 run:
   - python3 WAScan/wascan.py -h
