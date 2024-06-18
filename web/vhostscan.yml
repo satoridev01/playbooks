@@ -16,4 +16,4 @@ install:
 help:
   - VHostScan -h
 run:
-  - VHostScan -t ${{URL}}
+  - VHostScan -t ${{URL}} ${{PARAM}}
