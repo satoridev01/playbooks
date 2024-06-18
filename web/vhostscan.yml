@@ -2,7 +2,7 @@ settings:
   image: python
   name: A virtual host scanner that can be used with pivot tools, detect catch-all scenarios, aliases and dynamic default pages.
   timeout: 1200
-  #example: satori run satori://web/vhostscan.yml --data='{"URL":"satori.ci"}' --output
+  #example: satori run satori://web/vhostscan.yml --data='{"DOMAIN":"satori.ci", "PARAM":""}' --output
 
 install:
   assertReturnCode: 0
@@ -11,9 +11,9 @@ install:
   git:
     - apt install git -qy
   numpy:
-    - pip install numpy >= 1.4
+    - pip install numpy python-Levenshtein
   clone:
-    - git clone --depth 1 https://github.com/codingo/VHostScan.git ; cd VHostScan ; python3 setup.py install
+    - git clone --depth 1 https://github.com/codingo/VHostScan.git ; cd VHostScan ; pip install .
 
 help:
   - VHostScan -h
