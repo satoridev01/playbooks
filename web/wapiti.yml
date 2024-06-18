@@ -1,8 +1,7 @@
 settings:
   image: cyberwatch/wapiti
   name: Web vulnerability scanner written in Python3
-  timeout: 180
-  #example: satori run satori://web/wapiti.yml --data='{"URL":"https://satori.ci"}' --output
+  #example: satori run satori://web/wapiti.yml --data='{"URL":"https://example.com"}' --output
 
 wapiti:
   help:
