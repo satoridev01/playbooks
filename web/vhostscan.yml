@@ -10,6 +10,8 @@ install:
     - apt update
   git:
     - apt install git -qy
+  numpy:
+    - pip install numpy
   clone:
     - git clone --depth 1 https://github.com/codingo/VHostScan.git ; cd VHostScan ; python3 setup.py install
 
