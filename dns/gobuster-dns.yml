@@ -1,0 +1,16 @@
+settings:
+  image: golang
+  name: A tool used to brute-force DNS subodmains(with wildcard support)
+  #example: satori run satori://dns/gobuster-dns.yml --data='{"DOMAIN": "satori.ci"}' --output
+
+install:
+  assertReturnCode: 0
+  gobuster-dns:
+    - go install github.com/OJ/gobuster/v3@latest
+
+gobuster-dns:
+  assertReturnCode: 0
+  help:
+    - gobuster dns -h
+  run:
+    - gobuster dns -d ${{DOMAIN}} -w words.txt
