@@ -1,0 +1,18 @@
+settings:
+  image: golang
+  name: shuffleDNS is a wrapper around massdns written in go that allows you to enumerate valid subdomains using active bruteforce as well as resolve subdomains with wildcard handling and easy input-output support.
+  #example: satori run satori://dns/shuffledns.yml --data='{"DOMAIN":"satori.ci"}'
+
+install:
+  assertReturnCode: 0
+  shuffledns:
+    - go install -v github.com/projectdiscovery/shuffledns/cmd/shuffledns@latest
+  massdns:
+    - 
+
+shuffledns:
+  assertReturnCode: 0
+  help:
+    - shuffledns -h
+  run:
+    - shuffledns -d ${{DOMAIN}} -list example-subdomains.txt -r resolvers.txt -mode resolve
