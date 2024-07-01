@@ -15,4 +15,6 @@ wascan:
   ls:
     - ls
   help:
-    - cd WAScan ; python3 wascan.py -h
+    - cd WAScan ; python3 wascan.py -hh
+  run:
+    - python3 wascan.py -u ${{URL}}
