@@ -12,5 +12,7 @@ install:
 
 wascan:
   assertReturnCode: 0
+  ls:
+    - ls
   help:
     - python3 wascan.py -h
