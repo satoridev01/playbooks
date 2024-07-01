@@ -13,6 +13,6 @@ install:
 wascan:
   assertReturnCode: 0
   help:
-    - cd WAScan ; python3 wascan.py -hh
+    - cd WAScan ; python3 wascan.py --help
   run:
-    - python3 wascan.py -u ${{URL}}
+    - cd WAScan ; python3 wascan.py -u ${{URL}}
