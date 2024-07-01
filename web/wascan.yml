@@ -8,7 +8,7 @@ install:
   beautifulsoup:
     - pip install beautifulsoup4
   clone:
-    - git clone --depth 1 https://github.com/R3dFruitRollUp/WAScan.git ; cd WAScan ; pip install -r requirements.txt
+    - git clone --depth 1 https://github.com/R3dFruitRollUp/WAScan.git
 
 run:
   - python3 WAScan/wascan.py -h
