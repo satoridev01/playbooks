@@ -10,5 +10,11 @@ install:
   clone:
     - git clone --depth 1 https://github.com/R3dFruitRollUp/WAScan.git
 
-run:
-  - python3 WAScan/wascan.py -h
+wascan:
+  assertReturnCode: 0
+  cd:
+    - cd WAScan
+  help:
+    - python3 wascan.py --help
+  run:
+    #- python3 
