@@ -5,10 +5,8 @@ settings:
 
 install:
   assertReturnCode: 0
-  update:
-    - apt update
-  git:
-    - apt install git -qy
+  beautifulsoup:
+    - pip install beautifulsoup4
   clone:
     - git clone --depth 1 https://github.com/R3dFruitRollUp/WAScan.git ; cd WAScan ; pip install -r requirements.txt
 
