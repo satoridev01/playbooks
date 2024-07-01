@@ -15,4 +15,4 @@ wascan:
   ls:
     - ls
   help:
-    - python3 wascan.py -h
+    - cd WAScan ; python3 wascan.py -h
