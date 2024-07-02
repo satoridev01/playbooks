@@ -5,9 +5,10 @@ settings:
 
 install:
   assertReturnCode: 0
+  bueatifulsoup:
+    - pip install beautifulsoup4
   clone:
-    - git clone --depth 1 https://github.com/R3dFruitRollUp/WAScan.git ; cd WAScan ; pip install -r requirements.txt
-
+    - git clone --depth 1 https://github.com/R3dFruitRollUp/WAScan.git
 wascan:
   assertReturnCode: 0
   help:
