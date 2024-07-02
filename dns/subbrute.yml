@@ -13,4 +13,4 @@ subbrute:
   help:
     - subbrute/subbrute.py -h
   run:
-    - subbrute/subbrute.py ${{DOMAIN}}
+    - subbrute/subbrute.py ${{DOMAIN}} -r subbrute/resolvers.txt
