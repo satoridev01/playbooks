@@ -8,10 +8,10 @@ install:
   bueatifulsoup:
     - pip install beautifulsoup4
   clone:
-    - git clone --depth 1 https://github.com/R3dFruitRollUp/WAScan.git .
+    - git clone --depth 1 https://github.com/R3dFruitRollUp/WAScan.git
 wascan:
   assertReturnCode: 0
   help:
-    - python wascan.py --help
+    - cd WAScan ; python wascan.py --help
   run:
-    - python wascan.py -u ${{URL}}
+    - cd WAScan ; python wascan.py -u ${{URL}}
