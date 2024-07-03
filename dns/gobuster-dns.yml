@@ -11,7 +11,7 @@ install:
 gobuster-dns:
   assertReturnCode: 0
   ls:
-    - ls
+    - ls -la
   help:
     - gobuster dns -h
   run:
