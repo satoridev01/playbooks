@@ -9,6 +9,8 @@ install:
     - apt update
   git:
     - apt install -qy git
+  rustfmt:
+    - rustup component add rustfmt
   clone:
     - git clone --depth 1 https://github.com/junnlikestea/vita ; cd vita ; cargo build --release
 
