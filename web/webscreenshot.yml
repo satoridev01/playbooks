@@ -5,8 +5,10 @@ settings:
 
 webscreenshot:
   assertReturnCode: 0
+  update:
+    - apt update
   xvfb:
-    - apt-get install xvfb -qy
+    - apt install xvfb -qy
   install:
     - pip install webscreenshot
   help:
