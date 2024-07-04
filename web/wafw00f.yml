@@ -8,7 +8,7 @@ install:
   update:
     - apt update
   pipx:
-    - apt install pipx ; pipx ensurepath
+    - apt install pipx -qy ; pipx ensurepath
   git:
     - apt install git -qy
   clone:
