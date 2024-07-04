@@ -10,7 +10,7 @@ install:
   git:
     - apt install git -qy
   clone:
-    - git clone --depth 1 https://github.com/EnableSecurity/wafw00f.git ; python wafw00f/setup.py install
+    - git clone --depth 1 https://github.com/EnableSecurity/wafw00f.git ; pipx install git+https://github.com/EnableSecurity/wafw00f.git
 
 run:
   - wafw00f ${{URL}}
