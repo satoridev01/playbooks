@@ -4,14 +4,14 @@ settings:
   #example: satori run satori://web/webanalyze.yml --data='{"HOST":"satori.ci"}' --output
 
 install:
-assertReturnCode: 0
+  assertReturnCode: 0
   webanalyze:
     - go install -v github.com/rverton/webanalyze/cmd/webanalyze@latest
   update:
     - webanalyze -update
 
 webanalyze:
-assertReturnCode: 0
+  assertReturnCode: 0
   help:
     - webanalyze -h
   run:
