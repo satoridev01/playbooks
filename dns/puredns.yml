@@ -17,5 +17,7 @@ install:
 
 puredns:
   assertReturnCode: 0
+  help:
+    - puredns -h
   run:
     - /go/bin/puredns resolve domains.txt --bin $(pwd)/massdns/bin/massdns
