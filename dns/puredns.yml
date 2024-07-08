@@ -14,20 +14,8 @@ install:
     - go install github.com/d3mondev/puredns/v2@latest
   dom:
     - echo "${{DOMAIN}}" > domains.txt
-  debug:
-    - ls -l massdns/bin/massdns
-    - which puredns
-    - cat domains.txt
 
 puredns:
   assertReturnCode: 0
-  help:
-    - puredns -h
   run:
-    - puredns resolve domains.txt --bin $(pwd)/massdns/bin/massdns
-
-post_run:
-  debug:
-    - echo $PATH
-    - ls -l /go/bin
-    - ls -l $(pwd)/massdns/bin
+    - /go/bin/puredns resolve domains.txt --bin $(pwd)/massdns/bin/massdns
