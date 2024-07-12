@@ -15,9 +15,10 @@ install:
   dom:
     - echo "${{DOMAIN}}" > domains.txt
 
+
 puredns:
   assertReturnCode: 0
   help:
-    - /go/bin/puredns -h
+    - puredns -h
   run:
-    - /go/bin/puredns resolve domains.txt --bin $(cat /tmp/massdns_path)/massdns/bin/massdns
+    - /go/bin/puredns resolve domains.txt --bin $(pwd)/massdns/bin/massdns
