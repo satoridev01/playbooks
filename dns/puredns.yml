@@ -18,6 +18,6 @@ install:
 puredns:
   assertReturnCode: 0
   help:
-    - puredns -h
+    - /go/bin/puredns -h
   run:
-    - /go/bin/puredns resolve domains.txt --bin $(pwd)/massdns/bin/massdns
+    - /go/bin/puredns resolve domains.txt --bin $(cat /tmp/massdns_path)/massdns/bin/massdns
