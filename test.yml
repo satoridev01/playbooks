@@ -1,6 +1,6 @@
 test:
   assertStdoutContains: Hello World
   hello:
-  - echo Hello ${{WHO}}
+  - echo Hello ${{WHO}}${{EXTRA}}
   bye:
-  - echo Bye ${{WHO}}
+  - echo Bye ${{WHO}}${{EXTRA}}
