@@ -1,7 +1,7 @@
 settings:
   image: python:bullseye
   name: Enumerate subdomains on a target domain through passive reconnaissance and dictionary scan
-  # example: satori run satori://dns/knockpy.yml --data='{"DOMAIN":"satori.ci"}' --output
+  #example: satori run satori://dns/knockpy.yml --data='{"DOMAIN":"satori.ci"}' --output
 
 install:
   git:
@@ -11,5 +11,5 @@ install:
   requirements:
   - pip3 install -r knock/requirements.txt
 
-knock:
-- "echo ${{DOMAIN}} | python3 knock/knockpy.py"
+run:
+  - cd knock && python3 knockpy/knockpy.py ${{DOMAIN}}
