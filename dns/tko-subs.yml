@@ -1,7 +1,7 @@
 settings:
   image: golang:latest
   name: tko-subs is a tool that can help you detect and takeover subdomains with dead DNS records
-  #example: satori run satori://recon/tko-subs.yml --data='{"DOMAIN": "example.com"}' --output
+  #example: satori run satori://dns/tko-subs.yml --data='{"DOMAIN": "example.com"}' --output
 
 install:
   assertReturnCode: 0
