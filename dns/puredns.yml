@@ -21,4 +21,4 @@ puredns:
   help:
     - puredns -h
   run:
-    - /go/bin/puredns resolve domains.txt --bin $(pwd)/massdns/bin/massdns
+    - /go/bin/puredns resolve domains.txt --bin ./massdns/bin/massdns --resolvers ./massdns/lists/resolvers.txt
