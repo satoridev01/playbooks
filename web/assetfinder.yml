@@ -14,4 +14,4 @@ assetfinder:
   help:
     - assetfinder --help
   run:
-    - assetfinder [--subs-only] ${{DOMAIN}}
+    - assetfinder --subs-only ${{DOMAIN}}
