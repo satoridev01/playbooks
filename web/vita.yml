@@ -1,6 +1,7 @@
 settings:
   image: rust
-  name: Vita is a tool to gather subdomains from passive sources.
+  name: Vita is a tool to gather subdomains from passive sources
+  timeout: 600
   #example: satori run satori://web/vita.yml --data='{"DOMAIN":"satori.ci"}' --output
   #github: https://github.com/junnlikestea/vita
 
