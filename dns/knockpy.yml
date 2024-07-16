@@ -14,6 +14,6 @@ install:
 knockpy:
   assertReturnCode: 0
   #help:
-    - cd knock && python3 -m knockpy.knockpy -h
+    #- cd knock && python3 -m knockpy.knockpy -h
   run:
     - cd knock && python3 -m knockpy.knockpy ${{DOMAIN}}
