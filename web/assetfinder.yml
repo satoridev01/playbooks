@@ -6,7 +6,8 @@ settings:
 
 install:
   assetReturnCode: 0
-  - go install github.com/tomnomnom/assetfinder@latest
+  tool:
+    - go install github.com/tomnomnom/assetfinder@latest
 
 assetfinder:
   assertReturnCode: 0
