@@ -11,5 +11,10 @@ install:
   requirements:
   - pip3 install -r knock/requirements.txt
 
-run:
-  - cd knock && python3 knockpy/knockpy.py ${{DOMAIN}}
+knockpy:
+  assertReturnCode: 0
+  #help:
+  run:
+    - ls -R knock
+    - find knock -name "*.py"
+    - python3 knock/knockpy.py ${{DOMAIN}}
