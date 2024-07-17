@@ -9,10 +9,6 @@ urlhunter:
     - go install github.com/utkusen/urlhunter@latest
     - echo 'export PATH=$PATH:/go/bin' >> $HOME/.bashrc
     - source $HOME/.bashrc
-  debug:
-    - go version
-    - echo $PATH
-    - ls -l /go/bin
   help:
     - urlhunter --help
   run:
