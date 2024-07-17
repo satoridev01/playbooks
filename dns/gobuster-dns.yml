@@ -1,12 +1,15 @@
 settings:
   image: golang
-  name: A tool used to brute-force DNS subodmains(with wildcard support)
+  name: A tool used to brute-force DNS subdomains (with wildcard support)
   #example: satori run satori://dns/gobuster-dns.yml --data='{"DOMAIN": "satori.ci"}' --output
 
 install:
   assertReturnCode: 0
   gobuster-dns:
     - go install github.com/OJ/gobuster/v3@latest
+  wordlist:
+    - mkdir -p wordlists
+    - curl -s https://raw.githubusercontent.com/danielmiessler/SecLists/master/Discovery/DNS/subdomains-top1million-5000.txt -o wordlists/subdomains.txt
 
 gobuster-dns:
   assertReturnCode: 0
@@ -15,4 +18,4 @@ gobuster-dns:
   help:
     - gobuster dns -h
   run:
-    - gobuster dns -d ${{DOMAIN}} -w gobuster/words.txt
+    - gobuster dns -d ${{DOMAIN}} -w wordlists/subdomains.txt
