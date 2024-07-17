@@ -18,4 +18,4 @@ gobuster-dns:
   help:
     - gobuster dns -h
   run:
-    - gobuster dns -d ${{DOMAIN}} -w wordlists/subdomains.txt
+    - - gobuster dns -d ${{DOMAIN}} -w wordlists/subdomains.txt --wildcard -v
