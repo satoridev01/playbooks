@@ -17,7 +17,7 @@ urlhunter:
   help:
     - urlhunter --help
   run:
-    - urlhunter --keywords ${{URL}} --date 2023-07-17 --o out.txt
+    - urlhunter --keywords ${{URL}} --date latest --o out.txt
   cat:
     - cat out.txt
 
