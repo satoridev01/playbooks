@@ -13,8 +13,8 @@ For example, if `WHO` is set to `World`, the commands will output `Hello World` 
 ## Author
 
 Satori CI"
-  gallery:
-  - https://files.catbox.moe/jrhvks.png
+  #gallery:
+  #- https://files.catbox.moe/jrhvks.png
 
 test:
   assertStdoutContains: Hello World
