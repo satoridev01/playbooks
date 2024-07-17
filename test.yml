@@ -3,11 +3,14 @@ settings:
 
 The playbook defines two command blocks: hello and bye. The hello block executes the command echo Hello ${{WHO}}, which prints `Hello` followed by the value of the WHO variable. Similarly, the bye block executes the command echo Bye ${{WHO}}, printing `Bye` followed by the value of the WHO variable. The WHO variable is a placeholder that will be provided during the playbook execution.
 
-For example, if WHO is set to `World`, the commands will output `Hello World` and `Bye World`. Since `Hello World` is part of the output, the assertion will pass, verifying that the output contains the desired phrase."
+For example, if WHO is set to `World`, the commands will output `Hello World` and `Bye World`. Since `Hello World` is part of the output, the assertion will pass, verifying that the output contains the desired phrase.
+
+*Example*:
+satori run satori://test.yml --data='{\"WHO\":\"World\"}'"
 
 test:
   assertStdoutContains: Hello World
   hello:
-  - echo Hello ${{WHO}}${{EXTRA}}
+  - echo Hello ${{WHO}}
   bye:
-  - echo Bye ${{WHO}}${{EXTRA}}
+  - echo Bye ${{WHO}}
