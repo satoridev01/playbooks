@@ -1,4 +1,5 @@
 settings:
+  timeout: 300
   image: golang
   name: Urlhunter is a recon tool that allows searching on URLs that are exposed via shortener services such as bit.ly and goo.gl.
   #example: satori run satori://web/urlhunter.yml --data='{"URL":"satori.ci"}' --output
