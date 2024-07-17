@@ -1,3 +1,10 @@
+settings:
+  description: "This playbook is designed to test the output of two commands to ensure it contains the phrase `Hello World`. It defines a single test named test, which includes an assertion and two sets of commands. The assertion, assertStdoutContains: Hello World, checks that the standard output from the executed commands contains the string `Hello World`.
+
+The playbook defines two command blocks: hello and bye. The hello block executes the command echo Hello ${{WHO}}, which prints `Hello` followed by the value of the WHO variable. Similarly, the bye block executes the command echo Bye ${{WHO}}, printing `Bye` followed by the value of the WHO variable. The WHO variable is a placeholder that will be provided during the playbook execution.
+
+For example, if WHO is set to `World`, the commands will output `Hello World` and `Bye World`. Since `Hello World` is part of the output, the assertion will pass, verifying that the output contains the desired phrase."
+
 test:
   assertStdoutContains: Hello World
   hello:
