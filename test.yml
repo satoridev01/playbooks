@@ -5,8 +5,10 @@ The playbook defines two command blocks: hello and bye. The hello block executes
 
 For example, if WHO is set to `World`, the commands will output `Hello World` and `Bye World`. Since `Hello World` is part of the output, the assertion will pass, verifying that the output contains the desired phrase.
 
-*Example*:
-satori run satori://test.yml --data='{\"WHO\":\"World\"}'"
+## Example:
+`satori run satori://test.yml --data='{\"WHO\":\"World\"}'`"
+  gallery:
+  - https://files.catbox.moe/jrhvks.png
 
 test:
   assertStdoutContains: Hello World
