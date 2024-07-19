@@ -1,6 +1,6 @@
 settings:
   timeout: 300
-  image: golang
+  image: golang:latest
   name: Urlhunter is a recon tool that allows searching on URLs that are exposed via shortener services such as bit.ly and goo.gl.
   #example: satori run satori://web/urlhunter.yml --data='{"URL":"satori.ci"}' --output
 
@@ -8,12 +8,12 @@ urlhunter:
   assertReturnCode: 0
   install:
     - go install github.com/utkusen/urlhunter@latest
-    - echo 'export PATH=$PATH:/go/bin' >> $HOME/.bashrc
+  prepare:
+    - echo "${{URL}}" > keywords.txt
   help:
-    - urlhunter --help
+    - /go/bin/urlhunter -h
   run:
-    - urlhunter --keywords ${{URL}} --date latest --o out.txt
+    - /go/bin/urlhunter --keywords keywords.txt --date latest -o /go/bin/urlhunter/out.txt
   cat:
     - cat out.txt
-
 
