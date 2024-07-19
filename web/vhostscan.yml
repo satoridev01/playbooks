@@ -2,7 +2,7 @@ settings:
   image: python
   name: A virtual host scanner that can be used with pivot tools, detect catch-all scenarios, aliases and dynamic default pages.
   timeout: 1200
-  #example: satori run satori://web/vhostscan.yml --data='{"DOMAIN":"satori.ci", "PARAM":""}' --output
+  #example: satori run satori://web/vhostscan.yml --data='{"DOMAIN":"satori.ci"}' --output
 
 install:
   assertReturnCode: 0
@@ -18,4 +18,4 @@ install:
 help:
   - VHostScan -h
 run:
-  - VHostScan -t ${{DOMAIN}} ${{PARAM}}
+  - VHostScan -t ${{DOMAIN}}
