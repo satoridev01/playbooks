@@ -1,16 +1,19 @@
 settings:
   image: golang
-  name: GoAltdns is a permutation generation tool that can take a list of subdomains, permute them using a wordlist, insert indexes, numbers, dashes and increase your chance of finding that estoeric subdomain that no-one found during bug-bounty or pentest.
+  name: GoAltdns is a permutation generation tool that can take a list of subdomains, permute them using a wordlist, insert indexes, numbers, dashes and increase your chance of finding that esoteric subdomain that no-one found during bug-bounty or pentest.
   #example: satori run satori://dns/goaltdns.yml --data='{"DOMAIN": "satori.ci"}' --output
 
 install:
   assertReturnCode: 0
   goaltdns:
     - go install github.com/subfinder/goaltdns@latest
+  wordlist:
+    - mkdir -p /go/src/github.com/subfinder/goaltdns
+    - wget https://raw.githubusercontent.com/subfinder/goaltdns/master/words.txt -O /go/src/github.com/subfinder/goaltdns/words.txt
 
 goaltdns:
   assertReturnCode: 0
   help:
     - goaltdns -h
   run:
-    - echo ${{DOMAIN}} | goaltdns -w goaltdns/words.txt
+    - echo ${{DOMAIN}} | goaltdns -w /go/src/github.com/subfinder/goaltdns/words.txt
