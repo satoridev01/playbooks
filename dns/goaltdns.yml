@@ -1,12 +1,13 @@
 settings:
   image: golang
-  name: GoAltdn: subdomain generation tool
+  name: GoAltdn subdomain generation tool
   description: It takes a list of subdomains, permute them using a wordlist, insert indexes, numbers, dashes and generates potential subdomains.
   author: 
     - https://github.com/subfinder
   ## Example: satori run satori://dns/goaltdns.yml --data='{"DOMAIN": "satori.ci"}' --output
 
 install:
+  assertReturnCode: 0
   goaltdns:
     - go install github.com/subfinder/goaltdns@latest
   wordlist:
@@ -14,6 +15,7 @@ install:
     - wget -q https://raw.githubusercontent.com/subfinder/goaltdns/master/words.txt -O /go/src/github.com/subfinder/goaltdns/words.txt
 
 goaltdns:
+  assertReturnCode: 0
   help:
     - goaltdns -h
   run:
