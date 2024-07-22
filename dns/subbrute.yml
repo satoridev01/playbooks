@@ -14,6 +14,6 @@ install:
 subbrute:
   assertReturnCode: 0
   help:
-    - python subbrute/subbrute.py -h
+    - python3 subbrute/subbrute.py -h
   run:
-    - python subbrute/subbrute.py ${{DOMAIN}} -r subbrute/resolvers.txt
+    - python3 subbrute/subbrute.py ${{DOMAIN}} -r subbrute/resolvers.txt
