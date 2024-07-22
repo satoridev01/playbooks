@@ -4,6 +4,8 @@ settings:
   description: It takes a list of subdomains, permute them using a wordlist, insert indexes, numbers, dashes and generates potential subdomains.
   author: 
     - https://github.com/subfinder
+  gallery:
+    - https://files.catbox.moe/wfwsek.png
   ## Example: satori run satori://dns/goaltdns.yml --data='{"DOMAIN": "satori.ci"}' --output
 
 install:
