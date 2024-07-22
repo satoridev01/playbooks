@@ -12,7 +12,7 @@ install:
     - go install github.com/subfinder/goaltdns@latest
   wordlist:
     - mkdir -p /go/src/github.com/subfinder/goaltdns
-    - wget https://raw.githubusercontent.com/subfinder/goaltdns/master/words.txt -O /go/src/github.com/subfinder/goaltdns/words.txt
+    - wget -q https://raw.githubusercontent.com/subfinder/goaltdns/master/words.txt -O /go/src/github.com/subfinder/goaltdns/words.txt
 
 goaltdns:
   assertReturnCode: 0
