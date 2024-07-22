@@ -1,6 +1,6 @@
 settings:
   image: golang
-  name: GoAltdn: permutation generation tool
+  name: GoAltdn: subdomain generation tool
   description: It takes a list of subdomains, permute them using a wordlist, insert indexes, numbers, dashes and generates potential subdomains.
   files: true
   author: 
