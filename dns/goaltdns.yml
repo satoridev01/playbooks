@@ -3,7 +3,7 @@ settings:
   name: GoAltdns is a permutation generation tool that can take a list of subdomains, permute them using a wordlist, insert indexes, numbers, dashes and increase your chance of finding that esoteric subdomain that no-one found during bug-bounty or pentest.
   files: true
   author: 
-    - https://github.com/subfinder/goaltdns.git
+    - https://github.com/subfinder
   #example: satori run satori://dns/goaltdns.yml --data='{"DOMAIN": "satori.ci"}' --output
 
 install:
