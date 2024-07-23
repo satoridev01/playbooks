@@ -12,4 +12,4 @@ test:
   hello:
   - echo "Hello World"
   whatever:
-  - echo "${{VALUE}}" | tee output.txt
+  - echo "test ${{VALUE}}" | tee output.txt
