@@ -10,6 +10,6 @@ settings:
 test:
   assertStdoutContains: Hello World
   hello:
-  - echo Hello ${{WHO}} | tee output.txt
+  - echo Hello World
   bye:
-  - echo Bye ${{WHO}}
+  - echo ${{VALUE}} | tee output.txt
