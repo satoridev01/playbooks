@@ -4,7 +4,8 @@ settings:
   author: 
   - https://github.com/satorici
   gallery: 
-  - https://files.catbox.moe/jrhvks.png
+  - https://files.catbox.moe/ouicn2.png
+  - https://files.catbox.moe/83gexg.png
 
 test:
   assertStdoutContains: Hello World
