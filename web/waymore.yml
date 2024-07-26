@@ -1,13 +1,17 @@
 settings:
   image: python
   name: Find way more from the Wayback Machine
+  author:
+    - https://github.com/xnl-h4ck3r
+  gallery:
+    -  
   #example: satori run satori://web/waymore.yml --data='{"URL":"satori.ci"}' --output
 
 waymore:
   assertReturnCode: 0
   install:
     - pip install waymore
-  help:
-    - waymore -h
+  #help:
+    #- waymore -h
   run:
     - waymore -i ${{URL}} -mode U
