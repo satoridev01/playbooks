@@ -1,6 +1,10 @@
 settings:
   image: cyberwatch/wapiti
   name: Web vulnerability scanner written in Python3
+  author:
+    - https://github.com/wapiti-scanner
+  gallery:
+    - https://files.catbox.moe/gf4hk7.png
   #example: satori run satori://web/wapiti.yml --data='{"URL":"https://example.com"}' --output
 
 wapiti:
