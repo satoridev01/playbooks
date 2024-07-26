@@ -8,7 +8,7 @@ settings:
   #example: satori run satori://web/wapiti.yml --data='{"URL":"https://example.com"}' --output
 
 wapiti:
-  help:
-    - wapiti -h
+  #help:
+   # - wapiti -h
   run:
     - wapiti -u ${{URL}}
