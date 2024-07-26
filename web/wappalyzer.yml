@@ -1,6 +1,10 @@
 settings:
   image: sitespeedio/node:ubuntu-22-04-nodejs-20.15.1
   name: Wappalyzer identifies technologies on websites, including content management systems, eCommerce platforms, JavaScript frameworks, analytics tools and much more.
+  author:
+    - https://github.com/tunetheweb
+  gallery:
+    - https://files.catbox.moe/1905vl.png
   #example: satori run satori://web/wappalyzer.yml --data='{"URL":"https://satori.ci"}' --output
   
 install:
