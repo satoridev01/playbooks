@@ -1,5 +1,6 @@
 settings:
-  image: ubuntu
+  #image: ubuntu
+  files: true
   name: "Static analysis tool for mobile code"
   description: "It can find insecure code patterns in your Android and iOS source code. Supports Java, Kotlin, Swift, and Objective C Code. mobsfscan uses MobSF static analysis rules and is powered by semgrep and libsast pattern matcher."
   #example: satori run ./ --playbook="satori://code/mobsfscan.yml" --report --output
@@ -17,12 +18,12 @@ mobsfscan:
   error:
     setSeverity: 1
     run:
-    - mobsfscan ./ --sarif | jq '.runs[].results[] | select(.level == "error")'
+    - mobsfscan ./ --sarif | jq '.runs[].results[] | select(.level == "error")' | tee error.log
   warning:
     setSeverity: 3
     run:
-    - mobsfscan ./ --sarif | jq '.runs[].results[] | select(.level == "warning")'
+    - mobsfscan ./ --sarif | jq '.runs[].results[] | select(.level == "warning")' | tee warning.log
   note:
     setSeverity: 5
     run:
-    - mobsfscan ./ --sarif | jq '.runs[].results[] | select(.level == "note")'
+    - mobsfscan ./ --sarif | jq '.runs[].results[] | select(.level == "note")' | tee note.log
