@@ -30,5 +30,3 @@ mobsfscan:
     setSeverity: 5
     run:
     - cat mobsfscan-output.log | jq '.runs[].results[] | select(.level == "note")' | tee note.log
-    none:
-    - cat mobsfscan-output.log | jq '.runs[].results[] | select(.level == "note")' | tee none.log
