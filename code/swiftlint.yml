@@ -1,0 +1,10 @@
+settings:
+  image: norionomura/swiftlint
+
+swiftlint:
+  help:
+  - swiftlint -h
+  analyze:
+  - swiftlint analyze
+  lint:
+  - swiftlint lint
