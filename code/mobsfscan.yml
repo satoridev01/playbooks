@@ -15,17 +15,20 @@ install:
 
 mobsfscan:
   assertStdout: False
+  assertStderr: False
+  output:
+  - mobsfscan ./ --sarif > mobsfscan-output.log
   error:
     setSeverity: 1
     run:
-    - mobsfscan ./ --sarif | jq '.runs[].results[] | select(.level == "error")' | tee error.log
+    - cat mobsfscan-output.log | jq '.runs[].results[] | select(.level == "error")' | tee error.log
   warning:
     setSeverity: 3
     run:
-    - mobsfscan ./ --sarif | jq '.runs[].results[] | select(.level == "warning")' | tee warning.log
+    - cat mobsfscan-output.log | jq '.runs[].results[] | select(.level == "warning")' | tee warning.log
   note:
     setSeverity: 5
     run:
-    - mobsfscan ./ --sarif | jq '.runs[].results[] | select(.level == "note")' | tee note.log
+    - cat mobsfscan-output.log | jq '.runs[].results[] | select(.level == "note")' | tee note.log
     none:
-    - mobsfscan ./ --sarif | jq '.runs[].results[] | select(.level == "note")' | tee none.log
+    - cat mobsfscan-output.log | jq '.runs[].results[] | select(.level == "note")' | tee none.log
