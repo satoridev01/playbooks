@@ -14,7 +14,15 @@ install:
 
 mobsfscan:
   assertStdout: False
-  run:
-  - mobsfscan ./ --sarif | jq '.runs[].results[] | select(.level == "error")'
-  full:
-  - mobsfscan ./ --sarif
+  error:
+    setSeverity: 1
+    run:
+    - mobsfscan ./ --sarif | jq '.runs[].results[] | select(.level == "error")'
+  warning:
+    setSeverity: 3
+    run:
+    - mobsfscan ./ --sarif | jq '.runs[].results[] | select(.level == "warning")'
+  note:
+    setSeverity: 5
+    run:
+    - mobsfscan ./ --sarif | jq '.runs[].results[] | select(.level == "note")'
