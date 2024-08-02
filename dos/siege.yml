@@ -11,9 +11,9 @@ settings:
 
 install:
   curl:
-  - apt install -y curl
+  - apt install -qy curl
   siege:
-  - apt install -y siege
+  - apt install -qy siege
 
 host:
   assertReturnCode: 0
