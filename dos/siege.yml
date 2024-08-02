@@ -21,6 +21,7 @@ install:
 
 host:
   assertReturnCode: 0
+  setSeverity: 4
   before_siege:
   - curl -s ${{URL}} -m 3
   siege:
