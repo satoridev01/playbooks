@@ -6,6 +6,8 @@ settings:
                 - Slow Read attack (based on TCP persist timer exploit) by draining concurrent connections pool
                 - Apache Range Header attack by causing very significant memory and CPU usage on the server."
   files: true
+  timeout: 2000
+  count: 10
 
 install:
   update:
