@@ -8,6 +8,8 @@ settings:
                 The tool has three modes, in which it can operate – regression, internet simulation and brute force.
                 Siege must only be ran against servers you own or on such you have explicit permission to test. "
   mitigation: "Use an anti DDoS service such as CloudFlare to prevent network attacks"
+  count: 10
+  timeout: 300
 
 install:
   update:
@@ -25,5 +27,3 @@ host:
   - siege -c 100 -t 30s ${{URL}}
   after_siege:
   - curl -s ${{URL}} -m 3
-  results:
-  - "set +f; cat siege.*"
