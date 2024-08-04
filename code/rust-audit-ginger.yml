@@ -26,3 +26,6 @@ cargo-geiger:
   - cargo install cargo-geiger >> /dev/null
   run:
   - cargo geiger | tee geiger.txt
+
+rm:
+- rm -fr target/
