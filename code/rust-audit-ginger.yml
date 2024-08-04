@@ -1,7 +1,7 @@
 settings:
   image: rust
   files: true
-  authors:
+  author:
   - https://crates.io/users/alex
   - https://crates.io/users/tarcieri
   - https://crates.io/users/Shnatsel
