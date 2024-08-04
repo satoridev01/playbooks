@@ -1,0 +1,28 @@
+settings:
+  image: rust
+  files: true
+  authors:
+  - https://crates.io/users/alex
+  - https://crates.io/users/tarcieri
+  - https://crates.io/users/Shnatsel
+  - https://crates.io/users/tarcieri
+  - https://crates.io/users/anderejd
+  - https://crates.io/users/pinkforest
+
+cargo-audit:
+  assertStdoutNotContains:
+  - Severity
+  - advisories
+  setSeverity: 4
+  install:
+  - cargo install cargo-audit >> /dev/null
+  run:
+  - cargo audit | tee audit.txt
+
+cargo-geiger:
+  assertStdoutNotContains: "!  │"
+  setSeverity: 4
+  install:
+  - cargo install cargo-geiger >> /dev/null
+  run:
+  - cargo geiger | tee geiger.txt
