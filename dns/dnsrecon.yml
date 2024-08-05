@@ -4,7 +4,7 @@ settings:
   author:
     - https://github.com/darkoperator
   gallery:
-    - https://www.canva.com/design/DAGM9PQY0gY/GBx_47l74SNI9YtrkHpi7w/watch?utm_content=DAGM9PQY0gY&utm_campaign=share_your_design&utm_medium=link&utm_source=shareyourdesignpanel
+    - https://files.catbox.moe/b92mj7.gif
   #example: satori run satori://dns/dnsrecon.yml --data='{"DOMAIN": "satori.ci"}' --output
 
 install:
