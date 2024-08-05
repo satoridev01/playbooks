@@ -1,6 +1,10 @@
 settings:
   image: python:bullseye
   name: A simple script to screenshot a list of websites, based on the url-to-image PhantomJS script.
+  author:
+    - https://github.com/maaaaz
+  gallery:
+    - 
   #example: satori run satori://web/webscreenshot.yml --data='{"URL":"satori.ci"}' --output
 
 webscreenshot:
