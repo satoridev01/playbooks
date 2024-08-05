@@ -1,6 +1,8 @@
 settings:
   image: golang
   name: dnsx is a fast and multi-purpose DNS toolkit allow to run multiple probers using retryabledns library, that allows you to perform multiple DNS queries of your choice with a list of user supplied resolvers.
+  author:
+    - https://github.com/projectdiscovery
   #example: satori run satori://dns/dnsx.yml --data='{"DOMAIN": "satori.ci"}' --output
 
 install:
