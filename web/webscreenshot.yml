@@ -4,7 +4,7 @@ settings:
   author:
     - https://github.com/maaaaz
   gallery:
-    - 
+    - https://files.catbox.moe/8jv7ts.gif
   #example: satori run satori://web/webscreenshot.yml --data='{"URL":"satori.ci"}' --output
 
 webscreenshot:
