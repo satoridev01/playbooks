@@ -3,6 +3,8 @@ settings:
   name: A tool used to brute-force DNS subdomains (with wildcard support)
   author:
     - https://github.com/OJ
+  gallery:
+    - https://files.catbox.moe/kti61x.gif
   #example: satori run satori://dns/gobuster-dns.yml --data='{"DOMAIN": "satori.ci"}' --output
 
 install:
