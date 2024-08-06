@@ -4,7 +4,7 @@ settings:
   author:
     - https://github.com/xnl-h4ck3r
   gallery:
-    -  
+    - https://files.catbox.moe/y6sbh6.gif 
   #example: satori run satori://web/waymore.yml --data='{"URL":"satori.ci"}' --output
 
 waymore:
