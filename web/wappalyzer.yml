@@ -4,7 +4,7 @@ settings:
   author:
     - https://github.com/tunetheweb
   gallery:
-    - https://files.catbox.moe/1905vl.png
+    - https://files.catbox.moe/0pp2iq.gif
   #example: satori run satori://web/wappalyzer.yml --data='{"URL":"https://satori.ci"}' --output
   
 install:
