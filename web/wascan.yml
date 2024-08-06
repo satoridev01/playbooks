@@ -4,7 +4,7 @@ settings:
   author:
     - https://github.com/R3dFruitRollUp
   gallery:
-    - 
+    - https://files.catbox.moe/n5nfpj.png
   #example: satori run satori://web/wascan.yml --data='{"URL":"satori.ci"}' --output
 
 install:
