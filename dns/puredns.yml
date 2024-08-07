@@ -3,6 +3,8 @@ settings:
   name: Puredns is a fast domain resolver and subdomain bruteforcing tool that can accurately filter out wildcard subdomains and DNS poisoned entries.
   author:
     - https://github.com/blechschmidt
+  gallery:
+    - https://files.catbox.moe/2i78fz.png
   #example: satori run satori://dns/puredns.yml --data='{"DOMAIN": "satori.ci"}' --output
 
 install:
