@@ -31,3 +31,5 @@ run:
     - echo "github,github.io,There isn't a GitHub Pages site here,false" >> providers-data.csv
   run:
     - tko-subs -domain ${{DOMAIN}} -data providers-data.csv
+  read:
+    - cat output.csv
