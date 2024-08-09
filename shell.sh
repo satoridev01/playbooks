@@ -1,4 +1,4 @@
-!/bin/sh
+#!/bin/sh
 #trap "" HUP INT
 EXTERNAL_IP="`curl -s ifconfig.me`"
 RANDOM_PORT=$((1024 + ($(date +%s%N) % 64511)))
