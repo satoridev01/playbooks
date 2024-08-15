@@ -5,9 +5,9 @@ settings:
   
 install:
   update:
-  - apt update
+  - apt update >> /dev/null
   testssl:
-  - apt install -qy testssl.sh
+  - apt install -qy testssl.sh >> /dev/null
 
 testssl:
   run:
