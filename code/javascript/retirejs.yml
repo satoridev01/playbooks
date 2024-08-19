@@ -5,10 +5,12 @@ settings:
   #github: https://github.com/RetireJS/retire.js
 
 install:
+  assertReturnCode: 0
   retire:
   - npm install -g retire
 
 retirejs:
+  assertReturnCode: 0
   help:
     - retire --help
   run:
