@@ -10,7 +10,7 @@ install:
     - npm install -g retire
 
 retirejs:
-  as`sertReturnCode: 0
+  assertReturnCode: 0
   help:
     - retire --help
   run:
