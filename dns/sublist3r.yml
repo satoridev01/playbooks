@@ -19,5 +19,5 @@ sublist3r:
     - python Sublist3r/sublist3r.py -v -d ${{DOMAIN}} -t 5 -e bing,yahoo -o subresults.txt
     
   read:
-    - cat Sublist3r/subresults.txt
+    - ls Sublist3r
     
