@@ -1,8 +1,11 @@
 settings:
   image: python
   name: E-mails, subdomains and names enumeration tool.
+  author: 
+    - https://github.com/laramies/theHarvester
+  gallery:
+    - https://files.catbox.moe/pn0jpc.gif
   #example: satori run satori://email/theharvester.yml --data='{"DOMAIN":"umd.edu"}' --output
-  #github: https://github.com/laramies/theHarvester
 
 install:
   git:
