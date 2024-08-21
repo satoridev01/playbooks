@@ -1,8 +1,11 @@
 settings:
   image: ubuntu:jammy
   name: A tiny web auditor with strong opinions.
+  author:
+    - https://github.com/trailofbits/twa
+  gallery:
+    - https://files.catbox.moe/vasexx.gif
   #example: satori run satori://web/twa.yml --data='{"HOST":"satori.ci"}' --output
-  #github: https://github.com/trailofbits/twa
 
 install:
   update:
