@@ -4,7 +4,7 @@ settings:
   #example: satori run satori://code/javascript/semgrep.yml --output
 
 install:
-  - pip install semgrep -qy
+  - pip install semgrep
 
 semgrep-javascript:
   - semgrep --config "p/javascript"
