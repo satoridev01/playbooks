@@ -4,7 +4,7 @@ settings:
   author:
     - https://github.com/Josue87
   gallery:
-    - https://files.catbox.moe/z3yd5f.png
+    - https://files.catbox.moe/a35ytq.png
   #example: satori run satori://dns/gotator.yml --data='{"DOMAIN": "satori.ci"}' --output
 
 install:
