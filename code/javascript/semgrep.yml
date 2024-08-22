@@ -1,4 +1,5 @@
 settings:
+  image: python
   name: "Static Source Code Analysis with Semgrep"
   #example: satori run satori://code/javascript/semgrep.yml --output
 
