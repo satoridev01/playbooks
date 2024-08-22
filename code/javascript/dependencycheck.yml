@@ -1,6 +1,6 @@
 settings:
   name: "Check dependencies of publicly disclosed vulnerabilities contained within a project's dependencies"
-  #example: satori run satori://code/javascript/dependencycheck.yml
+  #example: satori run satori://code/javascript/dependencycheck.yml --output
   
 install:
   updates:
