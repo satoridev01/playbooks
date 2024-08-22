@@ -1,6 +1,10 @@
 settings:
   image: python
   name: "Static Source Code Analysis with Semgrep"
+  author:
+    - https://github.com/semgrep
+  gallery:
+    - https://files.catbox.moe/5yw3g6.png
   #example: satori run satori://code/javascript/semgrep.yml --output
 
 install:
