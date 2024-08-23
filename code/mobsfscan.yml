@@ -5,6 +5,7 @@ settings:
   description: "MobSFScan can find insecure code patterns in Android and iOS source code. Supports Java, Kotlin, Swift, and Objective C Code. It uses MobSF static analysis rules and is powered by semgrep and libsast pattern matcher.\n\n## Example:\n\n```satori run ./ --playbook=\"satori://code/mobsfscan.yml\" --report --output```"
   author:
   - https://github.com/MobSF
+  #example: satori ./ run satori://code/mobsfscan.yml --output
   
 install:
   update:
