@@ -1,6 +1,10 @@
 settings:
   image: python
   name: "Find common security issues in Python code"
+  author:
+  - https://github.com/PyCQA
+  gallery:
+  -
   #example: satori run ./ --playbook="satori://code/python/bandit.yml" --report
 
 install:
