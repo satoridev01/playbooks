@@ -9,6 +9,6 @@ install:
 - apt install -qy pylint
   
 pylint:
-  assertStdout: False
+  assertReturncCode: 0
   run:
   - pylint *
