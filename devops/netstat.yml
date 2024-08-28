@@ -3,7 +3,7 @@ settings:
   #example: satori run satori://devops/netstat.yml --output
 
 install:
-- apt -qy install net-tools
+  - apt install net-tools -qy
 
 netstat:
   assertStdoutNotContains: "LISTEN"
