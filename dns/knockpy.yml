@@ -11,9 +11,9 @@ install:
   knock:
   - git clone https://github.com/guelfoweb/knock.git --depth 1
   requirements:
-  - pip3 install -r knock/requirements.txt
+  - cd knock && pip install .
 
 knockpy:
   assertReturnCode: 0
   run:
-    - cd knock && python3 -m knockpy.knockpy ${{DOMAIN}}
+    - cd knock && python3 -m knockpy.py ${{DOMAIN}}
