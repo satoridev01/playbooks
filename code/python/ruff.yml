@@ -3,6 +3,8 @@ settings:
   name: "Python linter"
   author:
   - https://github.com/satorici
+  gallery:
+  - https://files.catbox.moe/fso4nn.gif
   #example: satori run ./ --playbook="satori://code/python/ruff.yml" --output
 
 install:
