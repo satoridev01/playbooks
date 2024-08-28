@@ -1,6 +1,6 @@
 settings:
   name: "There are no open ports listening"
-  #example: satori run satori://devops/netstat.yml --report
+  #example: satori run satori://devops/netstat.yml --output
 
 install:
 - apt -qy install net-tools
