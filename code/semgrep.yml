@@ -2,7 +2,7 @@ settings:
     name: "Semgrep: static source code analysis"
     image: python
     author:
-    -
+    - https://github.com/semgrep
     gallery:
     - https://files.catbox.moe/dj0xyt.png
     #eample: satori run ./ --playbook="satori://code/semgrep.yml" --output
