@@ -1,7 +1,7 @@
 settings:
   name: "Assert that there is no Python command execution on the code"
   author:
-  -
+  - https://github.com/satorici
   gallery:
   - https://files.catbox.moe/p19cst.png
   # example: satori run ./ --playbook="satori://code/python/exec.yml" --output 
