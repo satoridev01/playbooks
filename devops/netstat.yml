@@ -1,5 +1,9 @@
 settings:
   name: "There are no open ports listening"
+  author:
+  -
+  gallery:
+  - https://files.catbox.moe/m6elkc.png
   #example: satori run satori://devops/netstat.yml --output
 
 install:
