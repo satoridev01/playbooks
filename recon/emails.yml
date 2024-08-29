@@ -1,7 +1,8 @@
 settings:
   name: Get all urls of a domain and search for email addresses
   author:
-  -
+  - https://github.com/bp0lr
+  - https://github.com/projectdiscovery
   gallery:
   - https://files.catbox.moe/7tozqa.png
   #example: satori run satori://recon/emails.yml --data='{"DOMAIN":"satori.ci"}' --output
