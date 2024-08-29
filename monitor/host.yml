@@ -1,6 +1,10 @@
 settings:
   image: ubuntu
   name: "Check if a host has a certain IP address"
+  author:
+  - https://github.com/satorici
+  gallery:
+  - https://files.catbox.moe/8d7b4t.png
   #example: satori run satori://monitor/host.yml --data='{"HOST":"host_name","IP":"ip_adress"}' --output
 
 install:
