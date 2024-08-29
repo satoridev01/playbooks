@@ -1,6 +1,6 @@
 settings:
   name: "Ping a host with no packet loss"
-  #example: satori run satori://monitor/ping.yml --data='{"HOST":"satori.ci"}' --report
+  #example: satori run satori://monitor/ping.yml --data='{"HOST":"satori.ci"}' --output
 
 install:
 - apt update
