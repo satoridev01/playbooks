@@ -1,5 +1,9 @@
 settings:
   name: "Fetch all the URLs that the Wayback Machine knows about for a domain"
+  author:
+  - github.com/tomnomnom
+  gallery:
+  -
   # example: satori run satori://recon/waybackurls.yml --data='{"URL":"https://www.satori.ci"}' --output
 
 install:
