@@ -1,5 +1,9 @@
 settings:
   name: "Identify the technology associated with a host: CDN, CLOUD or WAF"
+  author:
+  -
+  gallery:
+  - https://files.catbox.moe/7cj3mn.png
   # Example: satori run satori://recon/cdncheck.yml --data='{"HOST":"satori.ci"}' --output
 
 install:
