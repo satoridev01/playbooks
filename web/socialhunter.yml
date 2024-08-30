@@ -1,6 +1,10 @@
 settings:
   name: Socialhunter crawls the given URL and finds broken social media links that can be hijacked
   image: golang
+  author: 
+  - https://github.com/utkusen
+  gallery:
+  - 
   # example: satori run satori://web/socialhunter.yml --data='{"URL":"https://www.satori.ci"}' --output
   #          satori run satori://web/socialhunter.yml --data='{"URL":"http://utkusen.com"}' --output
 
