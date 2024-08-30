@@ -1,7 +1,9 @@
 settings:
   name: ZGrab scanner
   image: golang
-  # source: https://github.com/zmap/zgrab2
+  - https://github.com/zmap
+  gallery:
+  - 
   # example: satori run satori://web/zgrab2.yml --data='{"HOST":"satori.ci"}' --output
 
 zgrab2:
