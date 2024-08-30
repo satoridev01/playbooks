@@ -5,7 +5,7 @@ settings:
   - https://github.com/kleiton0x00
   gallery:
   - 
-  # example: satori run satori://web/pp/ppmap.yml --data='{"URL":"https://satori.ci"}' --output
+  # example: satori run satori://web/ppmap.yml --data='{"URL":"https://satori.ci"}' --output
   
 install:
   - apt update
