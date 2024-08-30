@@ -1,7 +1,7 @@
 settings:
   name: Zmap is a fast single packet network scanner designed for Internet-wide network surveys
   author:
-  - 
+  - https://github.com/satorici
   gallery:
   - 
   #example: satori run satori://scan/zmap.yml --data='{"PORT":"1234","HOST":"host"}' --output
