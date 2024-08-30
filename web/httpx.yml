@@ -4,7 +4,7 @@ settings:
   author: 
   - https://github.com/projectdiscovery
   gallery:
-  - 
+  - https://files.catbox.moe/83do15.png
   # example: satori run satori://web/httpx.yml --data='{"URL":"satori.ci"}' --output
 
 httpx:
