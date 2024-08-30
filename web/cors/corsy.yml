@@ -1,7 +1,10 @@
 settings:
   name: Scans for all known misconfigurations in CORS implementations.
   image: python
-  # source: https://github.com/s0md3v/Corsy
+  author: 
+  - https://github.com/s0md3v
+  gallery:
+  - 
   # example: satori run satori://web/cors/corsy.yml --data='{"URL":"https://satori.ci"}' --output
 
 install:
