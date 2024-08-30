@@ -1,6 +1,10 @@
 settings:
   name: "Dirb - web directory brute forcer"
   image: ubuntu:jammy
+  author: 
+  - https://github.com/satorici
+  gallery:
+  - 
   # example: satori run satori://web/dirb.yml --data='{"URL":"http://example.com"}' --output
 
 install:
