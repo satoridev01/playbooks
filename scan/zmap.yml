@@ -3,7 +3,7 @@ settings:
   author:
   - https://github.com/satorici
   gallery:
-  - 
+  - https://files.catbox.moe/tuoctj.png
   #example: satori run satori://scan/zmap.yml --data='{"PORT":"1234","HOST":"host"}' --output
 
 install:
