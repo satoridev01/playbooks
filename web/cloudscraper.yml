@@ -1,7 +1,10 @@
 settings:
   name: "Cloud Scraper enumerates targets in search of cloud resources. S3 Buckets, Azure Blobs, Digital Ocean Storage Space"
   image: python
-  # source: https://github.com/jordanpotti/cloudscraper
+  author:
+  - https://github.com/jordanpotti
+  gallery:
+  - 
   # example: satori run satori://web/cloudscraper.yml --output --data='{"URL":"http://example.com"}' --report --output
 
 install:
