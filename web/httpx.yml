@@ -1,6 +1,10 @@
 settings:
   name: "httpx is a fast and multi-purpose HTTP toolkit that allows running multiple probes using the retryablehttp library"
   image: golang
+  author: 
+  - https://github.com/projectdiscovery
+  gallery:
+  - 
   # example: satori run satori://web/httpx.yml --data='{"URL":"satori.ci"}' --output
 
 httpx:
