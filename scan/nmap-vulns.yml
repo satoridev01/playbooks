@@ -4,7 +4,7 @@ settings:
   author:
   - https://github.com/satorici
   gallery:
-  -   
+  - https://files.catbox.moe/3sdyoy.gif  
   #example: satori run satori://scan/nmap-vulns.yml --data='{"HOST":"satori.ci"}' --output
 
 install:
