@@ -1,6 +1,10 @@
 settings:
   name: "A simple scanner/exploitation tool written in GO which automatically exploits known and existing gadgets (checks for specific variables in the global context) to perform XSS via Prototype Pollution. NOTE: The program only exploits known gadgets, but does not cover code analysis or any advanced Prototype Pollution exploitation, which may include custom gadgets."
   image: ubuntu:jammy
+  author: 
+  - https://github.com/kleiton0x00
+  gallery:
+  - 
   # example: satori run satori://web/pp/ppmap.yml --data='{"URL":"https://satori.ci"}' --output
   
 install:
