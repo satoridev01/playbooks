@@ -1,6 +1,10 @@
 settings:
   name: Identify potential vulnerabilities on the web pages of a website
   image: python
+  author: 
+  - https://github.com/satorici
+  gallery:
+  - 
   # example: satori run satori://web/parth.yml --data='{"HOST":"geeksforgeeks.org"}' --output
 
 parth:
