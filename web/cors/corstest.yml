@@ -1,7 +1,10 @@
 settings:
   name: "CORS Test: misconfiguration scanner"
   image: python
-  # source: https://github.com/RUB-NDS/CORStest
+  author: 
+  - https://github.com/RUB-NDS/CORStest
+  gallery:
+  - 
   # example: satori run satori://web/cors/corstest.yml --data='{"URL":"https://satori.ci"}' --output
 
 install:
