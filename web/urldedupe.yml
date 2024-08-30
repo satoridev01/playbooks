@@ -1,6 +1,9 @@
 settings:
   name: Pass in a list of URLs, and get back a list of deduplicated (unique) URL and query string combination
   image: ubuntu:jammy
+  - https://github.com/ameenmaali
+  gallery:
+  - 
   # Example: satori run satori://web/urldedupe.yml --data='{"URL":"https://google.com/home?qs=value\nhttps://google.com/home?qs=secondValue"}' --output
 
 install:
