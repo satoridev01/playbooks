@@ -3,7 +3,7 @@ settings:
   author:
   - https://github.com/satorici
   gallery:
-  - 
+  - https://files.catbox.moe/xd763c.gif
   # example: satori run satori://scan/nmap-full-scan.yml --data='{"HOST":"satori.ci"}' --output
 
 install:
