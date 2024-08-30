@@ -1,5 +1,9 @@
 settings:
   name: Full network scan
+  author:
+  - https://github.com/satorici
+  gallery:
+  - 
   # example: satori run satori://scan/nmap-full-scan.yml --data='{"HOST":"satori.ci"}' --output
 
 install:
