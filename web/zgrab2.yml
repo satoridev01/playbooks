@@ -1,6 +1,7 @@
 settings:
   name: ZGrab scanner
   image: golang
+  author:
   - https://github.com/zmap
   gallery:
   - 
