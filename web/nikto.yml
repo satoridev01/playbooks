@@ -4,7 +4,7 @@ settings:
   author: 
   - https://github.com/sullo
   gallery:
-  - 
+  - https://files.catbox.moe/lkx3qy.png
   # example: satori run satori://web/nikto.yml --data='{"URL":"http://example.com"}' --output
 
 install:
