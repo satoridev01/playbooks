@@ -4,7 +4,7 @@ settings:
   author: 
   - https://github.com/RUB-NDS/CORStest
   gallery:
-  - 
+  - https://files.catbox.moe/iaoxhf.png
   # example: satori run satori://web/cors/corstest.yml --data='{"URL":"https://satori.ci"}' --output
 
 install:
