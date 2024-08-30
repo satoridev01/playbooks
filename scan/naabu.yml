@@ -1,6 +1,10 @@
 settings:                                                                                                        
   name: Naabu is a Go port scanning tool that performs fast SYN/CONNECT/UDP enumeration of valid ports for hosts 
   image: ubuntu:jammy
+  author:
+  - https://github.com/projectdiscovery
+  gallery:
+  - 
   # example: satori run satori://scan/naabu.yml --data='{"HOST":"satori.ci"}' --output                           
                                                                                                                  
 install:
