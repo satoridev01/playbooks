@@ -1,7 +1,7 @@
 settings:
   name: "Ping a host with no packet loss"
   author:
-  -
+  - https://github.com/satorici
   gallery:
   - https://files.catbox.moe/mw4jlg.png
   #example: satori run satori://monitor/ping.yml --data='{"HOST":"satori.ci"}' --output
