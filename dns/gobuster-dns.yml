@@ -1,6 +1,6 @@
 settings:
   image: golang
-  name: A tool used to brute-force DNS subdomains (with wildcard support)
+  name: gobuster-dns brute forces DNS subdomains
   author:
     - https://github.com/OJ
   gallery:
