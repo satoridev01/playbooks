@@ -10,4 +10,4 @@ sudomy:
   run:
     - sudomy -d ${{DOMAIN}} --all ; ls -lR
   run2:
-    - /sudomy -d ${{DOMAIN}} -dP -eP -rS -cF -pS -tO -gW --httpx --dnsprobe  -aI webanalyze -sS ; ls -lR
+    - sudomy -d ${{DOMAIN}} -dP -eP -rS -cF -pS -tO -gW --httpx --dnsprobe  -aI webanalyze -sS ; ls -lR
