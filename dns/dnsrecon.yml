@@ -1,6 +1,6 @@
 settings:
   image: python
-  name: DNSRecon: general domain name enumeration
+  name: "DNSRecon: general domain name enumeration"
   description: |
     This tool provides the ability to perform. 
     - Check all NS Records for Zone Transfers; 
