@@ -32,6 +32,6 @@ run:
     - echo "name,cname,string,http" > providers-data.csv
     - echo "github,github.io,There isn't a GitHub Pages site here,false" >> providers-data.csv
   run:
-    - tko-subs -domain ${{DOMAIN}} -data providers-data.csv
+    - tko-subs -domain ${{DOMAIN}} -data /go/pkg/mod/github.com/anshumanbh/tko-subs@*/providers-data.csv
   read:
     - cat output.csv
