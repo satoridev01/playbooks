@@ -1,6 +1,6 @@
 settings:
   image: golang
-  name: dnsX queries all dns records of a domain
+  name: "dnsX: queries all dns records of a domain"
   author:
     - https://github.com/projectdiscovery
   gallery:
