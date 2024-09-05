@@ -26,6 +26,8 @@ run:
   assertReturnCode: 0
   help:
     - tko-subs -h
+  find:
+    - find ./ -name providers-data.csv
   prepare:
     - echo "name,cname,string,http" > providers-data.csv
     - echo "github,github.io,There isn't a GitHub Pages site here,false" >> providers-data.csv
