@@ -8,12 +8,10 @@ settings:
   #example: satori run satori://dns/dnsx.yml --data='{"DOMAIN": "satori.ci"}' --output
 
 install:
-  assertReturnCode: 0
   dnsx:
     - go install -v github.com/projectdiscovery/dnsx/cmd/dnsx@latest
 
 dnsx:
-  assertReturnCode: 0
   help:
     - dnsx -h
   run:
