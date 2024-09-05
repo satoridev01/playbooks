@@ -6,8 +6,8 @@ settings:
   gallery:
     - https://files.catbox.moe/54vy1l.gif
   #example: satori run satori://dns/massdns.yml --data='{"DOMAIN": "satori.ci"}' --output
+  
 install:
-  assertReturnCode: 0
   update:
     - apt update
   dependencies:
@@ -15,14 +15,23 @@ install:
   clone:
     - git clone --depth 1 https://github.com/blechschmidt/massdns.git
     - cd massdns && make
-  dom:
+  domain:
     - echo "${{DOMAIN}}" > domain.txt
 
+RECORD:
+- - A
+  - AAAA
+  - MX
+  - NS
+  - TXT
+  - CNAME
+  - SOA
+  - SRV
+  - PTR
+  - SPF
+
 run:
-  assertReturnCode: 0
   help:
     - ./massdns/bin/massdns --help
   run:
-    - for record_type in A AAAA MX NS TXT CNAME SOA SRV PTR SPF; do ./massdns/bin/massdns -r massdns/lists/resolvers.txt -t $record_type -o F -w output_${record_type}.txt domain.txt; done
-    - cat output_*.txt
-    # - ./massdns/bin/massdns -r massdns/lists/resolvers.txt -t AAAA domain.txt
+    - ./massdns/bin/massdns -q -r massdns/lists/resolvers.txt -t ${{RECORD}} -o F -w output_${{RECORD}}.txt domain.txt; cat output_${{RECORD}}.txt
