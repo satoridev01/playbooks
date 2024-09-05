@@ -28,7 +28,6 @@ RECORD:
   - SOA
   - SRV
   - PTR
-  - SPF
 
 run:
   help:
