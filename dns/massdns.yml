@@ -9,9 +9,9 @@ settings:
   
 install:
   update:
-    - apt update
+    - apt update >> /dev/null
   dependencies:
-    - apt install git make gcc -qy
+    - apt install git make gcc -qy >> /dev/null
   clone:
     - git clone --depth 1 https://github.com/blechschmidt/massdns.git
     - cd massdns && make
