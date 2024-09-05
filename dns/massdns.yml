@@ -23,6 +23,6 @@ run:
   help:
     - ./massdns/bin/massdns --help
   run:
-    - for record_type in A AAAA MX NS TXT CNAME SOA SRV PTR SPF; do ./massdns -r massdns/lists/resolvers.txt -t $record_type -o F -w output_${record_type}.txt domain.txt; done
+    - for record_type in A AAAA MX NS TXT CNAME SOA SRV PTR SPF; do ./massdns/bin/massdns -r massdns/lists/resolvers.txt -t $record_type -o F -w output_${record_type}.txt domain.txt; done
     - cat output_*.txt
     # - ./massdns/bin/massdns -r massdns/lists/resolvers.txt -t AAAA domain.txt
