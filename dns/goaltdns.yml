@@ -6,7 +6,7 @@ settings:
     - https://github.com/subfinder
   gallery:
     - https://files.catbox.moe/wfwsek.png
-  ## Example: satori run satori://dns/goaltdns.yml --data='{"DOMAIN": "satori.ci"}' --output
+  example: satori run satori://dns/goaltdns.yml -d DOMAIN="satori.ci" --output
 
 install:
   assertReturnCode: 0
