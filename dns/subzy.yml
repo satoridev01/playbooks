@@ -9,7 +9,7 @@ settings:
 
 subzy:
   install:
-    - go install -v github.com/LukaSikic/subzy@latest
+    - go install -v github.com/PentestPad/subzy@latest
   help:
     - subzy --help
   run:
