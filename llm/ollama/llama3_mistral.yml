@@ -4,6 +4,7 @@ settings:
   cpu: 16384
   memory: 122880
   timeout: 300
+  example: satori run satori://llm/ollama/llama3_mistral.yml -d MODEL="model" -d INPUT="input" --output
 
 MODEL:
 - - "llama3"
