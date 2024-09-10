@@ -5,7 +5,7 @@ settings:
     - https://github.com/semgrep
     gallery:
     - https://files.catbox.moe/dj0xyt.png
-    #eample: satori run ./ --playbook="satori://code/semgrep.yml" --output
+    example: satori run ./ --playbook="satori://code/semgrep.yml" --output
 
 install:
   assertReturnCode: 0
