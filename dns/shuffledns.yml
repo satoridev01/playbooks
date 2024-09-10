@@ -22,4 +22,4 @@ shuffledns:
   help:
     - shuffledns -h
   run:
-    - shuffledns -d ${{DOMAIN}} -list example-subdomains.txt -r tests/resolvers.txt -mode resolve
+    - cd shuffledns/tests && shuffledns -d ${{DOMAIN}} -list example-subdomains.txt -r resolvers.txt -mode resolve
