@@ -4,7 +4,7 @@ settings:
   - https://github.com/s0md3v
   gallery:
   - https://files.catbox.moe/5b50gj.png
-  # Example: satori run satori://scan/smap.yml --data='{"HOST":"satori.ci"}' --output
+  example: satori run satori://scan/smap.yml -d HOST="satori.ci" --output
 
 install:
   update:
