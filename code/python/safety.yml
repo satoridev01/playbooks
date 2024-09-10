@@ -6,7 +6,7 @@ settings:
   - https://github.com/satorici
   gallery:
   -
-  # example: satori run ./ --playbook="satori://code/python/safety.yml" --output 
+  example: satori run ./ --playbook="satori://code/python/safety.yml" --output
   
 install:
   - pip3 install safety

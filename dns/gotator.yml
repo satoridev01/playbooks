@@ -5,7 +5,7 @@ settings:
     - https://github.com/Josue87
   gallery:
     - https://files.catbox.moe/a35ytq.png
-  #example: satori run satori://dns/gotator.yml --data='{"DOMAIN": "satori.ci"}' --output
+  example: satori run satori://dns/gotator.yml -d DOMAIN="satori.ci" --output
 
 install:
   assertReturnCode: 0

@@ -5,7 +5,7 @@ settings:
     - https://github.com/rverton
   gallery:
     - https://files.catbox.moe/ievv8s.gif
-  #example: satori run satori://web/webanalyze.yml --data='{"HOST":"satori.ci"}' --output
+  example: satori run satori://web/webanalyze.yml -d HOST="satori.ci" --output
 
 install:
   assertReturnCode: 0

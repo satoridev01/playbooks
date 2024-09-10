@@ -1,7 +1,7 @@
 settings:
   name: "Checks TLS/SSL ciphers and protocols for security flaws"
   image: ubuntu:jammy
-  # example: satori run satori://web/testssl.yml --data='{"HOST":"satori.ci"}' --output
+  example: satori run satori://web/testssl.yml -d HOST="satori.ci" --output
   
 install:
   update:

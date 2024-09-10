@@ -5,7 +5,7 @@ settings:
     - https://github.com/xnl-h4ck3r
   gallery:
     - https://files.catbox.moe/y6sbh6.gif 
-  #example: satori run satori://web/waymore.yml --data='{"URL":"satori.ci"}' --output
+  example: satori run satori://web/waymore.yml -d URL="satori.ci" --output
 
 waymore:
   assertReturnCode: 0

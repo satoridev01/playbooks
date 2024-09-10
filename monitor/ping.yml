@@ -4,7 +4,7 @@ settings:
   - https://github.com/satorici
   gallery:
   - https://files.catbox.moe/mw4jlg.png
-  #example: satori run satori://monitor/ping.yml --data='{"HOST":"satori.ci"}' --output
+  example: satori run satori://monitor/ping.yml -d HOST="satori.ci" --output
 
 install:
 - apt update

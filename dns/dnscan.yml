@@ -6,7 +6,7 @@ settings:
   - https://github.com/rbsec
   gallery:
   - https://files.catbox.moe/t5vgws.png
-  # example: satori run satori://dns/dnscan.yml --data='{"DOMAIN":"satori.ci"}' --output
+  example: satori run satori://dns/dnscan.yml -d DOMAIN="satori.ci" --output
   
 install:
   update: 

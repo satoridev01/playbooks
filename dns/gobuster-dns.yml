@@ -5,7 +5,7 @@ settings:
     - https://github.com/OJ
   gallery:
     - https://files.catbox.moe/kti61x.gif
-  #example: satori run satori://dns/gobuster-dns.yml --data='{"DOMAIN": "satori.ci"}' --output
+  example: satori run satori://dns/gobuster-dns.yml -d DOMAIN="satori.ci" --output
 
 install:
   gobuster-dns:

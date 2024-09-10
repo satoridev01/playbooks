@@ -5,7 +5,7 @@ settings:
     - https://github.com/blechschmidt
   gallery:
     - https://files.catbox.moe/54vy1l.gif
-  #example: satori run satori://dns/massdns.yml --data='{"DOMAIN": "satori.ci"}' --output
+  example: satori run satori://dns/massdns.yml -d DOMAIN="satori.ci" --output
   
 install:
   update:

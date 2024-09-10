@@ -4,7 +4,7 @@ settings:
     - https://github.com/jeremylong
   gallery:
     - https://files.catbox.moe/4goi2y.gif
-  #example: satori run satori://code/javascript/dependencycheck.yml --output
+  example: satori run satori://code/javascript/dependencycheck.yml --output
   
 install:
   updates:

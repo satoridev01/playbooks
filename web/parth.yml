@@ -5,7 +5,7 @@ settings:
   - https://github.com/satorici
   gallery:
   - https://files.catbox.moe/s6ab46.png
-  # example: satori run satori://web/parth.yml --data='{"HOST":"geeksforgeeks.org"}' --output
+  example: satori run satori://web/parth.yml -d HOST="geeksforgeeks.org" --output
 
 parth:
   install:

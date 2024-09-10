@@ -12,7 +12,7 @@ settings:
     - https://github.com/darkoperator
   gallery:
     - https://files.catbox.moe/b92mj7.gif
-  #example: satori run satori://dns/dnsrecon.yml --data='{"DOMAIN": "satori.ci"}' --output
+  example: satori run satori://dns/dnsrecon.yml -d DOMAIN="satori.ci" --output
 
 install:
   assertReturnCode: 0

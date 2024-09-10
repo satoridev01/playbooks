@@ -5,7 +5,8 @@ settings:
     - https://github.com/hakluke
   gallery:
     - https://files.catbox.moe/ut84q3.png
-  # example: satori run satori://dns/hakrevdns.yml --data='{"IP":"54.210.33.205\n3.93.207.195"}' --output
+  example: satori run satori://dns/hakrevdns.yml -d IP="54.210.33.205
+3.93.207.195" --output
 
 install:
   hakrevdns:

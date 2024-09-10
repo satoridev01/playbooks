@@ -5,7 +5,7 @@ settings:
     - https://github.com/blechschmidt
   gallery:
     - https://files.catbox.moe/2i78fz.png
-  #example: satori run satori://dns/puredns.yml --data='{"DOMAIN": "satori.ci"}' --output
+  example: satori run satori://dns/puredns.yml -d DOMAIN="satori.ci" --output
 
 install:
   assertReturnCode: 0

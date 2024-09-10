@@ -5,7 +5,7 @@ settings:
     - https://github.com/laramies/theHarvester
   gallery:
     - https://files.catbox.moe/pn0jpc.gif
-  #example: satori run satori://email/theharvester.yml --data='{"DOMAIN":"umd.edu"}' --output
+  example: satori run satori://email/theharvester.yml -d DOMAIN="umd.edu" --output
 
 install:
   git:

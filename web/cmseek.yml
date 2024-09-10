@@ -6,7 +6,7 @@ settings:
   - https://github.com/Tuhinshubhra
   gallery:
   - https://files.catbox.moe/gthwl0.gif
-  # example: satori run satori://web/cmseek.yml --data='{"URL":"https://satori.ci"}' --output
+  example: satori run satori://web/cmseek.yml -d URL="https://satori.ci" --output
 
 install:
   update:

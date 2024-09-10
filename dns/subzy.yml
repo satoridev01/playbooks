@@ -5,7 +5,7 @@ settings:
     - https://github.com/PentestPad
   gallery:
     - https://files.catbox.moe/46j46k.png
-  #example: satori run satori://dns/subzy.yml --data='{"DOMAIN":"satori.ci"}' --output
+  example: satori run satori://dns/subzy.yml -d DOMAIN="satori.ci" --output
 
 subzy:
   install:

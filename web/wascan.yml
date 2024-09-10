@@ -5,7 +5,7 @@ settings:
     - https://github.com/R3dFruitRollUp
   gallery:
     - https://files.catbox.moe/n5nfpj.png
-  #example: satori run satori://web/wascan.yml --data='{"URL":"satori.ci"}' --output
+  example: satori run satori://web/wascan.yml -d URL="satori.ci" --output
 
 install:
   assertReturnCode: 0

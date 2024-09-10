@@ -5,7 +5,7 @@ settings:
   - https://github.com/s0md3v
   gallery:
   - https://files.catbox.moe/lj0oxn.png
-  # example: satori run satori://web/cors/corsy.yml --data='{"URL":"https://satori.ci"}' --output
+  example: satori run satori://web/cors/corsy.yml -d URL="https://satori.ci" --output
 
 install:
   update:

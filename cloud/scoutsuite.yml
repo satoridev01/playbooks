@@ -1,7 +1,7 @@
 settings:
   name: "Multi-cloud security-auditing tool that gathers configuration data for manual inspection and highlights risk areas."
   files: True
-  # example: satori run satori://cloud/scoutsuite.yml --data='{"aws_secret_access_key":"TBC","aws_access_key_id":"TBC"}' --files
+  example: satori run satori://cloud/scoutsuite.yml -d aws_secret_access_key="TBC" -d aws_access_key_id="TBC" --files --output
   
 install:
   scoutsuite:

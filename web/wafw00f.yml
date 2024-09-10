@@ -5,7 +5,7 @@ settings:
     - https://github.com/EnableSecurity
   gallery:
     - https://files.catbox.moe/gywp34.png
-  #example: satori run satori://web/wafw00f.yml --data='{"URL":"satori.ci"}' --output
+  example: satori run satori://web/wafw00f.yml -d URL="satori.ci" --output
 
 install:
   assertReturnCode: 0

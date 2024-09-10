@@ -3,7 +3,7 @@ settings:
   files: true
   author:
   - https://github.com/rustsec
-  #example: satori run satori://code/rust-audit-ginger.yml --output
+  example: satori run satori://code/rust-audit-ginger.yml --output
 
 cargo-audit:
   assertStdoutNotContains:

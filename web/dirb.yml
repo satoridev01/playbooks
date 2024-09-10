@@ -5,7 +5,7 @@ settings:
   - https://github.com/satorici
   gallery:
   - https://files.catbox.moe/siqrj1.png
-  # example: satori run satori://web/dirb.yml --data='{"URL":"http://example.com"}' --output
+  example: satori run satori://web/dirb.yml -d URL="http://example.com" --output
 
 install:
   assertReturnCode: 0
