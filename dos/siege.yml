@@ -10,6 +10,7 @@ settings:
   mitigation: "Use an anti DDoS service such as CloudFlare to prevent network attacks"
   count: 10
   timeout: 300
+  example: satori run satori://dos/siege.yml -d URL="satori.ci" --output
 
 install:
   update:
