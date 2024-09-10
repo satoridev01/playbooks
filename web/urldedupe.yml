@@ -5,7 +5,7 @@ settings:
   - https://github.com/ameenmaali
   gallery:
   - https://files.catbox.moe/l0rcrt.png
-  # Example: satori run satori://web/urldedupe.yml --data='{"URL":"https://google.com/home?qs=value\nhttps://google.com/home?qs=secondValue"}' --output
+  example: satori run satori://web/urldedupe.yml -d URL="https://google.com/home?qs=value\nhttps://google.com/home?qs=secondValue" --output
 
 install:
 - apt update
