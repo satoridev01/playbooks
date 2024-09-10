@@ -1,5 +1,6 @@
 settings:
   image: norionomura/swiftlint
+  example: satori run ./ --playbook="satori://code/swiftlint.yml" --output
 
 swiftlint:
   help:
