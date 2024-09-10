@@ -5,8 +5,7 @@ settings:
     - https://github.com/s0md3v
   gallery:
     - https://files.catbox.moe/9eflgb.png
-  example: satori run satori://web/uro.yml -d URL=""https://satori.ci/page/1/
-https://satori.ci/page/2/"" --output
+  example: satori run satori://web/uro.yml -d URL="https://satori.ci/page/1/" -d URL="https://satori.ci/page/2/" --output
 
 uro:
   assertReturnCode: 0
