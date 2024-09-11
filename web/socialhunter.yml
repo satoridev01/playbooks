@@ -6,7 +6,6 @@ settings:
   gallery:
   - https://files.catbox.moe/1knj4c.png
   example: satori run satori://web/socialhunter.yml -d URL="https://www.satori.ci" --output
-  #          satori run satori://web/socialhunter.yml --data='{"URL":"http://utkusen.com"}' --output
 
 install:
   socialhunter:
