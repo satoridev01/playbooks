@@ -23,4 +23,4 @@ shuffledns:
   help:
     - shuffledns -h
   run:
-    - cd shuffledns/tests && shuffledns -mcmd ./massdns -r massdns/lists/resolvers.txt -d ${{DOMAIN}} -list example-subdomains.txt -r resolvers.txt -mode resolve
+    - cd shuffledns/tests && shuffledns -m r ./massdns/lists/resolvers.txt -d ${{DOMAIN}} -list example-subdomains.txt -r resolvers.txt -mode resolve
