@@ -1,4 +1,5 @@
 settings:
+  timeout: 300
   image: python:bullseye
   name: Enumerate subdomains on a target domain through passive reconnaissance and dictionary scan
   author:
