@@ -22,5 +22,5 @@ shuffledns:
   help:
     - shuffledns -h
   run:
-    #- shuffledns -m massdns/lists/resolvers.txt -d ${{DOMAIN}} -r shuffledns/tests/resolvers.txt -mode resolve
-    - shuffledns -d ${{DOMAIN}} 
+    - shuffledns -m massdns/lists/resolvers.txt -d ${{DOMAIN}} -r shuffledns/tests/resolvers.txt -mode resolve
+    #- shuffledns -d ${{DOMAIN}} 
