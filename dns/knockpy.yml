@@ -9,11 +9,11 @@ install:
   git:
   - apt install -qy git
   knock:
-  - git clone https://github.com/guelfoweb/knock.git --depth 1
+  - pip install git+https://github.com/guelfoweb/knock.git
   requirements:
   - cd knock && pip install .
 
 knockpy:
   assertReturnCode: 0
   run:
-    - cd knock && python3 -m knockpy ${{DOMAIN}}
+    - knockpy -d ${{DOMAIN}} --recon --bruteforce
