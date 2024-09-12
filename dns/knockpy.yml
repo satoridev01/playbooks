@@ -15,5 +15,7 @@ install:
 
 knockpy:
   assertReturnCode: 0
+  help:
+  - knockpy -h
   run:
-    - knockpy -d ${{DOMAIN}} --recon --bruteforce
+  - knockpy -d ${{DOMAIN}} --recon --bruteforce
