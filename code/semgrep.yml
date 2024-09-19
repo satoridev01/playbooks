@@ -10,7 +10,7 @@ settings:
 install:
   assertReturnCode: 0
   semgrep:
-  - pip install semgrep
+  - pip install semgrep -q
 
 error:
   assertStdout: False
