@@ -9,9 +9,9 @@ settings:
 
 parth:
   install:
-  - pip3 install requests parth
-  help:
-  - parth -h
+  - pip3 install requests parth -q
+  #help:
+  #- parth -h
   test:
     assertStdoutContains: "issues"
     run:
