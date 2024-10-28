@@ -11,7 +11,7 @@ install:
 
 gitxray:
   repo:
-    - gitxray -r https://github.com/${{REPO}} -c ${{CONTRIBUTOR}} -f emails -outformat text -out filters.log
+    - gitxray -r https://github.com/${{REPO}} -c ${{CONTRIBUTOR}} -f emails -outformat text -out filters.log >>/dev/null
   test:
     filters:
       - cat filters.log
