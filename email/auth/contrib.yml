@@ -12,8 +12,7 @@ install:
 - python3 -m pip install -r requirements.txt
 
 gitxray:
-  repo:
+  contributor:
     - export GH_ACCESS_TOKEN=${{GH_ACCESS_TOKEN}}; cd src; python3 -m gitxray.gitxray -r https://github.com/${{REPO}} -c ${{CONTRIBUTOR}} -f emails -outformat text -out ../filters.log
-  test:
-    filters:
-      - cat filters.log
+  output:
+    - cat filters.log
