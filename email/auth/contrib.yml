@@ -13,7 +13,7 @@ install:
 
 gitxray:
   repo:
-    - export GH_ACCESS_TOKEN=${{GH_ACCESS_TOKEN}}; python3 -m gitxray.gitxray -r https://github.com/${{REPO}} -c ${{CONTRIBUTOR}} -f emails -outformat text -out filters.log
+    - export GH_ACCESS_TOKEN=${{GH_ACCESS_TOKEN}}; cd src; python3 -m gitxray.gitxray -r https://github.com/${{REPO}} -c ${{CONTRIBUTOR}} -f emails -outformat text -out ../filters.log
   test:
     filters:
       - cat filters.log
