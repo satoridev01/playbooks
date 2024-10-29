@@ -13,6 +13,6 @@ install:
 
 gitxray:
   contributor:
-    - cd src; python3 -m gitxray.gitxray -r https://github.com/${{REPO}} -f emails -outformat text -out ../filters.log
+    - cd src; python3 -m gitxray.gitxray -r https://github.com/${{REPO}} -c ${{CONTRIBUTOR}} -f emails -outformat text -out ../filters.log
   output:
     - cat filters.log
