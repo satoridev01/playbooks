@@ -8,4 +8,4 @@ install:
 - echo '${{PASS}}' > password
 
 run:
-- /jtr/run/john password
+- /jtr/run/john password --pot=john.pot
