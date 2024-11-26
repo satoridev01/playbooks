@@ -1,5 +1,5 @@
 settings:
-  name: gitSome account emails
+  name: gitSome: get emails associated with a Github account
   image: python
   gallery: 
   - https://files.catbox.moe/bnkkxg.png
