@@ -1,8 +1,7 @@
 settings:
   name: gitSome: get emails associated with a Github account
   image: python
-  gallery: 
-  - https://files.catbox.moe/bnkkxg.png
+  # gallery: - https://files.catbox.moe/bnkkxg.png
   example: satori run gitsome.yml -d USER=octocat --output
 
 install:
@@ -10,4 +9,4 @@ install:
 - cd gitSome; pip install -r requirements.txt >> /dev/null
 
 run:
-- python3 gitSome/gitSome.py -u ${{USER}}
+- python3 gitSome/gitSome.py -u ${{ORG}}
