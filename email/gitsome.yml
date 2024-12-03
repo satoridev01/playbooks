@@ -1,7 +1,8 @@
 settings:
-  name: "gitSome get emails associated with a Github account"
+  name: "gitSome gets emails associated with a Github account"
   image: python
-  # gallery: - https://files.catbox.moe/bnkkxg.png
+  gallery: 
+  - https://files.catbox.moe/bnkkxg.png
   example: satori run gitsome.yml -d USER=octocat --output
 
 install:
