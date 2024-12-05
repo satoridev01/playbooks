@@ -4,7 +4,7 @@
 
 You can contribute your own playbooks with the Satori CI community to be used publicly.
 
-1. Create a fork of our playbook repository by clicking [this link](https://github.com/satorici/playbooks/fork). Click on ___Create fork___.
+1. Create a fork of our playbook repository by going to [https://github.com/satorici/playbooks/fork](https://github.com/satorici/playbooks/fork). Click on ___Create fork___.
 2. Create a new branch in your forked repository:
     1. Below your repository name there's a branch dropdown that says ___main___, click it and then click on ___View all branches___.
     2. Click ___New branch___.
