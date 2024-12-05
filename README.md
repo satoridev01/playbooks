@@ -11,6 +11,6 @@ You can contribute your own playbooks here. Satori CI shares part of the profits
     3. Under ___New branch name___, type a name for the branch and click on ___Create new branch___.
     4. Select your newly created branch.
 4. Create or modify your playbook, either by using the web interface or locally by pushing your changes to your repository.
-5. [Click here to open a pull request](https://github.com/satorici/playbooks/compare), make sure you click ___compare across forks___. There will be four dropdowns, in the third one select your forked repository and in the last, the branch you created in the second step. Finally click the ___Create pull request___ button.
+5. [Click here to open a pull request](https://github.com/satorici/playbooks/compare), click on ___compare across forks___. There will be four dropdowns, in the third one select your forked repository and in the last one the branch you created in the second step. Finally complete the title, the description and click on ___Create pull request___
 
-We will review your submission as soon as possible.
+We will review your submission to include it in the public repository of playbooks.
