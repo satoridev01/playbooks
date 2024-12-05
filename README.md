@@ -1,8 +1,8 @@
 # Satori CI playbook repository
 
-## Submitting your playbooks
+### Submitting your playbooks
 
-You can contribute your own playbooks here. Satori CI shares part of the profits with the playbooks' creators and authors.
+You can contribute your own playbooks with the Satori CI community to be used publicly.
 
 1. Create a fork of our playbook repository by clicking [this link](https://github.com/satorici/playbooks/fork). Click on ___Create fork___.
 2. Create a new branch in your forked repository:
@@ -13,4 +13,4 @@ You can contribute your own playbooks here. Satori CI shares part of the profits
 4. Create or modify your playbook, either by using the web interface or locally by pushing your changes to your repository.
 5. [Click here to open a pull request](https://github.com/satorici/playbooks/compare), click on ___compare across forks___. There will be four dropdowns, in the third one select your forked repository and in the last one the branch you created in the second step. Finally complete the title, the description and click on ___Create pull request___
 
-We will review your submission to include it in the public repository of playbooks.
+We will review your submission to include it in the public repository of playbooks. If you have any questions, drop us an email at info@satori.ci
